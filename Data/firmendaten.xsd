@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs='http://www.w3.org/2001/XMLSchema' elementFormDefault='qualified'>
+
+    <xs:element name='firmenliste'>
+        <xs:complexType>
+            <xs:sequence>
+            
+                <xs:element name='firma' maxOccurs='unbounded'>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name='branche' type='xs:string'/>
+                            <xs:element name='strasse_hnr' type='xs:string'/>
+                            <xs:element name='adresszusatz' type='xs:string' minOccurs='0'/>
+                            <xs:element name='plz' type='xs:string'/>
+                            <xs:element name='ort' type='xs:string'/>
+                            <xs:element name='land' type='landListe'/>
+                            <xs:element name='website' type='xs:anyURI'/>
+                            <xs:element name='ansprechpartner' maxOccurs='3' type='apPerson'/>
+                            <xs:element name='erfassungsdatum' type='xs:date'/>
+                        </xs:sequence>
+                        <xs:attribute name='name' use='required'/>
+                    </xs:complexType>
+                </xs:element>
+                
+            </xs:sequence>
+            <xs:attribute name='version' use='required' type='xs:integer'/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="apPerson">
+        <xs:sequence>
+            <xs:element name='anrede' type='xs:string'/>
+            <xs:element name='titel' type='xs:string' minOccurs='0'/>
+            <xs:element name='funktion' type='xs:string' minOccurs='0'/>
+            <xs:element name='telefon' type='xs:string'/>
+            <xs:element name='fax' type='xs:string' minOccurs='0'/>
+            <xs:element name='email' type='emailAdresse'/>
+        </xs:sequence>
+        <xs:attribute name='name' use='required'/>
+    </xs:complexType>
+
+    <xs:simpleType name="landListe">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="DE"/>
+            <xs:enumeration value="AT"/>
+            <xs:enumeration value="CH"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="emailAdresse"> 
+        <xs:restriction base="xsd:string"> 
+            <xs:pattern value="[^@]+@[^\.]+\..+"/>
+        </xs:restriction> 
+    </xs:simpleType> 
+
+</xs:schema>
