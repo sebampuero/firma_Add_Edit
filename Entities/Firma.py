@@ -1,5 +1,3 @@
-
-
 class Firma:
     'Firma Objekt'
 

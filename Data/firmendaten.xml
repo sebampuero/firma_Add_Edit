@@ -1,11 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<firmenliste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	         xsi:noNamespaceSchemaLocation="firmendaten.xsd"
-             version="1">
-	
+<firmenliste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1" xsi:noNamespaceSchemaLocation="firmendaten.xsd">
+
     <firma name="4system GmbH">
         <branche>E-Learning</branche>
-        <strasse_hnr>Kurfrstenstraße 114</strasse_hnr>
+        <strasse_hnr>Kurfrstenstra&#195;&#376;e 114</strasse_hnr>
         <plz>10787</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -26,7 +23,7 @@
         <ort>Berlin</ort>
         <land>DE</land>
         <website>http://www.aastra.de</website>
-        <ansprechpartner name="Jürgen Signer">
+        <ansprechpartner name="J&#195;&#188;rgen Signer">
             <anrede>Herr</anrede>
             <funktion>GF</funktion>
             <telefon>030 6104 2007</telefon>
@@ -44,7 +41,7 @@
 
     <firma name="42com Telecommunication GmbH">
         <branche>Telekommunikation</branche>
-        <strasse_hnr>Straße der Pariser Kommune 12-16</strasse_hnr>
+        <strasse_hnr>Stra&#195;&#376;e der Pariser Kommune 12-16</strasse_hnr>
         <plz>10243</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -80,26 +77,9 @@
         <erfassungsdatum>2010-10-05</erfassungsdatum>
     </firma>
 
-    <firma name="adKor GmbH">
-        <branche>Kommunikationstechnik</branche>
-        <strasse_hnr>Am Kleingewerbegebiet 8</strasse_hnr>
-        <plz>15745</plz>
-        <ort>Wildau</ort>
-        <land>DE</land>
-        <website>http://www.adkor.de</website>
-        <ansprechpartner name="Hartmut Kordus">
-            <anrede>Herr</anrede>
-            <titel>Dipl.-Ing.</titel>
-            <telefon>03375 21 40 53</telefon>
-            <fax>21 40 56</fax>
-            <email>hartmut.kordus@adkor.de</email>
-        </ansprechpartner>
-        <erfassungsdatum>2012-01-31</erfassungsdatum>
-    </firma>
-
     <firma name="Airbus Operations GmbH">
         <branche>Luftfahrt</branche>
-        <strasse_hnr>Lüneburger Schanze 30</strasse_hnr>
+        <strasse_hnr>L&#195;&#188;neburger Schanze 30</strasse_hnr>
         <plz>21614</plz>
         <ort>Buxtehude</ort>
         <land>DE</land>
@@ -113,9 +93,9 @@
         <erfassungsdatum>2011-07-15</erfassungsdatum>
     </firma>
 
-    <firma name="Akademie der Bundeswehr für Information und Kommunikation">
+    <firma name="Akademie der Bundeswehr f&#195;&#188;r Information und Kommunikation">
         <branche>Verteidigung</branche>
-        <strasse_hnr>Prötzeler Chaussee 20</strasse_hnr>
+        <strasse_hnr>Pr&#195;&#182;tzeler Chaussee 20</strasse_hnr>
         <plz>15344</plz>
         <ort>Strausberg</ort>
         <land>DE</land>
@@ -136,7 +116,7 @@
         <ort>Bernstadt</ort>
         <land>DE</land>
         <website>http://www.alphaQuest.de</website>
-        <ansprechpartner name="André Probst">
+        <ansprechpartner name="Andr&#195;&#169; Probst">
             <anrede>Herr</anrede>
             <telefon>07348 9670446</telefon>
             <fax>9670447</fax>
@@ -147,7 +127,7 @@
 
     <firma name="Andracor GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Mertensstraße 127 - 131</strasse_hnr>
+        <strasse_hnr>Mertensstra&#195;&#376;e 127 - 131</strasse_hnr>
         <plz>13587</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -159,5 +139,4 @@
         </ansprechpartner>
         <erfassungsdatum>2011-07-07</erfassungsdatum>
     </firma>
-
 </firmenliste>
