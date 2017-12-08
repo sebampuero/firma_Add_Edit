@@ -1,6 +1,9 @@
 class Ansprechpartner:
     'Ansprechpartner Objekt'
 
+    title_list = ['M.Sc.', 'M.Eng.', 'Dipl.-Inf. (FH)', 'Dipl.-Inform. (FH)', 'Dipl.-Ing. (FH)', 'Dipl.-Wirt.-Inf. (FH)',
+                  'Dipl.-Wi.-Inform. (FH)', 'Dipl.-Ing.', 'Dipl.-Ing.-Inf.', 'Dr. rer. nat.']
+
     def __init__(self, name, anrede, telefon, email, titel=None, funktion=None, fax=None):
         self.name = name
         self.anrede = anrede
@@ -20,3 +23,6 @@ class Ansprechpartner:
             "funktion": self.funktion,
             "fax": self.fax
         }
+
+
+

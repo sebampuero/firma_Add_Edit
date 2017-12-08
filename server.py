@@ -1,6 +1,6 @@
 from flask import Flask, Response, redirect, request
-from Service.json_request import get_firm_json
-from Service.firmen_service import create_firm,edit_firm
+from Service.json_request import get_firm_json, get_title
+from Service.firmen_service import create_firm, edit_firm
 
 app = Flask(__name__)
 
@@ -24,12 +24,20 @@ def edit():
     return redirect("/")
 
 
-@app.route('/firmen_json', methods=['GET'])
+@app.route('/firmen_json_request', methods=['GET'])
 def get():
     query = request.args.get('query', '').lower()
     if query is '':
         return Response(status=400)
     return Response(get_firm_json(query), status=200, mimetype="application/json")
+
+
+@app.route('/titles_request', methods=['GET'])
+def get_a_title():
+    query = request.args.get('query', '').lower()
+    if query is '':
+        return Response(status=400)
+    return Response(get_title(query), status=200, mimetype="application/json")
 
 
 if __name__ == "__main__":

@@ -5,9 +5,10 @@ Service for creating, editing and retrieving firms
 """
 from Entities.Ansprechpartner import Ansprechpartner
 from Entities.Firma import Firma
-from Service.xml_parser import get_firms_from_xml, insert_firm,delete_firm
+from Service.xml_parser import get_firms_from_xml, insert_firm, delete_firm
 
 
+# Edit a firm. Delete and then create a new element with the new data
 def edit_firm(content):
     firma_dict = content
     delete_firm(firma_dict['name'].lower())
@@ -33,6 +34,7 @@ def create_firm(content):
 # @return the searched firm, None is returned when not found
 def get_firm_by_name(name):
     firms_elements = get_firms_from_xml()
+    firmas_list = []
     for f_element in firms_elements:
         if name in f_element.attrib['name'].lower():
             ansprechpartner_list = []
@@ -49,4 +51,5 @@ def get_firm_by_name(name):
                           f_element.find('plz').text, f_element.find('ort').text, f_element.find('land').text,
                           f_element.find('website').text, ansprechpartner_list, f_element.find('erfassungsdatum').text,
                           "" if f_element.find('adresszusatz') is None else f_element.find('adresszusatz').text)
-            return firma
+            firmas_list.append(firma)
+    return firmas_list

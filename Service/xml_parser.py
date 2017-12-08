@@ -4,6 +4,7 @@ Parses the XML File containing firm elements
 @date 8.12.2017
 """
 import xml.etree.ElementTree as ET
+from xml.dom import minidom
 
 filename = "Data/firmendaten.xml"
 
@@ -15,6 +16,7 @@ def get_firms_from_xml():
     return firms
 
 
+# Delete a firm in the XML File by name
 def delete_firm(firma_name):
     root, tree = get_root()
     for firma in root.findall('firma'):
@@ -53,6 +55,8 @@ def insert_firm(firma):
     tree.write(filename)
 
 
+# Get the root of the XML File
+# @return the root
 def get_root():
     with open(filename, 'r') as xml_file:
         tree = ET.parse(xml_file, ET.XMLParser(encoding='UTF-8'))
