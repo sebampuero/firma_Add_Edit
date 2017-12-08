@@ -1,12 +1,12 @@
 from flask import Flask, Response, redirect
-
+from Service.json_request import get_firms_json
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def hello():
-    return Response("<h1>Hallo</h1><br>Edit | Create", mimetype="text/html")
+    return Response("<a href='/firmen_json'>Hallo</a>", mimetype="text/html")
 
 
 @app.route('/create', methods=['POST'])
@@ -21,7 +21,7 @@ def edit():
 
 @app.route('/firmen_json', methods=['GET'])
 def get():
-    return Response("json")
+    return Response(get_firms_json(),status=200,mimetype="application/json")
 
 
 if __name__ == "__main__":
