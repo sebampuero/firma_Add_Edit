@@ -37,19 +37,36 @@ def get_firm_by_name(name):
     firmas_list = []
     for f_element in firms_elements:
         if name in f_element.attrib['name'].lower():
-            ansprechpartner_list = []
-            for a_element in f_element.findall('ansprechpartner'):
-                ansprechpartner = Ansprechpartner(a_element.attrib['name'], a_element.find('anrede').text,
-                                                  a_element.find('telefon').text, a_element.find('email').text,
-                                                  "" if a_element.find('titel') is None else a_element.find(
-                                                      'titel').text,
-                                                  "" if a_element.find('funktion') is None else a_element.find(
-                                                      'funktion').text,
-                                                  "" if a_element.find('fax') is None else a_element.find('fax').text)
-                ansprechpartner_list.append(ansprechpartner)
-            firma = Firma(f_element.attrib['name'], f_element.find('branche').text, f_element.find('strasse_hnr').text,
-                          f_element.find('plz').text, f_element.find('ort').text, f_element.find('land').text,
-                          f_element.find('website').text, ansprechpartner_list, f_element.find('erfassungsdatum').text,
-                          "" if f_element.find('adresszusatz') is None else f_element.find('adresszusatz').text)
-            firmas_list.append(firma)
+            firmas_list = get_list_of_firms_from_xml(f_element, firmas_list)
+    return firmas_list
+
+
+# Retrive a list with all the firms
+# @return the list of firms
+def get_all_firms():
+    firms_elements = get_firms_from_xml()
+    firms_list = []
+    for f_element in firms_elements:
+        firms_list = get_list_of_firms_from_xml(f_element, firms_list)
+    return firms_list
+
+
+# Populate the list of firms with the XML data
+# @return the populated list
+def get_list_of_firms_from_xml(f_element, firmas_list):
+    ansprechpartner_list = []
+    for a_element in f_element.findall('ansprechpartner'):
+        ansprechpartner = Ansprechpartner(a_element.attrib['name'], a_element.find('anrede').text,
+                                          a_element.find('telefon').text, a_element.find('email').text,
+                                          "" if a_element.find('titel') is None else a_element.find(
+                                              'titel').text,
+                                          "" if a_element.find('funktion') is None else a_element.find(
+                                              'funktion').text,
+                                          "" if a_element.find('fax') is None else a_element.find('fax').text)
+        ansprechpartner_list.append(ansprechpartner)
+    firma = Firma(f_element.attrib['name'], f_element.find('branche').text, f_element.find('strasse_hnr').text,
+                  f_element.find('plz').text, f_element.find('ort').text, f_element.find('land').text,
+                  f_element.find('website').text, ansprechpartner_list, f_element.find('erfassungsdatum').text,
+                  "" if f_element.find('adresszusatz') is None else f_element.find('adresszusatz').text)
+    firmas_list.append(firma)
     return firmas_list
