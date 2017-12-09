@@ -3,8 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit a firm</title>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 </head>
 <body>
     <h1>Edit</h1>
+    <select id="firm_name">
+        <option>A firm</option>
+        <option>Another firm</option>
+    </select>
+    <form id="firm_form">
+        <label>Firmenname</label>
+        <input type="text" name="name" placeholder="Firmenname" required><br>
+        <label>Straße</label>
+        <input type="text" name="strasse_hnr" placeholder="Straße Hausnummer" required><br>
+        <label>Adresszusatz</label>
+        <input type="text" name="adresszusatz" placeholder="Adresszusatz" required><br>
+        <label>PLZ</label>
+        <input type="text" name="plz" placeholder="PLZ" required><br>
+        <label>Ort</label>
+        <input type="text" name="ort" placeholder="Ort" required><br>
+        <label>Website</label>
+        <input type="text" name="website" placeholder="Website" required><br>
+        <label>Erfassungsdatum</label>
+        <input type="text" name="erfassungsdatum" placeholder="datum" required><br>
+        <label>Land</label>
+        <input type="text" name="land" placeholder="Land" required><br>
+        <label>Branche</label>
+        <select name="branche">
+            <option>Kommunikation</option>
+            <option>Telekom</option>
+            <option>Software</option>
+            <option>N/A</option>
+        </select><br>
+    </form>
+    <h2>Ansprechpartner</h2>
+    <form class="ansprechpartner_form">
+        <label>Name</label><br>
+        <input type="text" name="name" placeholder="Name"><br>
+        <label>Anrede</label><br>
+        <input type="radio" name="anrede" value="Herr"> Herr<br>
+        <input type="radio" name="anrede" value="Frau"> Frau<br>
+        <label>Titel</label><br>
+        <input type="text" name="titel" placeholder="Titel"><br>
+        <label>Funktion</label><br>
+        <input type="text" name="funktion" placeholder="Funktion"><br>
+        <label>Email</label><br>
+        <input type="email" name="email" placeholder="Email"><br>
+        <label>Fax</label><br>
+        <input type="text" name="fax" placeholder="Fax"><br>
+        <label>Telefon</label><br>
+        <input type="text" name="telefon" placeholder="Telefon"><br>
+    </form>
+    <h2>Ansprechpartner</h2>
+    <form class="ansprechpartner_form">
+        <label>Name</label><br>
+        <input type="text" name="name" placeholder="Name"><br>
+        <label>Anrede</label><br>
+        <input type="radio" name="anrede" value="Herr"> Herr<br>
+        <input type="radio" name="anrede" value="Frau"> Frau<br>
+        <label>Titel</label><br>
+        <input type="text" name="titel" placeholder="Titel"><br>
+        <label>Funktion</label><br>
+        <input type="text" name="funktion" placeholder="Funktion"><br>
+        <label>Email</label><br>
+        <input type="email" name="email" placeholder="Email"><br>
+        <label>Fax</label><br>
+        <input type="text" name="fax" placeholder="Fax"><br>
+        <label>Telefon</label><br>
+        <input type="text" name="telefon" placeholder="Telefon"><br>
+    </form>
+    <h2>Ansprechpartner</h2>
+    <form class="ansprechpartner_form">
+        <label>Name</label><br>
+        <input type="text" name="name" placeholder="Name"><br>
+        <label>Anrede</label><br>
+        <input type="radio" name="anrede" value="Herr"> Herr<br>
+        <input type="radio" name="anrede" value="Frau"> Frau<br>
+        <label>Titel</label><br>
+        <input type="text" name="titel" placeholder="Titel"><br>
+        <label>Funktion</label><br>
+        <input type="text" name="funktion" placeholder="Funktion"><br>
+        <label>Email</label><br>
+        <input type="email" name="email" placeholder="Email"><br>
+        <label>Fax</label><br>
+        <input type="text" name="fax" placeholder="Fax"><br>
+        <label>Telefon</label><br>
+        <input type="text" name="telefon" placeholder="Telefon"><br>
+    </form>
+    <button id="create">Erstellen</button>
 </body>
+<script>
+    $( document ).ready(function() {
+        //populate select element with firms using ajax
+        $('select#firm_name').on('change', function (e) {
+            var optionSelected = $("option:selected", this);
+            var valueSelected = this.value;
+            //on select , use the json body to populate forms
+            //when populated, the functionality of creation can be used here
+        });
+    });
+</script>
 </html>

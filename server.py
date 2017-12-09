@@ -1,5 +1,5 @@
 from flask import Flask, Response, redirect, request, render_template
-from Service.json_requests import get_firm_by_name_json, get_title, get_firms_json
+from Service.json_requests import get_firms_by_name_json, get_title, get_firms_json
 from Service.firmen_service import create_firm, edit_firm
 
 app = Flask(__name__)
@@ -7,6 +7,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
+    if request.args.get('create') == "true":
+        return render_template('index.html', create={"test": "test"})
+    if request.args.get('edit') == "true":
+        return render_template('index.html', edit={"test": "test"})
     return render_template('index.html')
 
 
@@ -31,7 +35,7 @@ def create():
 def edit():
     content = request.get_json()
     edit_firm(content)
-    return "url"
+    return "OK", 200
 
 
 @app.route('/firms', methods=['GET'])
@@ -39,7 +43,7 @@ def get():
     query = request.args.get('query', '').lower()
     if query is '':
         return Response(get_firms_json(), status=200, mimetype="application/json")
-    return Response(get_firm_by_name_json(query), status=200, mimetype="application/json")
+    return Response(get_firms_by_name_json(query), status=200, mimetype="application/json")
 
 
 @app.route('/titles', methods=['GET'])

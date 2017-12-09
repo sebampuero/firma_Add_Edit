@@ -139,4 +139,4 @@
         </ansprechpartner>
         <erfassungsdatum>2011-07-07</erfassungsdatum>
     </firma>
-</firmenliste>
+<firma name="wer"><branche>Telekom</branche><strasse_hnr>wer</strasse_hnr><adresszusatz>wer</adresszusatz><plz>wer</plz><ort>wr</ort><land>wer</land><website>er</website><ansprechpartner name="wr"><anrede>Herr</anrede><titel>wer</titel><funktion>err</funktion><telefon>34</telefon><fax>re</fax><email>www</email></ansprechpartner><erfassungsdatum>er</erfassungsdatum></firma></firmenliste>

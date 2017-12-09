@@ -5,13 +5,13 @@ Module for retrieving objects in json format
 """
 import json
 from Entities.Ansprechpartner import Ansprechpartner
-from Service.firmen_service import get_firm_by_name, get_all_firms
+from Service.firmen_service import get_firms_by_name, get_all_firms
 
 
 # Retrieve a firm as json format by name
 # @return the firm in json format, if not found null is returned
-def get_firm_by_name_json(name):
-    firmas = get_firm_by_name(name)
+def get_firms_by_name_json(name):
+    firmas = get_firms_by_name(name)
     dict_list = []
     if len(firmas) != 0 and firmas is not None:
         for a_firma in firmas:

@@ -32,7 +32,7 @@ def create_firm(content):
 
 # Retrieve a firm from the list by name
 # @return the searched firm, None is returned when not found
-def get_firm_by_name(name):
+def get_firms_by_name(name):
     firms_elements = get_firms_from_xml()
     firmas_list = []
     for f_element in firms_elements:
