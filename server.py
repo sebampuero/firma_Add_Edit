@@ -24,14 +24,14 @@ def edit_template():
 def create():
     content = request.get_json()
     create_firm(content)
-    return redirect("/")
+    return "OK", 200
 
 
 @app.route('/firm/edit', methods=['PUT'])
 def edit():
     content = request.get_json()
     edit_firm(content)
-    return redirect("/")
+    return "url"
 
 
 @app.route('/firms', methods=['GET'])

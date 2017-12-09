@@ -6,6 +6,11 @@
 </head>
 <body>
     <h1>Hallo</h1>
+    {% if create %}
+        {{ create.test }}
+    {% elif edit %}
+        {{ edit.test }}
+    {% endif %}
     <a href="/create">Create</a> | <a href="/edit">Edit</a>
 </body>
 </html>
