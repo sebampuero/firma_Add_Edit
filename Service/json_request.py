@@ -13,7 +13,7 @@ from Service.firmen_service import get_firm_by_name
 def get_firm_json(name):
     firmas = get_firm_by_name(name)
     dict_list = []
-    if len(firmas) != 0:
+    if len(firmas) != 0 and firmas is not None:
         for a_firma in firmas:
             dict_list.append(a_firma.json())
         return json.dumps(dict_list)
