@@ -54,29 +54,6 @@
         <erfassungsdatum>2012-01-31</erfassungsdatum>
     </firma>
 
-    <firma name="A.M.M. Aktionszentrum Multi Media GmbH">
-        <branche>Multimedia</branche>
-        <strasse_hnr>August-Bebel-Str. 68</strasse_hnr>
-        <plz>14482</plz>
-        <ort>Potsdam</ort>
-        <land>DE</land>
-        <website>http://www.amm-gruppe.de</website>
-        <ansprechpartner name="Kathrin Schwarz">
-            <anrede>Frau</anrede>
-            <funktion>GF</funktion>
-            <telefon>0331 740 60 84</telefon>
-            <fax>740 60 85</fax>
-            <email>info@amm-gruppe.de</email>
-        </ansprechpartner>
-        <ansprechpartner name="Stefan Schwarz">
-            <anrede>Herr</anrede>
-            <telefon>0331 740 60 84</telefon>
-            <fax>740 60 85</fax>
-            <email>info@amm-gruppe.de</email>
-        </ansprechpartner>
-        <erfassungsdatum>2010-10-05</erfassungsdatum>
-    </firma>
-
     <firma name="Airbus Operations GmbH">
         <branche>Luftfahrt</branche>
         <strasse_hnr>L&#195;&#188;neburger Schanze 30</strasse_hnr>
@@ -107,36 +84,6 @@
             <email>berndstichling@bundeswehr.org</email>
         </ansprechpartner>
         <erfassungsdatum>2008-01-04</erfassungsdatum>
-    </firma>
-
-    <firma name="Andracor GmbH">
-        <branche>N/A</branche>
-        <strasse_hnr>Mertensstra&#195;&#376;e 127 - 131</strasse_hnr>
-        <plz>13587</plz>
-        <ort>Berlin</ort>
-        <land>DE</land>
-        <website>http://www.andracor.com</website>
-        <ansprechpartner name="Benjamin Leschnitzer">
-            <anrede>Herr</anrede>
-            <telefon>030 850 14 262</telefon>
-            <email>leschnitzer@andracor.com</email>
-        </ansprechpartner>
-        <erfassungsdatum>2011-07-07</erfassungsdatum>
-    </firma>
-
-    <firma name="ARC-GREENLAB GmbH">
-        <branche>Geoinformatik</branche>
-        <strasse_hnr>Eichenstra&#195;&#376;e 3b</strasse_hnr>
-        <plz>12435</plz>
-        <ort>Berlin</ort>
-        <land>DE</land>
-        <website>http://www.arc-greenlab.de</website>
-        <ansprechpartner name="Wieland Busse">
-            <anrede>Herr</anrede>
-            <telefon>030 762933331</telefon>
-            <email>busse.wieland@arc-greenlab.de</email>
-        </ansprechpartner>
-        <erfassungsdatum>2010-10-05</erfassungsdatum>
     </firma>
 
     <firma name="art-X Webargentur Berlin">

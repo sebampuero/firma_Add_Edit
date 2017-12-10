@@ -5,7 +5,7 @@
     <form id="firm_form">
         <div class="form-group">
             <label>Firmenname</label>
-            <input class="form-control" type="text" name="name" placeholder="Firmenname" required>
+            <input class="form-control" id="typeahead" type="text" name="name" placeholder="Firmenname" required>
         </div>
         <div class="form-group">
             <label>Straße</label>
@@ -29,7 +29,7 @@
         </div>
         <div class="form-group">
             <label>Erfassungsdatum</label>
-            <input class="form-control" type="text" name="erfassungsdatum" placeholder="datum" required>
+            <input class="form-control" type="date" name="erfassungsdatum" placeholder="datum" required>
         </div>
         <div class="form-group">
             <label>Land</label>
@@ -41,6 +41,15 @@
                 <option>Kommunikation</option>
                 <option>Telekom</option>
                 <option>Software</option>
+                <option>Multimedia</option>
+                <option>Luftfahrt</option>
+                <option>Verteidigung</option>
+                <option>Webdesign</option>
+                <option>WLAN</option>
+                <option>IT-Dienstleistung</option>
+                <option>Netzwerkmanagement</option>
+                <option>Digitalfunk</option>
+                <option>Verlag</option>
                 <option>N/A</option>
             </select>
         </div>
@@ -58,7 +67,7 @@
         </div>
         <div class="form-group">
             <label>Titel</label><br>
-            <input class="form-control" type="text" name="titel" placeholder="Titel">
+            <input class="form-control typeahead_title" type="text" name="titel" placeholder="Titel">
         </div>
         <div class="form-group">
             <label>Funktion</label><br>
@@ -91,7 +100,7 @@
         </div>
         <div class="form-group">
             <label>Titel</label><br>
-            <input class="form-control" type="text" name="titel" placeholder="Titel">
+            <input class="form-control typeahead_title" type="text" name="titel" placeholder="Titel">
         </div>
         <div class="form-group">
             <label>Funktion</label><br>
@@ -124,7 +133,7 @@
         </div>
         <div class="form-group">
             <label>Titel</label><br>
-            <input class="form-control" type="text" name="titel" placeholder="Titel">
+            <input class="form-control typeahead_title" type="text" name="titel" placeholder="Titel">
         </div>
         <div class="form-group">
             <label>Funktion</label><br>
@@ -192,4 +201,5 @@
 
 </script>
 <script src="{{ url_for('static', filename='js/parse_firm_object_from_form.js') }}"></script>
+<script src="{{ url_for('static', filename='js/typeahead_utils.js') }}"></script>
 {% endblock %}
