@@ -1,5 +1,4 @@
 click==6.7
-Django==2.0
 Flask==0.12.2
 gunicorn==19.7.1
 itsdangerous==0.24
@@ -7,10 +6,8 @@ Jinja2==2.10
 MarkupSafe==1.0
 olefile==0.44
 Pillow==4.3.0
-PyAutoGUI==0.9.36
 PyMsgBox==1.0.6
 PyScreeze==0.1.13
 PyTweening==1.0.3
 pytz==2017.3
-pywin32==221
 Werkzeug==0.12.2
