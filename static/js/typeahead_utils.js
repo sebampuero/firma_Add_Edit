@@ -6,12 +6,6 @@ var firm_names = new Bloodhound({
         wildcard: '%QUERY'
     }
 });
-//Select the Bloodhound object and display the data
-$('input#typeahead').typeahead(null,{
-    name: 'name',
-    display: 'name',
-    source: firm_names
-});
 
 var titles = new Bloodhound({
     queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -21,6 +15,14 @@ var titles = new Bloodhound({
         wildcard: '%QUERY'
     }
 });
+
+//Select the Bloodhound object and display the data
+$('input#typeahead').typeahead(null,{
+    name: 'name',
+    display: 'name',
+    source: firm_names
+});
+
 //Select the Bloodhound object and display the data
 $('input.typeahead_title').typeahead(null,{
     name: 'titel',

@@ -4,26 +4,62 @@ var ans_form_validation_rules = {
        anrede: 'required',
        email: {
             required: true,
-            email: true
+            email: true,
+            pattern: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
        },
-       telefon: 'required'
+       telefon: {
+            required: true,
+            pattern: /[0-9]*(\+49)*[ ]*(\([0-9]+\))*([ ]*(-|–)*[ ]*[0-9]+)*/
+
+       }
     },
     messages: {
         name: 'Name muss angegeben werden!',
         anrede: 'Anrede muss angegeben werden',
         email: {
             required: 'Eine Emailadresse muss angegeben werden',
-            email: 'Es muss eine gültige Adresse angegeben werden'
+            email: 'Es muss eine gültige Adresse angegeben werden',
+            pattern: 'Es muss eine gültige Adresse angegeben werden'
         },
-        telefon: 'Telefon ist Pflicht'
+        telefon: {
+            required: 'Eine Telefonnummer muss angegeben werden',
+            pattern: 'Ungültiges Format'
+        }
     }
 };
-var firm_form_validation_rules = {};
+var firm_form_validation_rules = {
+    rules: {
+        name: 'required',
+        strasse_hnr: 'required',
+        plz: 'required',
+        ort: 'required',
+        website: 'required',
+        erfassungsdatum: 'required',
+        land: {
+            required: true,
+            pattern: /(DE|CH|AU)/
+        },
+        branche: 'required'
+    },
+    messages: {
+        name: 'Name muss angegeben werden',
+        strasse_hnr: 'Eine Adresse muss angegeben werden',
+        plz: 'Eine Postleitzahl muss angegeben werden',
+        ort: 'Ein Ort muss angegeben werden',
+        website: 'Eine Website muss angegeben werden',
+        erfassungsdatum: 'Erfassungsdatum ist pflicht',
+        land: {
+            required: "Ein Land muss angegeben werden",
+            pattern: "Kein gültiges Format"
+        },
+        branche: 'Die Branche muss angegeben werden'
+    }
+};
 function parse_firm_obj_from_form(){
     var firm_obj = {};
     var validation_flag = true;
     var ansprechpartner_list = [];
-    $("form#firm_form").validate();
+    $("form#firm_form").validate(firm_form_validation_rules);
     if(!$("form#firm_form").valid()){
         validation_flag = false;
         return {flag: validation_flag};
