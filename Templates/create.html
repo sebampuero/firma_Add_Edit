@@ -183,19 +183,23 @@
         })
 
         $('button#submit_create').on('click',function(){
-            var firm_obj = parse_firm_obj_from_form();
-            $.ajax({
-                type: "POST",
-                url: "/firm/create",
-                data: JSON.stringify(firm_obj),
-                contentType: 'application/json',
-                dataType: 'json'
-            }).always(function(data){
-                if(data.status == 200)
-                    window.location.replace("/?create="+firm_obj.name);
-                else if(data.status == 500)
-                    alert('Etwas ist schiefgelaufen, bitte versuchen Sie später erneut.')
-            });
+            var result = parse_firm_obj_from_form();
+            if(result.flag){
+                $.ajax({
+                    type: "POST",
+                    url: "/firm/create",
+                    data: JSON.stringify(result.firm_obj),
+                    contentType: 'application/json',
+                    dataType: 'json'
+                    }).always(function(data){
+                    if(data.status == 200)
+                        window.location.replace("/?create="+result.firm_obj.name);
+                    else if(data.status == 500)
+                        alert('Etwas ist schiefgelaufen, bitte versuchen Sie später erneut.')
+                });
+            }else{
+                alert("Bitte prüfen Sie das Formular, es gibt Fehler.");
+            }
         });
     });
 
