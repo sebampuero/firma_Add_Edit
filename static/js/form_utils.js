@@ -94,7 +94,7 @@ function disable_ansprechpartner_form(){
     $('.ansprechpartner_form').each(function(index, form) {
         if($(this).hasClass('disabled')){
             for(var i=0; i<form.length; i++){
-                form[i].readOnly = true;
+                $(this).hide();
             }
         }
     });
@@ -103,7 +103,7 @@ function enable_ansprechpartner_form(){
     $('.ansprechpartner_form').each(function(index, form) {
         if($(this).hasClass('checked')){
             for(var i=0; i<form.length; i++){
-                form[i].readOnly = false;
+                $(this).show();
             }
         }
     });
