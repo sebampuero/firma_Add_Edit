@@ -46,7 +46,7 @@
         </div>
     </form>
     <h2>Ansprechpartner</h2>
-    <form class="ansprechpartner_form">
+    <form class="ansprechpartner_form checked">
         <div class="form-group">
             <label>Name</label><br>
             <input class="form-control" type="text" name="name" placeholder="Name" required>
@@ -77,8 +77,9 @@
             <input class="form-control" type="text" name="telefon" placeholder="Telefon" required>
         </div>
     </form>
+    <input type="checkbox" id="ansprechpartner1_checkbox">Ansprechpartner hinzufügen
     <h2>Ansprechpartner</h2>
-    <form class="ansprechpartner_form">
+    <form class="ansprechpartner_form disabled" id="ansprechpartner_form_1">
         <div class="form-group">
             <label>Name</label><br>
             <input class="form-control" type="text" name="name" placeholder="Name" required>
@@ -109,8 +110,9 @@
             <input class="form-control" type="text" name="telefon" placeholder="Telefon" required>
         </div>
     </form>
+    <input type="checkbox" id="ansprechpartner2_checkbox">Ansprechpartner hinzufügen
     <h2>Ansprechpartner</h2>
-    <form class="ansprechpartner_form">
+    <form class="ansprechpartner_form disabled" id="ansprechpartner_form_2">
         <div class="form-group">
             <label>Name</label><br>
             <input class="form-control" type="text" name="name" placeholder="Name" required>
@@ -144,22 +146,47 @@
     <button id="submit_create" class="btn btn-primary">Erstellen</button>
     <button id="cancel_submit" class="btn btn-danger" onclick="if(!confirm('Möchten Sie wirklick abbrechen?'))return false;else{window.location.replace('/')}">Abbrechen</button>
     </div>
-<script src="{{ url_for('static', filename='js/typeahead.js') }}"></script>
-<script type="application/javascript">
-    var firm_form = $("form#firm_form");
-    var firm_obj = {};
-    var ansprechpartner_list = [];
 
-    $('button#submit_create').on('click',function(){
-        firm_obj = parse_firm_obj_from_form();
-        $.ajax({
-            type: "POST",
-            url: "/firm/create",
-            data: JSON.stringify(firm_obj),
-            contentType: 'application/json',
-            dataType: 'json'
-        }).always(function(data){
-            window.location.replace("/?create=true");
+<script type="application/javascript">
+    $(function(){
+        disable_ansprechpartner_form();
+
+        $('input:checkbox#ansprechpartner1_checkbox').change(
+        function(){
+            if ($(this).is(':checked')) {
+                $('form#ansprechpartner_form_1').removeClass('disabled').addClass('checked');
+                enable_ansprechpartner_form();
+            }else{
+                $('form#ansprechpartner_form_1').removeClass('checked').addClass('disabled');
+                disable_ansprechpartner_form();
+            }
+        })
+
+        $('input:checkbox#ansprechpartner2_checkbox').change(
+        function(){
+            if ($(this).is(':checked')) {
+                $('form#ansprechpartner_form_2').removeClass('disabled').addClass('checked');
+                enable_ansprechpartner_form();
+            }else{
+                $('form#ansprechpartner_form_2').removeClass('checked').addClass('disabled');
+                disable_ansprechpartner_form();
+            }
+        })
+
+        $('button#submit_create').on('click',function(){
+            var firm_obj = parse_firm_obj_from_form();
+            $.ajax({
+                type: "POST",
+                url: "/firm/create",
+                data: JSON.stringify(firm_obj),
+                contentType: 'application/json',
+                dataType: 'json'
+            }).always(function(data){
+                if(data.status == 200)
+                    window.location.replace("/?create="+firm_obj.name);
+                else if(data.status == 500)
+                    alert('Etwas ist schiefgelaufen, bitte versuchen Sie später erneut.')
+            });
         });
     });
 

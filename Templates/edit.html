@@ -51,7 +51,7 @@
         </div>
     </form>
     <h2>Ansprechpartner</h2>
-    <form class="ansprechpartner_form">
+    <form class="ansprechpartner_form disabled">
         <div class="form-group">
             <label>Name</label><br>
             <input class="form-control" type="text" name="name" placeholder="Name" required>
@@ -82,8 +82,9 @@
             <input class="form-control" type="text" name="telefon" placeholder="Telefon" required>
         </div>
     </form>
+    <input type="checkbox" id="ansprechpartner1_checkbox">Ansprechpartner hinzufügen
     <h2>Ansprechpartner</h2>
-    <form class="ansprechpartner_form">
+    <form class="ansprechpartner_form disabled" id="ansprechpartner_form_1">
         <div class="form-group">
             <label>Name</label><br>
             <input class="form-control" type="text" name="name" placeholder="Name" required>
@@ -114,8 +115,9 @@
             <input class="form-control" type="text" name="telefon" placeholder="Telefon" required>
         </div>
     </form>
+    <input type="checkbox" id="ansprechpartner2_checkbox">Ansprechpartner hinzufügen
     <h2>Ansprechpartner</h2>
-    <form class="ansprechpartner_form">
+    <form class="ansprechpartner_form disabled" id="ansprechpartner_form_2">
         <div class="form-group">
             <label>Name</label><br>
             <input class="form-control" type="text" name="name" placeholder="Name" required>
@@ -152,48 +154,76 @@
 <script src="{{ url_for('static', filename='js/populate.js') }}"></script>
 <script src="{{ url_for('static', filename='js/typeahead.js') }}"></script>
 <script>
-    var firm_obj = {};
-    var ansprechpartner_list = [];
-    var firms_list = [];
-    var firm_form = $("form#firm_form");
-    var list_of_ans_forms = $('.ansprechpartner_form');
+    $(function(){
+        var firms_list = [];
 
-    $.get( "/firms", function( firms ) {
-        firms_list = Object.assign(firms);
-        $('select#firm_name').empty();
-        $.each(firms,function(index,firm){
-            $('select#firm_name').append($('<option>').text(firm.name).attr('value',index));
-        });
-    });
+        disable_ansprechpartner_form();
 
-    $('select#firm_name').on('change', function (e) {
-        firm_form[0].reset();
-        $.each(list_of_ans_forms,function(){
-           $(this)[0].reset();
+        $.get( "/firms", function( firms ) {
+            firms_list = Object.assign(firms);
+            $('select#firm_name').empty();
+            $.each(firms,function(index,firm){
+                $('select#firm_name').append($('<option>').text(firm.name).attr('value',index));
+            });
         });
-        var value_selected = this.value;
-        $.each(firms_list,function(index,firm){
-            if(index == value_selected){
-                for(var i=0; i<firm.ansprechpartner.length; i++){
-                    $(list_of_ans_forms[i]).populate(firm.ansprechpartner[i]);
+
+        $('select#firm_name').on('change', function (e) {
+            $("form#firm_form")[0].reset();
+            $.each($('.ansprechpartner_form'),function(){
+                $(this).addClass('disabled').removeClass('checked');
+                disable_ansprechpartner_form();
+                $(this)[0].reset();
+            });
+            var value_selected = this.value;
+            $.each(firms_list,function(index,firm){
+                if(index == value_selected){
+                    for(var i=0; i<firm.ansprechpartner.length; i++){
+                        $($('.ansprechpartner_form')[i]).addClass('checked').populate(firm.ansprechpartner[i]);
+                        enable_ansprechpartner_form();
+                    }
+                    var temp_firm = jQuery.extend({}, firm);
+                    delete temp_firm.ansprechpartner;
+                    $("form#firm_form").populate(temp_firm);
                 }
-                var temp_firm = jQuery.extend({}, firm);
-                delete temp_firm.ansprechpartner;
-                firm_form.populate(temp_firm);
-            }
+            });
         });
-    });
 
-    $('button#submit_edit').on('click',function(){
-        firm_obj = parse_firm_obj_from_form();
-        $.ajax({
-            type: "PUT",
-            url: "/firm/edit",
-            data: JSON.stringify(firm_obj),
-            contentType: 'application/json',
-            dataType: 'json'
-        }).always(function(data){
-            window.location.replace("/?edit=true");
+        $('input:checkbox#ansprechpartner1_checkbox').change(
+        function(){
+            if ($(this).is(':checked')) {
+                $('form#ansprechpartner_form_1').removeClass('disabled').addClass('checked');
+                enable_ansprechpartner_form();
+            }else{
+                $('form#ansprechpartner_form_1').removeClass('checked').addClass('disabled');
+                disable_ansprechpartner_form();
+            }
+        })
+
+        $('input:checkbox#ansprechpartner2_checkbox').change(
+        function(){
+            if ($(this).is(':checked')) {
+                $('form#ansprechpartner_form_2').removeClass('disabled').addClass('checked');
+                enable_ansprechpartner_form();
+            }else{
+                $('form#ansprechpartner_form_2').removeClass('checked').addClass('disabled');
+                disable_ansprechpartner_form();
+            }
+        })
+
+        $('button#submit_edit').on('click',function(){
+            var firm_obj = parse_firm_obj_from_form();
+            $.ajax({
+                type: "PUT",
+                url: "/firm/edit",
+                data: JSON.stringify(firm_obj),
+                contentType: 'application/json',
+                dataType: 'json'
+            }).always(function(data){
+                if(data.status == 200)
+                    window.location.replace("/?edit="+firm_obj.name);
+                else if(data.status == 500)
+                    alert('Etwas ist schiefgelaufen, bitte versuchen Sie später erneut.')
+            });
         });
     });
 </script>

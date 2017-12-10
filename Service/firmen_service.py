@@ -12,22 +12,27 @@ from Service.xml_parser import get_firms_from_xml, insert_firm, delete_firm
 def edit_firm(content):
     firma_dict = content
     delete_firm(firma_dict['name'].lower())
-    create_firm(content)
+    status, code = create_firm(content)
+    return status, code
 
 
 # Insert a new firm
 def create_firm(content):
-    firma_dict = content
-    ansprechpartner_list = []
-    for ans in firma_dict['ansprechpartner']:
-        ansprechpartner = Ansprechpartner(ans['name'], ans['anrede'], ans['telefon'], ans['email'], ans['titel'],
-                                          ans['funktion'], ans['fax'])
-        ansprechpartner_list.append(ansprechpartner)
-    firma = Firma(firma_dict['name'], firma_dict['branche'], firma_dict['strasse_hnr'], firma_dict['plz'],
-                  firma_dict['ort'],
-                  firma_dict['land'], firma_dict['website'], ansprechpartner_list, firma_dict['erfassungsdatum'],
-                  firma_dict['adresszusatz'])
-    insert_firm(firma)
+    try:
+        firma_dict = content
+        ansprechpartner_list = []
+        for ans in firma_dict['ansprechpartner']:
+            ansprechpartner = Ansprechpartner(ans['name'], ans['anrede'], ans['telefon'], ans['email'], ans['titel'],
+                                              ans['funktion'], ans['fax'])
+            ansprechpartner_list.append(ansprechpartner)
+        firma = Firma(firma_dict['name'], firma_dict['branche'], firma_dict['strasse_hnr'], firma_dict['plz'],
+                      firma_dict['ort'],
+                      firma_dict['land'], firma_dict['website'], ansprechpartner_list, firma_dict['erfassungsdatum'],
+                      firma_dict['adresszusatz'])
+        insert_firm(firma)
+        return "ok", 200
+    except:
+        return "error", 500
 
 
 # Retrieve a firm from the list by name

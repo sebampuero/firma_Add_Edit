@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
+    <meta id="edited" data-status="{{edit}}">
+    <meta id="created" data-status="{{create}}">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
@@ -13,4 +15,15 @@
             </div>
         </div>
     </div>
+    <script>
+        $(function(){
+            if($('#edited').data().status == "" && $('#created').data().status == ""){
+                //do nothing
+            }else if($('#edited').data().status != ""){
+                alert("Firma "+ $('#edited').data().status +" wurde erfolgreich bearbeitet");
+            }else if($('#created').data() != ""){
+                alert("Firma "+ $('#created').data().status +" wurde erfolgreich erstellt");
+            }
+        });
+    </script>
 {% endblock %}

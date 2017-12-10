@@ -7,10 +7,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    if request.args.get('create') == "true":
-        return render_template('index.html', create={"created": "true"})
-    if request.args.get('edit') == "true":
-        return render_template('index.html', edit={"edited": "true"})
+    if request.args.get('create', '') != "":
+        return render_template('index.html', create=request.args.get('create'))
+    if request.args.get('edit', '') != "":
+        return render_template('index.html', edit=request.args.get('edit'))
     return render_template('index.html')
 
 
@@ -27,15 +27,21 @@ def edit_template():
 @app.route('/firm/create', methods=['POST'])
 def create():
     content = request.get_json()
-    create_firm(content)
-    return "OK", 200
+    status, code = create_firm(content)
+    if status == "ok" and code == 200:
+        return status, code
+    else:
+        return status, code
 
 
 @app.route('/firm/edit', methods=['PUT'])
 def edit():
     content = request.get_json()
-    edit_firm(content)
-    return "OK", 200
+    status, code = edit_firm(content)
+    if status == "ok" and code == 200:
+        return status, code
+    else:
+        return status, code
 
 
 @app.route('/firms', methods=['GET'])
