@@ -124,19 +124,4 @@
         </ansprechpartner>
         <erfassungsdatum>2012-05-29</erfassungsdatum>
     </firma>
-
-    <firma name="Andracor GmbH">
-        <branche>N/A</branche>
-        <strasse_hnr>Mertensstra&#195;&#402;&#197;&#184;e 127 - 131</strasse_hnr>
-        <plz>13587</plz>
-        <ort>Berlin</ort>
-        <land>DE</land>
-        <website>http://www.andracor.com</website>
-        <ansprechpartner name="Benjamin Leschnitzer">
-            <anrede>Herr</anrede>
-            <telefon>030 850 14 262</telefon>
-            <email>leschnitzer@andracor.com</email>
-        </ansprechpartner>
-        <erfassungsdatum>2011-07-07</erfassungsdatum>
-    </firma>
-<firma name="wer"><branche>Telekom</branche><strasse_hnr>wer</strasse_hnr><adresszusatz>wer</adresszusatz><plz>wer</plz><ort>wr</ort><land>wer</land><website>er</website><ansprechpartner name="wr"><anrede>Herr</anrede><titel>wer</titel><funktion>err</funktion><telefon>34</telefon><fax>re</fax><email>www</email></ansprechpartner><erfassungsdatum>er</erfassungsdatum></firma></firmenliste>
+</firmenliste>

@@ -91,28 +91,14 @@
     </form>
     <button id="create">Erstellen</button>
 </body>
+<script src="{{ url_for('static', filename='js/typeahead.js') }}"></script>
 <script type="application/javascript">
     var firm_form = $("form#firm_form");
     var firm_obj = {};
     var ans = [];
+
     $('button#create').on('click',function(){
-        $.each(firm_form.serializeArray(),function(index,element){
-            firm_obj[element.name] = element.value;
-        });
-        $('.ansprechpartner_form').each(function(index, form) {
-            var ans_obj = {}
-            if(form[0].value != ""){
-                $.each(form,function(i,data){
-                    if(form[i].type == "radio" && form[i].checked){
-                        ans_obj[form[i].name] = form[i].value;
-                    }else if(form[i].type != "radio"){
-                        ans_obj[form[i].name] = form[i].value;
-                    }
-                });
-                ans.push(ans_obj);
-            }
-        });
-        firm_obj['ansprechpartner'] = ans;
+        firm_obj = parse_firm_obj_from_form();
         $.ajax({
             type: "POST",
             url: "/firm/create",
@@ -123,5 +109,7 @@
             window.location.replace("/?create=true");
         });
     });
+
 </script>
+<script src="{{ url_for('static', filename='js/parse_firm_object_from_form.js') }}"></script>
 </html>

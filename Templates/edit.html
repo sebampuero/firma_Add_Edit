@@ -95,15 +95,51 @@
     </form>
     <button id="create">Erstellen</button>
 </body>
+<script src="{{ url_for('static', filename='js/populate.js') }}"></script>
+<script src="{{ url_for('static', filename='js/typeahead.js') }}"></script>
 <script>
-    $( document ).ready(function() {
-        //populate select element with firms using ajax
-        $('select#firm_name').on('change', function (e) {
-            var optionSelected = $("option:selected", this);
-            var valueSelected = this.value;
-            //on select , use the json body to populate forms
-            //when populated, the functionality of creation can be used here
+    var firm_obj = {};
+    var ans = [];
+    var firms_list = [];
+            var firm_form = $("form#firm_form");
+            var list_of_ans_forms = $('.ansprechpartner_form');
+            $.get( "/firms", function( firms ) {
+                firms_list = Object.assign(firms);
+                $('select#firm_name').empty();
+                $.each(firms,function(index,firm){
+                    $('select#firm_name').append($('<option>').text(firm.name).attr('value',index));
+                });
+            });
+            $('select#firm_name').on('change', function (e) {
+                firm_form[0].reset();
+                $.each(list_of_ans_forms,function(){
+                   $(this)[0].reset();
+                });
+                var value_selected = this.value;
+                $.each(firms_list,function(index,firm){
+                    if(index == value_selected){
+                        for(var i=0; i<firm.ansprechpartner.length; i++){
+                            $(list_of_ans_forms[i]).populate(firm.ansprechpartner[i]);
+                        }
+                        var temp_firm = jQuery.extend({}, firm);
+                        delete temp_firm.ansprechpartner;
+                        firm_form.populate(temp_firm);
+                    }
+                });
+            });
+    $('button#create').on('click',function(){
+        firm_obj = parse_firm_obj_from_form();
+        $.ajax({
+            type: "PUT",
+            url: "/firm/edit",
+            data: JSON.stringify(firm_obj),
+            contentType: 'application/json',
+            dataType: 'json'
+        }).always(function(data){
+            window.location.replace("/?edit=true");
         });
     });
 </script>
+<script src="{{ url_for('static', filename='js/parse_firm_object_from_form.js') }}"></script>
 </html>
+
