@@ -8,9 +8,9 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     if request.args.get('create') == "true":
-        return render_template('index.html', create={"test": "test"})
+        return render_template('index.html', create={"created": "true"})
     if request.args.get('edit') == "true":
-        return render_template('index.html', edit={"test": "test"})
+        return render_template('index.html', edit={"edited": "true"})
     return render_template('index.html')
 
 
