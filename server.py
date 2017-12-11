@@ -1,5 +1,5 @@
 from flask import Flask, Response, redirect, request, render_template
-from Service.json_requests import get_firms_by_name_json, get_title, get_firms_json
+from Service.json_requests import get_firms_by_name_json, get_title_json, get_firms_json, get_branches_json
 from Service.firmen_service import create_firm, edit_firm
 
 app = Flask(__name__)
@@ -57,7 +57,12 @@ def get_a_title():
     query = request.args.get('query', '').lower()
     if query is '':
         return Response(status=400)
-    return Response(get_title(query), status=200, mimetype="application/json")
+    return Response(get_title_json(query), status=200, mimetype="application/json")
+
+
+@app.route('/branch', methods=['GET'])
+def get_branches():
+    return Response(get_branches_json(), status=200, mimetype="application/json")
 
 
 if __name__ == "__main__":

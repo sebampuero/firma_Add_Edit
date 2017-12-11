@@ -95,7 +95,6 @@ jQuery.fn.populate = function(obj, options) {
 			// check that the named element exists in the form
 				var name	= getElementName(name); // handle non-php naming
 				var element	= form[name];
-
 			// if the form element doesn't exist, check if there is a tag with that id
 				if(element == undefined)
 				{

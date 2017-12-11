@@ -56,16 +56,23 @@ def get_all_firms():
     return firms_list
 
 
+# Retrieve a list of branchs
+# @return the list of branchs
+def get_firm_branchs():
+    firms = get_all_firms()
+    branchs_list = []
+    for a_firm in firms:
+        branchs_list.append(a_firm.branche)
+    return list(set(branchs_list))
+
+
 # Populate the list of firms with the XML data
 # @return the populated list
 def get_list_of_firms_from_xml(f_element, firmas_list):
     ansprechpartner_list = []
     for a_element in f_element.findall('ansprechpartner'):
-        telefon_list = []
-        for telefon in a_element.findall('telefon'):
-            telefon_list.append(telefon.text)
         ansprechpartner = Ansprechpartner(a_element.attrib['name'], a_element.find('anrede').text,
-                                          telefon_list, a_element.find('email').text,
+                                          a_element.find('telefon').text, a_element.find('email').text,
                                           "" if a_element.find('titel') is None else a_element.find(
                                               'titel').text,
                                           "" if a_element.find('funktion') is None else a_element.find(

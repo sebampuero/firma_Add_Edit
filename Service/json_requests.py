@@ -5,7 +5,7 @@ Module for retrieving objects in json format
 """
 import json
 from Entities.Ansprechpartner import Ansprechpartner
-from Service.firmen_service import get_firms_by_name, get_all_firms
+from Service.firmen_service import get_firms_by_name, get_all_firms, get_firm_branchs
 
 
 # Retrieve a firm as json format by name
@@ -36,7 +36,7 @@ def get_firms_json():
 
 # Retrive a list of titles in json format
 # @return a list of titles in json format
-def get_title(title):
+def get_title_json(title):
     titles = Ansprechpartner.title_list
     titles_list = []
     for a_title in titles:
@@ -46,3 +46,11 @@ def get_title(title):
     if len(titles_list) == 0:
         return "{}"
     return json.dumps(titles_list)
+
+
+# Return the list of branches in json format
+# @return the list of branches in json format
+def get_branches_json():
+    branches = get_firm_branchs()
+    branch_dict = {'branches': branches}
+    return json.dumps(branch_dict)

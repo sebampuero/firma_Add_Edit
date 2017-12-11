@@ -33,7 +33,10 @@ var firm_form_validation_rules = {
         strasse_hnr: 'required',
         plz: 'required',
         ort: 'required',
-        website: 'required',
+        website: {
+            required: true,
+            pattern: /^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+\.[a-z]+(\/[a-zA-Z0-9#]+\/?)*$/
+        },
         erfassungsdatum: 'required',
         land: {
             required: true,
@@ -46,7 +49,10 @@ var firm_form_validation_rules = {
         strasse_hnr: 'Eine Adresse muss angegeben werden',
         plz: 'Eine Postleitzahl muss angegeben werden',
         ort: 'Ein Ort muss angegeben werden',
-        website: 'Eine Website muss angegeben werden',
+        website: {
+            required: 'Eine Website muss angegeben werden',
+            pattern: 'Es muss eine gültige Adresse angegeben werden'
+        },
         erfassungsdatum: 'Erfassungsdatum ist pflicht',
         land: {
             required: "Ein Land muss angegeben werden",
@@ -132,3 +138,4 @@ function enable_disable_ans_form_2(){
         disable_ansprechpartner_form();
     }
 }
+
