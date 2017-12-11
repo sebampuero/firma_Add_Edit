@@ -114,6 +114,88 @@ function enable_ansprechpartner_form(){
         }
     });
 }
+
+function PLZ_validation(){
+
+  $('select.selectland').on('change', function() {
+
+    switch ($(this).val()) {
+     case 'DE':
+        $('.plz').blur(function(){
+          if(/(^\d{5}$)/i.test($(this).val())){
+
+            $('.plz~i').fadeIn();
+            $('.plz~i').addClass('fa-check');
+            $('.plz~i').removeClass('fa-close');
+            $('.plz').css('border-bottom','1px solid #00c4ff');
+            $('.plz~i').css('background-color','#00c4ff');
+
+          }
+          else{
+            $('.plz~i').fadeIn();
+            $('.plz~i').removeClass('fa-check');
+            $('.plz~i').addClass('fa-close');
+            $('.plz').css('border-bottom','1px solid red');
+            $('.plz~i').css('background-color','red');
+
+
+        }
+        })
+
+        break;
+    case "CH":
+        $('.plz').blur(function(){
+          if(/(^\d{4}$)/i.test($(this).val())){
+
+            $('.plz~i').fadeIn();
+            $('.plz~i').addClass('fa-check');
+            $('.plz~i').removeClass('fa-close');
+            $('.plz').css('border-bottom','1px solid #00c4ff');
+            $('.plz~i').css('background-color','#00c4ff');
+
+          }
+          else{
+            $('.plz~i').fadeIn();
+            $('.plz~i').removeClass('fa-check');
+            $('.plz~i').addClass('fa-close');
+            $('.plz').css('border-bottom','1px solid red');
+            $('.plz~i').css('background-color','red');
+
+
+        }
+        })
+
+            break;
+        case "AT":
+        $('.plz').blur(function(){
+
+          if(/(^\d{4}$)|(^\d{4}-\d{4}$)/i.test($(this).val())){
+
+            $('.plz~i').fadeIn();
+            $('.plz~i').addClass('fa-check');
+            $('.plz~i').removeClass('fa-close');
+            $('.plz').css('border-bottom','1px solid #00c4ff');
+            $('.plz~i').css('background-color','#00c4ff');
+
+          }
+          else{
+            $('.plz~i').fadeIn();
+            $('.plz~i').removeClass('fa-check');
+            $('.plz~i').addClass('fa-close');
+            $('.plz').css('border-bottom','1px solid red');
+            $('.plz~i').css('background-color','red');
+
+
+        }
+            })
+            break;
+
+    }
+
+  })
+
+
+}
 function enable_disable_ans_form_1(){
     if ($(this).is(':checked')) {
         $('form#ansprechpartner_form_1').removeClass('disabled').addClass('checked');
