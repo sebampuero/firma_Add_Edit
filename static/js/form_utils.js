@@ -37,7 +37,7 @@ var firm_form_validation_rules = {
         erfassungsdatum: 'required',
         land: {
             required: true,
-            pattern: /(DE|CH|AU)/
+            pattern: /(DE|CH|AT)/
         },
         branche: 'required'
     },

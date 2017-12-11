@@ -45,7 +45,7 @@
             <select name="land" class="form-control">
                 <option>DE</option>
                 <option>CH</option>
-                <option>AU</option>
+                <option>AT</option>
             </select>
             <small class="form-text text-muted">Pflichtfeld</small>
         </div>
@@ -210,6 +210,7 @@
             $('button#submit_edit').removeAttr('disabled');
             $.each($('input.checkbox_ansprechpartner'),function(){
                 $(this).removeAttr("disabled");
+                $(this).prop('checked',false);
             });
             $.each($('.ansprechpartner_form'),function(){
                 $(this).addClass('disabled').removeClass('checked');
