@@ -141,21 +141,6 @@
         <erfassungsdatum>2011-07-07</erfassungsdatum>
     </firma>
 
-    <firma name="ARC-GREENLAB GmbH">
-        <branche>Geoinformatik</branche>
-        <strasse_hnr>Eichenstra&#195;&#376;e 3b</strasse_hnr>
-        <plz>12435</plz>
-        <ort>Berlin</ort>
-        <land>DE</land>
-        <website>http://www.arc-greenlab.de</website>
-        <ansprechpartner name="Wieland Busse">
-            <anrede>Herr</anrede>
-            <telefon>030 762933331</telefon>
-            <email>busse.wieland@arc-greenlab.de</email>
-        </ansprechpartner>
-        <erfassungsdatum>2010-10-05</erfassungsdatum>
-    </firma>
-
     <firma name="art-X Webargentur Berlin">
         <branche>Webdesign</branche>
         <strasse_hnr>Choriner Str. 78</strasse_hnr>
@@ -3524,4 +3509,4 @@
         <erfassungsdatum>2003-02-04</erfassungsdatum>
     </firma>
 
-<firma name="werer"><branche>Software</branche><strasse_hnr>Schillerallee 1, Zimmer 107</strasse_hnr><adresszusatz>Zimmer 107</adresszusatz><plz>15745</plz><ort>Wildau</ort><land>DE</land><website>sdff</website><ansprechpartner name="roberto"><anrede>Frau</anrede><titel>M.Sc.</titel><telefon>123456</telefon><email>juan@com.com</email></ansprechpartner><erfassungsdatum>2017-12-02</erfassungsdatum></firma><firma name="SATCON GmbH"><branche>Software</branche><strasse_hnr>Warthestr. 21</strasse_hnr><plz>14513</plz><ort>Teltow</ort><land>DE</land><website>http://www.satcon-de.com</website><ansprechpartner name="Renate Kirchhoff"><anrede>Herr</anrede><titel>Dipl.-Wirt.-Inf. (FH)</titel><funktion>GF</funktion><telefon>03328 430 111</telefon><fax>430 112</fax><email>kirchhoff@satcon-de.com</email></ansprechpartner><erfassungsdatum>2002-06-06</erfassungsdatum></firma></firmenliste>
+<firma name="werer"><branche>Software</branche><strasse_hnr>Schillerallee 1, Zimmer 107</strasse_hnr><adresszusatz>Zimmer 107</adresszusatz><plz>15745</plz><ort>Wildau</ort><land>DE</land><website>sdff</website><ansprechpartner name="roberto"><anrede>Frau</anrede><titel>M.Sc.</titel><telefon>123456</telefon><email>juan@com.com</email></ansprechpartner><erfassungsdatum>2017-12-02</erfassungsdatum></firma><firma name="SATCON GmbH"><branche>Software</branche><strasse_hnr>Warthestr. 21</strasse_hnr><plz>14513</plz><ort>Teltow</ort><land>DE</land><website>http://www.satcon-de.com</website><ansprechpartner name="Renate Kirchhoff"><anrede>Herr</anrede><titel>Dipl.-Wirt.-Inf. (FH)</titel><funktion>GF</funktion><telefon>03328 430 111</telefon><fax>430 112</fax><email>kirchhoff@satcon-de.com</email></ansprechpartner><erfassungsdatum>2002-06-06</erfassungsdatum></firma><firma name="ARC-GREENLAB GmbH"><branche>Software</branche><strasse_hnr>Eichenstra&#195;&#376;e 3b</strasse_hnr><plz>12435</plz><ort>Berlin</ort><land>DE</land><website>http://www.arc-greenlab.de</website><ansprechpartner name="Wieland Busse"><anrede>Herr</anrede><titel>M.Eng.</titel><telefon>030 762933331</telefon><email>busse.wieland@arc-greenlab.de</email></ansprechpartner><erfassungsdatum>2010-10-05</erfassungsdatum></firma></firmenliste>
