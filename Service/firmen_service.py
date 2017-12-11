@@ -61,8 +61,11 @@ def get_all_firms():
 def get_list_of_firms_from_xml(f_element, firmas_list):
     ansprechpartner_list = []
     for a_element in f_element.findall('ansprechpartner'):
+        telefon_list = []
+        for telefon in a_element.findall('telefon'):
+            telefon_list.append(telefon.text)
         ansprechpartner = Ansprechpartner(a_element.attrib['name'], a_element.find('anrede').text,
-                                          a_element.find('telefon').text, a_element.find('email').text,
+                                          telefon_list, a_element.find('email').text,
                                           "" if a_element.find('titel') is None else a_element.find(
                                               'titel').text,
                                           "" if a_element.find('funktion') is None else a_element.find(

@@ -32,7 +32,7 @@
             <xs:element name='anrede' type='xs:string'/>
             <xs:element name='titel' type='xs:string' minOccurs='0'/>
             <xs:element name='funktion' type='xs:string' minOccurs='0'/>
-            <xs:element name='telefon' type='xs:string'/>
+            <xs:element name='telefon' type='xs:string' maxOccurs="4"/>
             <xs:element name='fax' type='xs:string' minOccurs='0'/>
             <xs:element name='email' type='emailAdresse'/>
         </xs:sequence>

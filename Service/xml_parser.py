@@ -53,7 +53,8 @@ def insert_firm(firma):
                 ET.SubElement(ansprechpartner_element, 'titel').text = ans.titel
             if ans.funktion != "":
                 ET.SubElement(ansprechpartner_element, 'funktion').text = ans.funktion
-            ET.SubElement(ansprechpartner_element, 'telefon').text = ans.telefon
+            for telefon in ans.telefon:
+                ET.SubElement(ansprechpartner_element, 'telefon').text = telefon
             if ans.fax != "":
                 ET.SubElement(ansprechpartner_element, 'fax').text = ans.fax
             ET.SubElement(ansprechpartner_element, 'email').text = ans.email
