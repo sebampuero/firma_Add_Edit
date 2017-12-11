@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="container">
-        <h1 style="text-align:center;">Eine Firma erstellen</h1>
+        <div class="main-wrapper">
+            <h1 style="text-align:center;">Eine Firma erstellen</h1>
     <form id="firm_form">
         <div class="form-group">
             <label>Firmenname</label>
@@ -15,7 +16,7 @@
         </div>
         <div class="form-group">
             <label>Adresszusatz</label>
-            <input class="form-control" type="text" name="adresszusatz" placeholder="Adresszusatz" required>
+            <input class="form-control" type="text" name="adresszusatz" placeholder="Adresszusatz">
         </div>
         <div class="form-group">
             <label>PLZ</label>
@@ -39,14 +40,19 @@
         </div>
         <div class="form-group">
             <label>Land</label>
-            <input class="form-control" type="text" name="land" placeholder="Land" required>
+            <select name="land" class="form-control">
+                <option>DE</option>
+                <option>CH</option>
+                <option>AU</option>
+            </select>
             <small class="form-text text-muted">Pflichtfeld</small>
         </div>
         <div class="form-group">
             <label>Branche</label>
             <select name="branche" class="form-control">
                 <option>Kommunikation</option>
-                <option>Telekom</option>
+                <option>Telekommunikation</option>
+                <option>Kommunikationstechnik</option>
                 <option>Software</option>
                 <option>Multimedia</option>
                 <option>Luftfahrt</option>
@@ -98,7 +104,8 @@
             <small class="form-text text-muted">Pflichtfeld</small>
         </div>
     </form>
-    <input type="checkbox" class="checkbox_ansprechpartner" id="ansprechpartner1_checkbox">Ansprechpartner hinzufügen
+    <small class="form-text text-muted">Es muss mindestens ein Ansprechpartner geben , maximal 3</small>
+    <input type="checkbox" class="checkbox_ansprechpartner" id="ansprechpartner1_checkbox">Ansprechpartner hinzufügen<br>
     <input type="checkbox" class="checkbox_ansprechpartner" id="ansprechpartner2_checkbox">Ansprechpartner hinzufügen
     <form class="ansprechpartner_form disabled" id="ansprechpartner_form_1">
          <h4>Ansprechpartner</h4>
@@ -178,33 +185,15 @@
             <button id="cancel_submit" class="btn btn-danger" onclick="if(!confirm('Möchten Sie wirklick abbrechen?'))return false;else{window.location.replace('/')}">Abbrechen</button>
         </div>
     </div><br>
+        </div>
     </div>
 
 <script type="application/javascript">
     $(function(){
         disable_ansprechpartner_form();
 
-        $('input:checkbox#ansprechpartner1_checkbox').change(
-        function(){
-            if ($(this).is(':checked')) {
-                $('form#ansprechpartner_form_1').removeClass('disabled').addClass('checked');
-                enable_ansprechpartner_form();
-            }else{
-                $('form#ansprechpartner_form_1').removeClass('checked').addClass('disabled');
-                disable_ansprechpartner_form();
-            }
-        })
-
-        $('input:checkbox#ansprechpartner2_checkbox').change(
-        function(){
-            if ($(this).is(':checked')) {
-                $('form#ansprechpartner_form_2').removeClass('disabled').addClass('checked');
-                enable_ansprechpartner_form();
-            }else{
-                $('form#ansprechpartner_form_2').removeClass('checked').addClass('disabled');
-                disable_ansprechpartner_form();
-            }
-        })
+        $('input:checkbox#ansprechpartner1_checkbox').change(enable_disable_ans_form_1);
+        $('input:checkbox#ansprechpartner2_checkbox').change(enable_disable_ans_form_2);
 
         $('button#submit_create').on('click',function(){
             var result = parse_firm_obj_from_form();

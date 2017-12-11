@@ -42,6 +42,13 @@
 .tt-suggestion p {
     margin: 0;
 }
+.main-wrapper{
+    width: 80%;
+    margin: 0 auto;
+    padding: 10%;
+    background-color: #d8d8d8;
+    border-radius: 10px;
+}
 .error{
 	color:red;
 }

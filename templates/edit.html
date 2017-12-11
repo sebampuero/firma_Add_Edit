@@ -1,11 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="container">
-        <h1 style="text-align:center;">Eine vorhandene Firma bearbeiten</h1>
+        <div class="main-wrapper">
+            <h1 style="text-align:center;">Eine vorhandene Firma bearbeiten</h1>
     <label>Firma auswählen</label>
     <select id="firm_name" class="form-control">
-        <option>A firm</option>
-        <option>Another firm</option>
     </select>
     <form id="firm_form" style="display:none;">
         <div class="form-group">
@@ -43,14 +42,19 @@
         </div>
         <div class="form-group">
             <label>Land</label>
-            <input class="form-control" type="text" name="land" placeholder="Land" required>
+            <select name="land" class="form-control">
+                <option>DE</option>
+                <option>CH</option>
+                <option>AU</option>
+            </select>
             <small class="form-text text-muted">Pflichtfeld</small>
         </div>
         <div class="form-group">
             <label>Branche</label>
             <select name="branche" class="form-control">
                 <option>Kommunikation</option>
-                <option>Telekom</option>
+                <option>Telekommunikation</option>
+                <option>Kommunikationstechnik</option>
                 <option>Software</option>
                 <option>Multimedia</option>
                 <option>Luftfahrt</option>
@@ -102,7 +106,8 @@
             <small class="form-text text-muted">Pflichtfeld</small>
         </div>
     </form>
-    <input disabled type="checkbox" class="checkbox_ansprechpartner" id="ansprechpartner1_checkbox">Ansprechpartner hinzufügen
+    <small class="form-text text-muted">Es muss mindestens ein Ansprechpartner geben , maximal 3</small>
+    <input disabled type="checkbox" class="checkbox_ansprechpartner" id="ansprechpartner1_checkbox">Ansprechpartner hinzufügen<br>
     <input disabled type="checkbox" class="checkbox_ansprechpartner" id="ansprechpartner2_checkbox">Ansprechpartner hinzufügen
     <form class="ansprechpartner_form disabled" id="ansprechpartner_form_1">
         <h4>Ansprechpartner</h4>
@@ -179,10 +184,11 @@
     </form>
     <div class="row justify-content-center">
         <div class="col-lg-auto">
-            <button id="submit_edit" class="btn btn-primary">Bearbeiten</button>
+            <button id="submit_edit" class="btn btn-primary" disabled>Bearbeiten</button>
             <button id="cancel_submit" class="btn btn-danger" onclick="if(!confirm('Möchten Sie wirklick abbrechen?'))return false;else{window.location.replace('/')}">Abbrechen</button>
         </div>
     </div><br>
+        </div>
     </div>
 <script src="{{ url_for('static', filename='js/populate.js') }}"></script>
 <script>
@@ -201,6 +207,7 @@
         $('select#firm_name').on('change', function (e) {
             $("form#firm_form")[0].reset();
             $("form#firm_form").show();
+            $('button#submit_edit').removeAttr('disabled');
             $.each($('input.checkbox_ansprechpartner'),function(){
                 $(this).removeAttr("disabled");
             });
@@ -223,27 +230,8 @@
             });
         });
 
-        $('input:checkbox#ansprechpartner1_checkbox').change(
-        function(){
-            if ($(this).is(':checked')) {
-                $('form#ansprechpartner_form_1').removeClass('disabled').addClass('checked');
-                enable_ansprechpartner_form();
-            }else{
-                $('form#ansprechpartner_form_1').removeClass('checked').addClass('disabled');
-                disable_ansprechpartner_form();
-            }
-        })
-
-        $('input:checkbox#ansprechpartner2_checkbox').change(
-        function(){
-            if ($(this).is(':checked')) {
-                $('form#ansprechpartner_form_2').removeClass('disabled').addClass('checked');
-                enable_ansprechpartner_form();
-            }else{
-                $('form#ansprechpartner_form_2').removeClass('checked').addClass('disabled');
-                disable_ansprechpartner_form();
-            }
-        })
+       $('input:checkbox#ansprechpartner1_checkbox').change(enable_disable_ans_form_1);
+       $('input:checkbox#ansprechpartner2_checkbox').change(enable_disable_ans_form_2);
 
         $('button#submit_edit').on('click',function(){
             var result = parse_firm_obj_from_form();
