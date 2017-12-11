@@ -41,7 +41,7 @@
             </div>
             <div class="form-group">
                 <label>Land</label>
-                <select name="land" class="form-control">
+                <select name="land" id="land_select" class="form-control">
                     <option>DE</option>
                     <option>CH</option>
                     <option>AT</option>
@@ -184,6 +184,8 @@
                 $('select#branch_select').append($('<option>').text(branch))
             });
         });
+
+        PLZ_validation();
 
         $('input:checkbox#ansprechpartner1_checkbox').change(enable_disable_ans_form_1);
         $('input:checkbox#ansprechpartner2_checkbox').change(enable_disable_ans_form_2);

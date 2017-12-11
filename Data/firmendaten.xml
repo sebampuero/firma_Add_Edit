@@ -1,11 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<firmenliste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	         xsi:noNamespaceSchemaLocation="firmendaten.xsd"
-             version="1">
+<firmenliste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1" xsi:noNamespaceSchemaLocation="firmendaten.xsd">
 	
     <firma name="4system GmbH">
         <branche>E-Learning</branche>
-        <strasse_hnr>Kurfrstenstraße 114</strasse_hnr>
+        <strasse_hnr>Kurfrstenstra&#195;&#376;e 114</strasse_hnr>
         <plz>10787</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -26,7 +23,7 @@
         <ort>Berlin</ort>
         <land>DE</land>
         <website>http://www.aastra.de</website>
-        <ansprechpartner name="Jürgen Signer">
+        <ansprechpartner name="J&#195;&#188;rgen Signer">
             <anrede>Herr</anrede>
             <funktion>GF</funktion>
             <telefon>030 6104 2007</telefon>
@@ -44,7 +41,7 @@
 
     <firma name="42com Telecommunication GmbH">
         <branche>Telekommunikation</branche>
-        <strasse_hnr>Straße der Pariser Kommune 12-16</strasse_hnr>
+        <strasse_hnr>Stra&#195;&#376;e der Pariser Kommune 12-16</strasse_hnr>
         <plz>10243</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -55,29 +52,6 @@
             <email>michael.palmer@42com.com</email>
         </ansprechpartner>
         <erfassungsdatum>2012-01-31</erfassungsdatum>
-    </firma>
-
-    <firma name="A.M.M. Aktionszentrum Multi Media GmbH">
-        <branche>Multimedia</branche>
-        <strasse_hnr>August-Bebel-Str. 68</strasse_hnr>
-        <plz>14482</plz>
-        <ort>Potsdam</ort>
-        <land>DE</land>
-        <website>http://www.amm-gruppe.de</website>
-        <ansprechpartner name="Kathrin Schwarz">
-            <anrede>Frau</anrede>
-            <funktion>GF</funktion>
-            <telefon>0331 740 60 84</telefon>
-            <fax>740 60 85</fax>
-            <email>info@amm-gruppe.de</email>
-        </ansprechpartner>
-        <ansprechpartner name="Stefan Schwarz">
-            <anrede>Herr</anrede>
-            <telefon>0331 740 60 84</telefon>
-            <fax>740 60 85</fax>
-            <email>info@amm-gruppe.de</email>
-        </ansprechpartner>
-        <erfassungsdatum>2010-10-05</erfassungsdatum>
     </firma>
 
     <firma name="adKor GmbH">
@@ -99,7 +73,7 @@
 
     <firma name="Airbus Operations GmbH">
         <branche>Luftfahrt</branche>
-        <strasse_hnr>Lüneburger Schanze 30</strasse_hnr>
+        <strasse_hnr>L&#195;&#188;neburger Schanze 30</strasse_hnr>
         <plz>21614</plz>
         <ort>Buxtehude</ort>
         <land>DE</land>
@@ -113,9 +87,9 @@
         <erfassungsdatum>2011-07-15</erfassungsdatum>
     </firma>
 
-    <firma name="Akademie der Bundeswehr für Information und Kommunikation">
+    <firma name="Akademie der Bundeswehr f&#195;&#188;r Information und Kommunikation">
         <branche>Verteidigung</branche>
-        <strasse_hnr>Prötzeler Chaussee 20</strasse_hnr>
+        <strasse_hnr>Pr&#195;&#182;tzeler Chaussee 20</strasse_hnr>
         <plz>15344</plz>
         <ort>Strausberg</ort>
         <land>DE</land>
@@ -136,7 +110,7 @@
         <ort>Bernstadt</ort>
         <land>DE</land>
         <website>http://www.alphaQuest.de</website>
-        <ansprechpartner name="André Probst">
+        <ansprechpartner name="Andr&#195;&#169; Probst">
             <anrede>Herr</anrede>
             <telefon>07348 9670446</telefon>
             <fax>9670447</fax>
@@ -147,7 +121,7 @@
 
     <firma name="Andracor GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Mertensstraße 127 - 131</strasse_hnr>
+        <strasse_hnr>Mertensstra&#195;&#376;e 127 - 131</strasse_hnr>
         <plz>13587</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -162,7 +136,7 @@
 
     <firma name="araneaNET GmbH">
         <branche>Netzwerkmanagement</branche>
-        <strasse_hnr>Steinstraße 1</strasse_hnr>
+        <strasse_hnr>Steinstra&#195;&#376;e 1</strasse_hnr>
         <plz>14482</plz>
         <ort>Potsdam</ort>
         <land>DE</land>
@@ -177,7 +151,7 @@
 
     <firma name="ARC-GREENLAB GmbH">
         <branche>Geoinformatik</branche>
-        <strasse_hnr>Eichenstraße 3b</strasse_hnr>
+        <strasse_hnr>Eichenstra&#195;&#376;e 3b</strasse_hnr>
         <plz>12435</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -210,7 +184,7 @@
 
     <firma name="arxes Information Design Berlin GmbH">
         <branche>WLAN</branche>
-        <strasse_hnr>Marxstraße 3a</strasse_hnr>
+        <strasse_hnr>Marxstra&#195;&#376;e 3a</strasse_hnr>
         <plz>13347</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -227,7 +201,7 @@
 
     <firma name="ASCI Systemhaus GmbH">
         <branche>IT-Dienstleistung</branche>
-        <strasse_hnr>Seddiner Straße 5</strasse_hnr>
+        <strasse_hnr>Seddiner Stra&#195;&#376;e 5</strasse_hnr>
         <plz>10315</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -244,7 +218,7 @@
 
     <firma name="asitos GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Bahnhofstraße Halle 7, Raum 8 EG</strasse_hnr>
+        <strasse_hnr>Bahnhofstra&#195;&#376;e Halle 7, Raum 8 EG</strasse_hnr>
         <plz>15745</plz>
         <ort>Wildau</ort>
         <land>DE</land>
@@ -299,7 +273,7 @@
 
     <firma name="BBB Management GmbH">
         <branche>Netzwerkmanagement</branche>
-        <strasse_hnr>Robert-Rössle-Str. 10</strasse_hnr>
+        <strasse_hnr>Robert-R&#195;&#182;ssle-Str. 10</strasse_hnr>
         <adresszusatz>Campus Berlin Buch</adresszusatz>
         <plz>13125</plz>
         <ort>Berlin</ort>
@@ -318,7 +292,7 @@
 
     <firma name="benntec Systemtechnik GmbH">
         <branche>Digitalfunk</branche>
-        <strasse_hnr>Köpenicker Str. 325</strasse_hnr>
+        <strasse_hnr>K&#195;&#182;penicker Str. 325</strasse_hnr>
         <plz>12555</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -336,7 +310,7 @@
 
     <firma name="bercom">
         <branche>Telekommunikation</branche>
-        <strasse_hnr>Carl-Scheele-Straße 12</strasse_hnr>
+        <strasse_hnr>Carl-Scheele-Stra&#195;&#376;e 12</strasse_hnr>
         <plz>12489</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -382,9 +356,9 @@
 
     <firma name="BHE Service">
         <branche>N/A</branche>
-        <strasse_hnr>Seestraße 19b</strasse_hnr>
+        <strasse_hnr>Seestra&#195;&#376;e 19b</strasse_hnr>
         <plz>15712</plz>
-        <ort>Königs Wusterhausen</ort>
+        <ort>K&#195;&#182;nigs Wusterhausen</ort>
         <land>DE</land>
         <website>http://www.bhe-service.de</website>
         <ansprechpartner name="Mario Goslinowski">
@@ -397,9 +371,9 @@
 
     <firma name="BMW Group">
         <branche>Verkehrsdienstleistung</branche>
-        <strasse_hnr>Knorrstraße 147</strasse_hnr>
+        <strasse_hnr>Knorrstra&#195;&#376;e 147</strasse_hnr>
         <plz>80937</plz>
-        <ort>München</ort>
+        <ort>M&#195;&#188;nchen</ort>
         <land>DE</land>
         <website>http://www.bmwgroup.com</website>
         <ansprechpartner name="Rainer Daude">
@@ -466,10 +440,10 @@
         <branche>Medien</branche>
         <strasse_hnr>Vor dem Bardowicker Tore 6a</strasse_hnr>
         <plz>21339</plz>
-        <ort>Lüneburg</ort>
+        <ort>L&#195;&#188;neburg</ort>
         <land>DE</land>
         <website>http://www.bp-mediawork.de</website>
-        <ansprechpartner name="Jörg  Bunjes">
+        <ansprechpartner name="J&#195;&#182;rg  Bunjes">
             <anrede>Herr</anrede>
             <titel>Dipl.-Kfm u. MMI</titel>
             <telefon>030 86870512-12</telefon>
@@ -494,14 +468,14 @@
         <erfassungsdatum>2008-01-21</erfassungsdatum>
     </firma>
 
-    <firma name="Bundesanstalt für Materialforschung und Prüfung">
+    <firma name="Bundesanstalt f&#195;&#188;r Materialforschung und Pr&#195;&#188;fung">
         <branche>Forschung</branche>
         <strasse_hnr>Unter den Eichen 87</strasse_hnr>
         <plz>12205</plz>
         <ort>Berlin</ort>
         <land>DE</land>
         <website>http://www.bam.de</website>
-        <ansprechpartner name="Rüdiger Schmidt">
+        <ansprechpartner name="R&#195;&#188;diger Schmidt">
             <anrede>Herr</anrede>
             <titel>Dipl.-Phys.</titel>
             <telefon>030 8104-0</telefon>
@@ -511,7 +485,7 @@
         <erfassungsdatum>2008-12-09</erfassungsdatum>
     </firma>
 
-    <firma name="Bundeswehr Streitkräfteamt">
+    <firma name="Bundeswehr Streitkr&#195;&#164;fteamt">
         <branche>Verteidigung</branche>
         <strasse_hnr>Stauffenbergstr. 18</strasse_hnr>
         <adresszusatz>Abt I / IMZBw</adresszusatz>
@@ -530,9 +504,9 @@
         <erfassungsdatum>2003-10-06</erfassungsdatum>
     </firma>
 
-    <firma name="BÜTTNER Sicherheitstechnik GmbH Cottbus">
+    <firma name="B&#195;&#339;TTNER Sicherheitstechnik GmbH Cottbus">
         <branche>N/A</branche>
-        <strasse_hnr>Pyramidenstraße 20</strasse_hnr>
+        <strasse_hnr>Pyramidenstra&#195;&#376;e 20</strasse_hnr>
         <plz>03042</plz>
         <ort>Cottbus</ort>
         <land>DE</land>
@@ -547,7 +521,7 @@
 
     <firma name="Cedavis Technology GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Lessingstraße 79</strasse_hnr>
+        <strasse_hnr>Lessingstra&#195;&#376;e 79</strasse_hnr>
         <adresszusatz>Pankow Park</adresszusatz>
         <plz>13158</plz>
         <ort>Berlin</ort>
@@ -565,7 +539,7 @@
     <firma name="City-Press GmbH">
         <branche>Agentur</branche>
         <strasse_hnr>Prenzlauer Promenade 177</strasse_hnr>
-        <adresszusatz>Bildagentur für Presse- u. Sportfotografie</adresszusatz>
+        <adresszusatz>Bildagentur f&#195;&#188;r Presse- u. Sportfotografie</adresszusatz>
         <plz>13189</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -598,12 +572,12 @@
 
     <firma name="cockpit4 GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Karl-Marx-Straße 118</strasse_hnr>
+        <strasse_hnr>Karl-Marx-Stra&#195;&#376;e 118</strasse_hnr>
         <plz>15745</plz>
         <ort>Wildau</ort>
         <land>DE</land>
         <website>http://www.cockpit4.de</website>
-        <ansprechpartner name="Christopher Mürbe">
+        <ansprechpartner name="Christopher M&#195;&#188;rbe">
             <anrede>Herr</anrede>
             <funktion>GF</funktion>
             <telefon>03375 959093</telefon>
@@ -619,7 +593,7 @@
         <ort>Dresden</ort>
         <land>DE</land>
         <website>http://www.comarch.de</website>
-        <ansprechpartner name="Anne Lübge">
+        <ansprechpartner name="Anne L&#195;&#188;bge">
             <anrede>Frau</anrede>
             <funktion>HR Manager</funktion>
             <telefon>0351 4389717</telefon>
@@ -653,7 +627,7 @@
         <ort>Berlin</ort>
         <land>DE</land>
         <website>http://www.systempartner-plus.de</website>
-        <ansprechpartner name="Matthias Krüger">
+        <ansprechpartner name="Matthias Kr&#195;&#188;ger">
             <anrede>Herr</anrede>
             <funktion>GF</funktion>
             <telefon>030 498 59 95-0</telefon>
@@ -687,12 +661,12 @@
 
     <firma name="CSA Computer &amp; Antriebstechnik GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Rheinstraße 7e</strasse_hnr>
+        <strasse_hnr>Rheinstra&#195;&#376;e 7e</strasse_hnr>
         <plz>14513</plz>
         <ort>Teltow</ort>
         <land>DE</land>
         <website>http://www.csa-germany.de</website>
-        <ansprechpartner name="Clemens Töpfer">
+        <ansprechpartner name="Clemens T&#195;&#182;pfer">
             <anrede>Herr</anrede>
             <titel>Dipl.-Ing.</titel>
             <funktion>GF</funktion>
@@ -705,7 +679,7 @@
 
     <firma name="CST concepts GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Bosestraße 42-43</strasse_hnr>
+        <strasse_hnr>Bosestra&#195;&#376;e 42-43</strasse_hnr>
         <adresszusatz>Zweigstelle in Teltow</adresszusatz>
         <plz>12103</plz>
         <ort>Berlin</ort>
@@ -741,12 +715,12 @@
 
     <firma name="DaimlerChrysler Bank AG (Zentrale)">
         <branche>Verkehrsdienstleistung</branche>
-        <strasse_hnr>Sieboldstraße 7</strasse_hnr>
+        <strasse_hnr>Sieboldstra&#195;&#376;e 7</strasse_hnr>
         <plz>70469</plz>
         <ort>Stuttgart</ort>
         <land>DE</land>
         <website>http://www.daimlerchrysler-bank.com</website>
-        <ansprechpartner name="Andreas Hörmann">
+        <ansprechpartner name="Andreas H&#195;&#182;rmann">
             <anrede>Herr</anrede>
             <telefon>07111 2574-4049</telefon>
             <fax>9 4949</fax>
@@ -774,7 +748,7 @@
 
     <firma name="DB Kommunikationstechnik GmbH">
         <branche>Telekommunikation</branche>
-        <strasse_hnr>Caroline-Michaelis-Straße 5-11</strasse_hnr>
+        <strasse_hnr>Caroline-Michaelis-Stra&#195;&#376;e 5-11</strasse_hnr>
         <adresszusatz>ICT Field Services</adresszusatz>
         <plz>10115</plz>
         <ort>Berlin</ort>
@@ -792,7 +766,7 @@
 
     <firma name="DB Services Nordost GmbH">
         <branche>Netzwerkmanagement</branche>
-        <strasse_hnr>Köthener Str. 2-3</strasse_hnr>
+        <strasse_hnr>K&#195;&#182;thener Str. 2-3</strasse_hnr>
         <adresszusatz>Mobility Networks Logistics</adresszusatz>
         <plz>10963</plz>
         <ort>Berlin</ort>
@@ -800,7 +774,7 @@
         <website>http://www.db-services.de</website>
         <ansprechpartner name="Silvia Kessler">
             <anrede>Frau</anrede>
-            <funktion>Fachreferentin Grundsätze - Personal</funktion>
+            <funktion>Fachreferentin Grunds&#195;&#164;tze - Personal</funktion>
             <telefon>030 297-53452</telefon>
             <fax>-68782</fax>
             <email>silvia.kessler@deutschebahn.com</email>
@@ -810,7 +784,7 @@
 
     <firma name="DEN GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Gützkower Landstr. 11a</strasse_hnr>
+        <strasse_hnr>G&#195;&#188;tzkower Landstr. 11a</strasse_hnr>
         <plz>17489</plz>
         <ort>Greifswald</ort>
         <land>DE</land>
@@ -846,7 +820,7 @@
         <ort>Zeuthen</ort>
         <land>DE</land>
         <website>http://www.desy.de</website>
-        <ansprechpartner name="Patrick Rüger">
+        <ansprechpartner name="Patrick R&#195;&#188;ger">
             <anrede>Herr</anrede>
             <telefon>033762 77334</telefon>
             <email>patrick.rueger@desy.de</email>
@@ -900,11 +874,11 @@
         <erfassungsdatum>2011-07-12</erfassungsdatum>
     </firma>
 
-    <firma name="Deutsches Zentrum für Luft- und Raumfahrt e. V.">
+    <firma name="Deutsches Zentrum f&#195;&#188;r Luft- und Raumfahrt e. V.">
         <branche>Gesundheitstelematik</branche>
-        <strasse_hnr>Linder Höhe</strasse_hnr>
+        <strasse_hnr>Linder H&#195;&#182;he</strasse_hnr>
         <plz>51147</plz>
-        <ort>Köln</ort>
+        <ort>K&#195;&#182;ln</ort>
         <land>DE</land>
         <website>http://www.dlr.de/Koeln-Porz/</website>
         <ansprechpartner name="Marion Scheuer-Leeser">
@@ -917,10 +891,10 @@
         <erfassungsdatum>2010-10-05</erfassungsdatum>
     </firma>
 
-    <firma name="Deutsches Zentrum für Luft- und Raumfahrt - Neustrehlitz">
+    <firma name="Deutsches Zentrum f&#195;&#188;r Luft- und Raumfahrt - Neustrehlitz">
         <branche>Kommunikationstechnik; Luftfahrt</branche>
         <strasse_hnr>Kalkhorstweg 53</strasse_hnr>
-        <adresszusatz>Institut für Kommunikation und Navigation</adresszusatz>
+        <adresszusatz>Institut f&#195;&#188;r Kommunikation und Navigation</adresszusatz>
         <plz>17235</plz>
         <ort>Neustrehlitz</ort>
         <land>DE</land>
@@ -934,10 +908,10 @@
         <erfassungsdatum>2008-01-04</erfassungsdatum>
     </firma>
 
-    <firma name="Deutsches Zentrum für Luft- und Raumfahrt - Berlin">
+    <firma name="Deutsches Zentrum f&#195;&#188;r Luft- und Raumfahrt - Berlin">
         <branche>Verkehrsinformatik; Luftfahrt</branche>
-        <strasse_hnr>Rutherfordstraße 2</strasse_hnr>
-        <adresszusatz>Institut für Verkehrsforschung</adresszusatz>
+        <strasse_hnr>Rutherfordstra&#195;&#376;e 2</strasse_hnr>
+        <adresszusatz>Institut f&#195;&#188;r Verkehrsforschung</adresszusatz>
         <plz>12489</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -970,10 +944,10 @@
 
     <firma name="DFS Deutsche Flugsicherung GmbH">
         <branche>Luftfahrt</branche>
-        <strasse_hnr>Mittelstraße 5/5a</strasse_hnr>
+        <strasse_hnr>Mittelstra&#195;&#376;e 5/5a</strasse_hnr>
         <adresszusatz>NL Berlin</adresszusatz>
         <plz>12529</plz>
-        <ort>Berlin-Schönefeld</ort>
+        <ort>Berlin-Sch&#195;&#182;nefeld</ort>
         <land>DE</land>
         <website>http://www.dfs.de</website>
         <ansprechpartner name="Rainer Proft">
@@ -992,7 +966,7 @@
         <ort>Berlin</ort>
         <land>DE</land>
         <website>http://www.die-artisten.com</website>
-        <ansprechpartner name="Rick Müller">
+        <ansprechpartner name="Rick M&#195;&#188;ller">
             <anrede>Herr</anrede>
             <telefon>030 78 95 10 39</telefon>
             <fax>78 95 10 41</fax>
@@ -1003,9 +977,9 @@
 
     <firma name="digital spirit GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Keithstraße 2-4</strasse_hnr>
+        <strasse_hnr>Keithstra&#195;&#376;e 2-4</strasse_hnr>
         <plz>10787</plz>
-        <ort>Berlin-Schöneberg</ort>
+        <ort>Berlin-Sch&#195;&#182;neberg</ort>
         <land>DE</land>
         <website>http://www.digital-spirit.de</website>
         <ansprechpartner name="Thomas Flum">
@@ -1025,7 +999,7 @@
         <ort>Oberursel</ort>
         <land>DE</land>
         <website>http://www.de.didata.com</website>
-        <ansprechpartner name="Ulrich Max Müller">
+        <ansprechpartner name="Ulrich Max M&#195;&#188;ller">
             <anrede>Herr</anrede>
             <funktion>Vostand</funktion>
             <telefon>06171 977 0</telefon>
@@ -1037,7 +1011,7 @@
 
     <firma name="di-Vision Bau-, Medien-, Projekte GmbH">
         <branche>e-wohnen</branche>
-        <strasse_hnr>Saarbrücker Str. 20/21</strasse_hnr>
+        <strasse_hnr>Saarbr&#195;&#188;cker Str. 20/21</strasse_hnr>
         <plz>10405</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -1068,14 +1042,14 @@
         <erfassungsdatum>2010-10-05</erfassungsdatum>
     </firma>
 
-    <firma name="DPS PhoneSAT Gesellschaft für Satellitenkommunikation mbH">
+    <firma name="DPS PhoneSAT Gesellschaft f&#195;&#188;r Satellitenkommunikation mbH">
         <branche>Satellitenkommunikation</branche>
-        <strasse_hnr>Industriestraße 12 - 14</strasse_hnr>
+        <strasse_hnr>Industriestra&#195;&#376;e 12 - 14</strasse_hnr>
         <plz>15366</plz>
         <ort>Dahlewitz-Hoppegarten</ort>
         <land>DE</land>
         <website>http://www.dps-phonesat.de</website>
-        <ansprechpartner name="Schunke Günther">
+        <ansprechpartner name="Schunke G&#195;&#188;nther">
             <anrede>Herr</anrede>
             <funktion>Vice President</funktion>
             <telefon>03342 385 370</telefon>
@@ -1092,7 +1066,7 @@
         <ort>Berlin</ort>
         <land>DE</land>
         <website>http://www.dreifach-einfach.de</website>
-        <ansprechpartner name="Marco Köhler">
+        <ansprechpartner name="Marco K&#195;&#182;hler">
             <anrede>Herr</anrede>
             <titel>Dipl.-Ing.</titel>
             <funktion>GF</funktion>
@@ -1105,7 +1079,7 @@
 
     <firma name="e*Message Wireless Information Services Deutschland GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Schönhauser Allee 10 - 11</strasse_hnr>
+        <strasse_hnr>Sch&#195;&#182;nhauser Allee 10 - 11</strasse_hnr>
         <plz>10119</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -1146,7 +1120,7 @@
         <ort>Wildau</ort>
         <land>DE</land>
         <website>http://www.eentwicklung.net</website>
-        <ansprechpartner name="Torsten Müller">
+        <ansprechpartner name="Torsten M&#195;&#188;ller">
             <anrede>Herr</anrede>
             <titel>Dipl.- Math.</titel>
             <funktion>GF</funktion>
@@ -1159,7 +1133,7 @@
 
     <firma name="Elcon Systemtechnik GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Obere Hauptstraße 10</strasse_hnr>
+        <strasse_hnr>Obere Hauptstra&#195;&#376;e 10</strasse_hnr>
         <plz>09232</plz>
         <ort>Hartmannsdorf</ort>
         <land>DE</land>
@@ -1171,10 +1145,10 @@
             <fax>6160</fax>
             <email>gf@elcon-system.de</email>
         </ansprechpartner>
-        <erfassungsdatum></erfassungsdatum>
+        <erfassungsdatum />
     </firma>
 
-    <firma name="ELDAT Gesellschaft für Elektronik und Datentechnik mbH">
+    <firma name="ELDAT Gesellschaft f&#195;&#188;r Elektronik und Datentechnik mbH">
         <branche>Funktechnik</branche>
         <strasse_hnr>Im Gewerbepark 14</strasse_hnr>
         <plz>15711</plz>
@@ -1187,7 +1161,7 @@
             <fax>9037-90</fax>
             <email>info@eldat.de</email>
         </ansprechpartner>
-        <ansprechpartner name="Hans-Heinz Müller">
+        <ansprechpartner name="Hans-Heinz M&#195;&#188;ller">
             <anrede>Herr</anrede>
             <funktion>GF</funktion>
             <telefon>03375 9037-0</telefon>
@@ -1199,12 +1173,12 @@
 
     <firma name="elos">
         <branche>IT-Dienstleistung</branche>
-        <strasse_hnr>Ebertystraße 51</strasse_hnr>
+        <strasse_hnr>Ebertystra&#195;&#376;e 51</strasse_hnr>
         <plz>10249</plz>
         <ort>Berlin</ort>
         <land>DE</land>
         <website>http://www.e-lo-s.de</website>
-        <ansprechpartner name="Olaf Kösler">
+        <ansprechpartner name="Olaf K&#195;&#182;sler">
             <anrede>Herr</anrede>
             <funktion>Inhaber</funktion>
             <telefon>030 420 179 79</telefon>
@@ -1217,7 +1191,7 @@
         <branche>N/A</branche>
         <strasse_hnr>Am Kraftwerk</strasse_hnr>
         <plz>03222</plz>
-        <ort>Lübbenau</ort>
+        <ort>L&#195;&#188;bbenau</ort>
         <land>DE</land>
         <website>http://www.emis-service.de</website>
         <ansprechpartner name="Eberhard Perschk">
@@ -1227,7 +1201,7 @@
             <fax>8789-88</fax>
             <email>info@emis-service.de</email>
         </ansprechpartner>
-        <ansprechpartner name="André Müller">
+        <ansprechpartner name="Andr&#195;&#169; M&#195;&#188;ller">
             <anrede>Herr</anrede>
             <telefon>03542 8789-0</telefon>
             <fax>8789-88</fax>
@@ -1238,7 +1212,7 @@
 
     <firma name="e-on Netz GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Weißenmoordstraße 114a</strasse_hnr>
+        <strasse_hnr>Wei&#195;&#376;enmoordstra&#195;&#376;e 114a</strasse_hnr>
         <plz>26125</plz>
         <ort>Oldenburg</ort>
         <land>DE</land>
@@ -1330,7 +1304,7 @@
 
     <firma name="EuroNorm GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Rathausstraße 2a</strasse_hnr>
+        <strasse_hnr>Rathausstra&#195;&#376;e 2a</strasse_hnr>
         <plz>15366</plz>
         <ort>Neuenhagen bei Berlin</ort>
         <land>DE</land>
@@ -1347,13 +1321,13 @@
 
     <firma name="FISA Systemtechnik GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Birnbaumsmühle 65</strasse_hnr>
-        <adresszusatz>Büro Frankfurt (Oder)</adresszusatz>
+        <strasse_hnr>Birnbaumsm&#195;&#188;hle 65</strasse_hnr>
+        <adresszusatz>B&#195;&#188;ro Frankfurt (Oder)</adresszusatz>
         <plz>15234</plz>
         <ort>Frankfurt (Oder)</ort>
         <land>DE</land>
         <website>http://www.ifv-mueller.de</website>
-        <ansprechpartner name="Bernd-Uwe Müller">
+        <ansprechpartner name="Bernd-Uwe M&#195;&#188;ller">
             <anrede>Herr</anrede>
             <telefon>0335 400 33 05</telefon>
             <email>b-u.mueller@ifv-mueller.de</email>
@@ -1361,9 +1335,9 @@
         <erfassungsdatum>2009-04-02</erfassungsdatum>
     </firma>
 
-    <firma name="Flughafen Berlin-Schönefeld GmbH">
+    <firma name="Flughafen Berlin-Sch&#195;&#182;nefeld GmbH">
         <branche>Luftfahrt</branche>
-        <strasse_hnr>Flughafen Schönefeld</strasse_hnr>
+        <strasse_hnr>Flughafen Sch&#195;&#182;nefeld</strasse_hnr>
         <plz>12521</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -1395,7 +1369,7 @@
 
     <firma name="Forschungsagentur Berlin GmbH">
         <branche>Forschung</branche>
-        <strasse_hnr>Rathausstraße 2a</strasse_hnr>
+        <strasse_hnr>Rathausstra&#195;&#376;e 2a</strasse_hnr>
         <plz>15366</plz>
         <ort>Neuenhagen bei Berlin</ort>
         <land>DE</land>
@@ -1410,7 +1384,7 @@
         <erfassungsdatum>2000-01-01</erfassungsdatum>
     </firma>
 
-    <firma name="Frauenhofer-Gesellschaft zur Förderung angewandten Forschung e. V.">
+    <firma name="Frauenhofer-Gesellschaft zur F&#195;&#182;rderung angewandten Forschung e. V.">
         <branche>Forschung</branche>
         <strasse_hnr>Kantstr. 55</strasse_hnr>
         <plz>14513</plz>
@@ -1483,7 +1457,7 @@
 
     <firma name="Gemtec GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Am Möllenberg 37</strasse_hnr>
+        <strasse_hnr>Am M&#195;&#182;llenberg 37</strasse_hnr>
         <plz>15751</plz>
         <ort>Niederlehme</ort>
         <land>DE</land>
@@ -1530,7 +1504,7 @@
         <erfassungsdatum>2004-09-08</erfassungsdatum>
     </firma>
 
-    <firma name="GMW Gesellschaft für Managemententwicklung und Weiterbildung mbH">
+    <firma name="GMW Gesellschaft f&#195;&#188;r Managemententwicklung und Weiterbildung mbH">
         <branche>N/A</branche>
         <strasse_hnr>Karl-Marx-Str 116</strasse_hnr>
         <plz>15745</plz>
@@ -1550,7 +1524,7 @@
 
     <firma name="GreenWaySysteme GmbH">
         <branche>Verkehrstelematik</branche>
-        <strasse_hnr>Große Müllroser Str. 46</strasse_hnr>
+        <strasse_hnr>Gro&#195;&#376;e M&#195;&#188;llroser Str. 46</strasse_hnr>
         <plz>15232</plz>
         <ort>Frankfurt (Oder)</ort>
         <land>DE</land>
@@ -1580,7 +1554,7 @@
         <erfassungsdatum>2012-01-31</erfassungsdatum>
     </firma>
 
-    <firma name="Helmholtz-Zentrum für Materialien und Energie BESSY">
+    <firma name="Helmholtz-Zentrum f&#195;&#188;r Materialien und Energie BESSY">
         <branche>Forschung</branche>
         <strasse_hnr>Albert-Einstein-Str. 15</strasse_hnr>
         <plz>12489</plz>
@@ -1597,7 +1571,7 @@
 
     <firma name="Herescu Media Projekt GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Lilienthalstraße 3a</strasse_hnr>
+        <strasse_hnr>Lilienthalstra&#195;&#376;e 3a</strasse_hnr>
         <plz>15732</plz>
         <ort>Waltersdorf</ort>
         <land>DE</land>
@@ -1614,7 +1588,7 @@
 
     <firma name="hns hardware netzwerke software GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Steinstraße 13</strasse_hnr>
+        <strasse_hnr>Steinstra&#195;&#376;e 13</strasse_hnr>
         <plz>10119</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -1626,15 +1600,15 @@
             <fax>28 0 48 110</fax>
             <email>hns@hns-berlin.de</email>
         </ansprechpartner>
-        <erfassungsdatum></erfassungsdatum>
+        <erfassungsdatum />
     </firma>
 
-    <firma name="Hörmann Funkwerk Kölleda GmbH">
+    <firma name="H&#195;&#182;rmann Funkwerk K&#195;&#182;lleda GmbH">
         <branche>Kommunikationstechnik</branche>
         <strasse_hnr>Im Funkwerk 5</strasse_hnr>
-        <adresszusatz>Systemhaus für Kommunikationstechnik</adresszusatz>
+        <adresszusatz>Systemhaus f&#195;&#188;r Kommunikationstechnik</adresszusatz>
         <plz>99625</plz>
-        <ort>Kölleda/Thüringen</ort>
+        <ort>K&#195;&#182;lleda/Th&#195;&#188;ringen</ort>
         <land>DE</land>
         <website>http://www.hfwk.de</website>
         <ansprechpartner name="Harald Steglich">
@@ -1664,7 +1638,7 @@
 
     <firma name="IBIS Service GmbH &amp; Co. KG">
         <branche>N/A</branche>
-        <strasse_hnr>Ladestraße 8</strasse_hnr>
+        <strasse_hnr>Ladestra&#195;&#376;e 8</strasse_hnr>
         <plz>15834</plz>
         <ort>Rangsdorf</ort>
         <land>DE</land>
@@ -1696,12 +1670,12 @@
 
     <firma name="IEB Institute of ElectronicBusiness">
         <branche>N/A</branche>
-        <strasse_hnr>Chausseestraße 8</strasse_hnr>
+        <strasse_hnr>Chausseestra&#195;&#376;e 8</strasse_hnr>
         <plz>10115</plz>
         <ort>Berlin</ort>
         <land>DE</land>
         <website>http://www.ieb.net</website>
-        <ansprechpartner name="Günter Platzwahl">
+        <ansprechpartner name="G&#195;&#188;nter Platzwahl">
             <anrede>Herr</anrede>
             <telefon>030 7 26 29 83 15</telefon>
             <fax>7 26 29 83 9</fax>
@@ -1744,7 +1718,7 @@
 
     <firma name="IKODA Innovative Kommunikationssysteme Dabendorf">
         <branche>Kommunikationstechnik</branche>
-        <strasse_hnr>Märkische Straße</strasse_hnr>
+        <strasse_hnr>M&#195;&#164;rkische Stra&#195;&#376;e</strasse_hnr>
         <plz>15806</plz>
         <ort>Dabendorf</ort>
         <land>DE</land>
@@ -1799,7 +1773,7 @@
         <ort>Neubiberg</ort>
         <land>DE</land>
         <website>http://www,infineon.de</website>
-        <ansprechpartner name="Steffen Röder">
+        <ansprechpartner name="Steffen R&#195;&#182;der">
             <anrede>Herr</anrede>
             <telefon>0234 65 199</telefon>
             <email>steffen.roeder@infineon.de</email>
@@ -1814,7 +1788,7 @@
         <ort>Hamburg</ort>
         <land>DE</land>
         <website>http://www.m2mcontrol.de</website>
-        <ansprechpartner name="Sebastian Kühne">
+        <ansprechpartner name="Sebastian K&#195;&#188;hne">
             <anrede>Herr</anrede>
             <telefon>040 696 47 260</telefon>
             <email>kuehne@infranet-technologies.de</email>
@@ -1822,11 +1796,11 @@
         <erfassungsdatum>2012-02-02</erfassungsdatum>
     </firma>
 
-    <firma name="Ingenieurbüro Zissel">
+    <firma name="Ingenieurb&#195;&#188;ro Zissel">
         <branche>N/A</branche>
-        <strasse_hnr>Küchenmeisterallee 15</strasse_hnr>
+        <strasse_hnr>K&#195;&#188;chenmeisterallee 15</strasse_hnr>
         <plz>15711</plz>
-        <ort>Königs Wusterhausen</ort>
+        <ort>K&#195;&#182;nigs Wusterhausen</ort>
         <land>DE</land>
         <website>http://www.zissel.com</website>
         <ansprechpartner name="Hardy Zissel">
@@ -1839,9 +1813,9 @@
 
     <firma name="Ingenieurgesellschaft Mengel &amp; Partner GbR">
         <branche>N/A</branche>
-        <strasse_hnr>Gartenstraße 50 </strasse_hnr>
+        <strasse_hnr>Gartenstra&#195;&#376;e 50 </strasse_hnr>
         <plz>12529</plz>
-        <ort>Schönefeld bei Berlin</ort>
+        <ort>Sch&#195;&#182;nefeld bei Berlin</ort>
         <land>DE</land>
         <website>http://www.mengelundpartner.de</website>
         <ansprechpartner name="Katja Goltz">
@@ -1855,7 +1829,7 @@
 
     <firma name="Innovationspark Wuhlheide GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Köpenicker Str. </strasse_hnr>
+        <strasse_hnr>K&#195;&#182;penicker Str. </strasse_hnr>
         <plz>12555</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -1872,7 +1846,7 @@
 
     <firma name="INTERAUTOMATION Deutschland GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Lessingstraße 79 Gebäude C4</strasse_hnr>
+        <strasse_hnr>Lessingstra&#195;&#376;e 79 Geb&#195;&#164;ude C4</strasse_hnr>
         <plz>13158</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -1889,7 +1863,7 @@
 
     <firma name="Intermatix GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Oranienstraße 6</strasse_hnr>
+        <strasse_hnr>Oranienstra&#195;&#376;e 6</strasse_hnr>
         <plz>10997</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -1934,12 +1908,12 @@
 
     <firma name="IQ wireless GmbH">
         <branche>Telekommunikation</branche>
-        <strasse_hnr>Carl-Scheele-Straße 4</strasse_hnr>
+        <strasse_hnr>Carl-Scheele-Stra&#195;&#376;e 4</strasse_hnr>
         <plz>12489</plz>
         <ort>Berlin</ort>
         <land>DE</land>
         <website>http://www.iq-wireless.com</website>
-        <ansprechpartner name="Mario Jäckel">
+        <ansprechpartner name="Mario J&#195;&#164;ckel">
             <anrede>Herr</anrede>
             <titel>Dr.- Ing.</titel>
             <funktion>GL</funktion>
@@ -1952,9 +1926,9 @@
 
     <firma name="IT-Direkt">
         <branche>N/A</branche>
-        <strasse_hnr>Kurfürstendamm 115 b</strasse_hnr>
+        <strasse_hnr>Kurf&#195;&#188;rstendamm 115 b</strasse_hnr>
         <plz>10711</plz>
-        <ort>Berlin-Schönefeld</ort>
+        <ort>Berlin-Sch&#195;&#182;nefeld</ort>
         <land>DE</land>
         <website>http://www.it-direkt.de</website>
         <ansprechpartner name="Ralf Stuck">
@@ -1969,7 +1943,7 @@
 
     <firma name="ixellence GmbH">
         <branche>Softwareentwicklung</branche>
-        <strasse_hnr>Bahnhofstraße, Halle 7</strasse_hnr>
+        <strasse_hnr>Bahnhofstra&#195;&#376;e, Halle 7</strasse_hnr>
         <plz>15745</plz>
         <ort>Wildau</ort>
         <land>DE</land>
@@ -1998,7 +1972,7 @@
         <erfassungsdatum>2007-03-07</erfassungsdatum>
     </firma>
 
-    <firma name="JUNGHANNS.NET Ges. für Internet-Service">
+    <firma name="JUNGHANNS.NET Ges. f&#195;&#188;r Internet-Service">
         <branche>Softwareentwicklung</branche>
         <strasse_hnr>Breite Str. 13a</strasse_hnr>
         <plz>12167</plz>
@@ -2017,7 +1991,7 @@
 
     <firma name="K&amp;M Elektronik AG">
         <branche>N/A</branche>
-        <strasse_hnr>Alexanderstraße 3</strasse_hnr>
+        <strasse_hnr>Alexanderstra&#195;&#376;e 3</strasse_hnr>
         <plz>10178</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -2032,7 +2006,7 @@
 
     <firma name="kaffeemike GmbH">
         <branche>Handel</branche>
-        <strasse_hnr>Schreinerstraße 13</strasse_hnr>
+        <strasse_hnr>Schreinerstra&#195;&#376;e 13</strasse_hnr>
         <plz>10247</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -2050,7 +2024,7 @@
         <branche>Satellitenkommunikation</branche>
         <strasse_hnr>Berliner Str. 27</strasse_hnr>
         <plz>15711</plz>
-        <ort>Königs Wusterhausen</ort>
+        <ort>K&#195;&#182;nigs Wusterhausen</ort>
         <land>DE</land>
         <website>http://www.karp-gmbh.de</website>
         <ansprechpartner name="Thomas Elster">
@@ -2064,7 +2038,7 @@
         <erfassungsdatum>2010-10-05</erfassungsdatum>
     </firma>
 
-    <firma name="Kassenärztliche Bundesvereinigung">
+    <firma name="Kassen&#195;&#164;rztliche Bundesvereinigung">
         <branche>Gesundheitswesen</branche>
         <strasse_hnr>Herbert-Lewin-Platz 2</strasse_hnr>
         <plz>10623</plz>
@@ -2081,7 +2055,7 @@
 
     <firma name="KIENZLE ARGO GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Alboinstraße 56</strasse_hnr>
+        <strasse_hnr>Alboinstra&#195;&#376;e 56</strasse_hnr>
         <plz>12103</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -2112,24 +2086,24 @@
         <erfassungsdatum>2008-04-02</erfassungsdatum>
     </firma>
 
-    <firma name="Kreisverwaltung Teltow-Fläming">
+    <firma name="Kreisverwaltung Teltow-Fl&#195;&#164;ming">
         <branche>Verwaltung</branche>
-        <strasse_hnr>Am Nuthefließ 2</strasse_hnr>
+        <strasse_hnr>Am Nutheflie&#195;&#376; 2</strasse_hnr>
         <plz>14943</plz>
         <ort>Luckenwalde</ort>
         <land>DE</land>
-        <website>http://www.teltow-fläming.de</website>
-        <ansprechpartner name="Michael Saß">
+        <website>http://www.teltow-fl&#195;&#164;ming.de</website>
+        <ansprechpartner name="Michael Sa&#195;&#376;">
             <anrede>Herr</anrede>
             <funktion>Abt.-Leiter</funktion>
             <telefon>03371 6 08 - 0</telefon>
             <fax>6 08 - 91 00</fax>
-            <email>info@teltow-fläming.de</email>
+            <email>info@teltow-fl&#195;&#164;ming.de</email>
         </ansprechpartner>
         <erfassungsdatum>2003-04-04</erfassungsdatum>
     </firma>
 
-    <firma name="KVBB Kassenärztliche Vereinigung Brandenburg">
+    <firma name="KVBB Kassen&#195;&#164;rztliche Vereinigung Brandenburg">
         <branche>Gesundheitswesen</branche>
         <strasse_hnr>Friedrich-Engels-Str. 103</strasse_hnr>
         <plz>14473</plz>
@@ -2148,7 +2122,7 @@
 
     <firma name="lesswire AG">
         <branche>N/A</branche>
-        <strasse_hnr>Albert-Einstein-Straße 16</strasse_hnr>
+        <strasse_hnr>Albert-Einstein-Stra&#195;&#376;e 16</strasse_hnr>
         <plz>12489</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -2164,7 +2138,7 @@
 
     <firma name="LR Media- Verkaufsgesellschaft mbH">
         <branche>Medien</branche>
-        <strasse_hnr>Straße der Jugend 54</strasse_hnr>
+        <strasse_hnr>Stra&#195;&#376;e der Jugend 54</strasse_hnr>
         <plz>03050</plz>
         <ort>Cottbus</ort>
         <land>DE</land>
@@ -2176,7 +2150,7 @@
             <fax>481 123</fax>
             <email>joerg.tudyka@lr-online.de</email>
         </ansprechpartner>
-        <ansprechpartner name="Claudia Rhönisch">
+        <ansprechpartner name="Claudia Rh&#195;&#182;nisch">
             <anrede>Frau</anrede>
             <funktion>Praktika</funktion>
             <telefon>0335 481 180</telefon>
@@ -2210,7 +2184,7 @@
 
     <firma name="mediplex healthcare Ltd. Co. KG">
         <branche>N/A</branche>
-        <strasse_hnr>Monumentenstraße 20</strasse_hnr>
+        <strasse_hnr>Monumentenstra&#195;&#376;e 20</strasse_hnr>
         <plz>10965</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -2257,12 +2231,12 @@
 
     <firma name="MID GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Eilbacher Hauptstraße 141</strasse_hnr>
+        <strasse_hnr>Eilbacher Hauptstra&#195;&#376;e 141</strasse_hnr>
         <plz>90451</plz>
-        <ort>Nürnberg</ort>
+        <ort>N&#195;&#188;rnberg</ort>
         <land>DE</land>
         <website>http://www.mid.de</website>
-        <ansprechpartner name="Jürgen Leuschel">
+        <ansprechpartner name="J&#195;&#188;rgen Leuschel">
             <anrede>Herr</anrede>
             <funktion>GF</funktion>
             <telefon>0911 968 36 0</telefon>
@@ -2274,7 +2248,7 @@
 
     <firma name="MoTechno">
         <branche>N/A</branche>
-        <strasse_hnr>Fanny-Zobel-Straße 1</strasse_hnr>
+        <strasse_hnr>Fanny-Zobel-Stra&#195;&#376;e 1</strasse_hnr>
         <plz>12435</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -2291,7 +2265,7 @@
 
     <firma name="mywerk system GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Dennis-Gabor-Straße 2</strasse_hnr>
+        <strasse_hnr>Dennis-Gabor-Stra&#195;&#376;e 2</strasse_hnr>
         <plz>14469</plz>
         <ort>Potsdam</ort>
         <land>DE</land>
@@ -2337,9 +2311,9 @@
         <erfassungsdatum>2010-10-05</erfassungsdatum>
     </firma>
 
-    <firma name="Navtec Gesellschaft für Signalverarbeitung und Navigation mbH">
+    <firma name="Navtec Gesellschaft f&#195;&#188;r Signalverarbeitung und Navigation mbH">
         <branche>N/A</branche>
-        <strasse_hnr>Flughafen Berlin-Schönefeld</strasse_hnr>
+        <strasse_hnr>Flughafen Berlin-Sch&#195;&#182;nefeld</strasse_hnr>
         <plz>12521</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -2356,8 +2330,8 @@
 
     <firma name="NAVTEQ GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Brunnenstraße 128</strasse_hnr>
-        <adresszusatz>Regionalbüro Berlin</adresszusatz>
+        <strasse_hnr>Brunnenstra&#195;&#376;e 128</strasse_hnr>
+        <adresszusatz>Regionalb&#195;&#188;ro Berlin</adresszusatz>
         <plz>13355</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -2390,7 +2364,7 @@
 
     <firma name="Neumann + Partner Informationssysteme GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>An der hohen Straße 1</strasse_hnr>
+        <strasse_hnr>An der hohen Stra&#195;&#376;e 1</strasse_hnr>
         <plz>08393</plz>
         <ort>Meerane</ort>
         <land>DE</land>
@@ -2431,7 +2405,7 @@
 
     <firma name="NTBB Systemtechnik GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Schillerstraße 58</strasse_hnr>
+        <strasse_hnr>Schillerstra&#195;&#376;e 58</strasse_hnr>
         <plz>15738</plz>
         <ort>Zeuthen</ort>
         <land>DE</land>
@@ -2464,7 +2438,7 @@
 
     <firma name="OpenSynergy GmbH">
         <branche>Softwareentwicklung</branche>
-        <strasse_hnr>Rotherstraße 9</strasse_hnr>
+        <strasse_hnr>Rotherstra&#195;&#376;e 9</strasse_hnr>
         <plz>10245</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -2480,7 +2454,7 @@
 
     <firma name="PAUX Technologies GmbH ">
         <branche>N/A</branche>
-        <strasse_hnr>Schönhauser Allee 42 </strasse_hnr>
+        <strasse_hnr>Sch&#195;&#182;nhauser Allee 42 </strasse_hnr>
         <plz>10435</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -2495,7 +2469,7 @@
 
     <firma name="Pei Tel Communikations GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Rheinstraße 17B</strasse_hnr>
+        <strasse_hnr>Rheinstra&#195;&#376;e 17B</strasse_hnr>
         <plz>14513</plz>
         <ort>Teltow</ort>
         <land>DE</land>
@@ -2510,10 +2484,10 @@
     </firma>
 
     <firma name="Perfekta GmbH">
-        <branche>Gebäudeautomation</branche>
+        <branche>Geb&#195;&#164;udeautomation</branche>
         <strasse_hnr>Rudolf-Breitscheid-Str. 15</strasse_hnr>
         <plz>15517</plz>
-        <ort>Fürstenwalde</ort>
+        <ort>F&#195;&#188;rstenwalde</ort>
         <land>DE</land>
         <website>http://www.perfekta.de</website>
         <ansprechpartner name="Bernd Rohrbeck">
@@ -2593,7 +2567,7 @@
 
     <firma name="PSIPENTA Software Systems GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Dirksennstraße 42 - 44</strasse_hnr>
+        <strasse_hnr>Dirksennstra&#195;&#376;e 42 - 44</strasse_hnr>
         <plz>10178</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -2611,8 +2585,8 @@
 
     <firma name="QUAPRO">
         <branche>Projektmanagement</branche>
-        <strasse_hnr>Amtsstraße 7</strasse_hnr>
-        <adresszusatz>Ing.-büro für QM und ProjManagem.</adresszusatz>
+        <strasse_hnr>Amtsstra&#195;&#376;e 7</strasse_hnr>
+        <adresszusatz>Ing.-b&#195;&#188;ro f&#195;&#188;r QM und ProjManagem.</adresszusatz>
         <plz>12555</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -2644,7 +2618,7 @@
 
     <firma name="Red Croco Media">
         <branche>N/A</branche>
-        <strasse_hnr>Bahnhofstraße 1</strasse_hnr>
+        <strasse_hnr>Bahnhofstra&#195;&#376;e 1</strasse_hnr>
         <plz>15745</plz>
         <ort>Wildau</ort>
         <land>DE</land>
@@ -2743,7 +2717,7 @@
 
     <firma name="secu-ring GbR">
         <branche>N/A</branche>
-        <strasse_hnr>Wönnichstraße 68/70</strasse_hnr>
+        <strasse_hnr>W&#195;&#182;nnichstra&#195;&#376;e 68/70</strasse_hnr>
         <plz>10317</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -2771,7 +2745,7 @@
         <ort>Werder</ort>
         <land>DE</land>
         <website>http://www.selectronic.de</website>
-        <ansprechpartner name="Frank Möllemann">
+        <ansprechpartner name="Frank M&#195;&#182;llemann">
             <anrede>Herr</anrede>
             <funktion>Personal</funktion>
             <telefon>03327 48 66 66</telefon>
@@ -2783,7 +2757,7 @@
 
     <firma name="Sell It Smart GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Gaudystraße 12</strasse_hnr>
+        <strasse_hnr>Gaudystra&#195;&#376;e 12</strasse_hnr>
         <plz>10437</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -2798,12 +2772,12 @@
 
     <firma name="Servermeile GmbH">
         <branche>IT-Dienstleistung</branche>
-        <strasse_hnr>Lahnstraße 34</strasse_hnr>
+        <strasse_hnr>Lahnstra&#195;&#376;e 34</strasse_hnr>
         <plz>12055</plz>
         <ort>Berlin</ort>
         <land>DE</land>
         <website>http://www.servermeile.de</website>
-        <ansprechpartner name="Christian Gründemann">
+        <ansprechpartner name="Christian Gr&#195;&#188;ndemann">
             <anrede>Frau</anrede>
             <telefon>030 2000 50 50</telefon>
             <email>c.gruendemann@servermeile.de</email>
@@ -2852,7 +2826,7 @@
         <ort>Berlin</ort>
         <land>DE</land>
         <website>http://www.sitqsystems.com</website>
-        <ansprechpartner name="Dirk Gödtke">
+        <ansprechpartner name="Dirk G&#195;&#182;dtke">
             <anrede>Herr</anrede>
             <funktion>GF</funktion>
             <telefon>030 80 40 99 500</telefon>
@@ -2877,14 +2851,14 @@
         <erfassungsdatum>2012-01-31</erfassungsdatum>
     </firma>
 
-    <firma name="Softwareentwicklung und Webseitengestaltung Mirko Böer">
+    <firma name="Softwareentwicklung und Webseitengestaltung Mirko B&#195;&#182;er">
         <branche>Softwareentwicklung</branche>
         <strasse_hnr>Niederkirchner Str. 9</strasse_hnr>
         <plz>04107</plz>
         <ort>Leipzig</ort>
         <land>DE</land>
         <website>http://www.wt-rate.com</website>
-        <ansprechpartner name="Stefan Böer">
+        <ansprechpartner name="Stefan B&#195;&#182;er">
             <anrede>Herr</anrede>
             <telefon>0179 13 17 52 9</telefon>
             <email>info@wt-rate.com</email>
@@ -2909,7 +2883,7 @@
         <erfassungsdatum>2002-06-14</erfassungsdatum>
     </firma>
 
-    <firma name="Söllner Consult GmbH">
+    <firma name="S&#195;&#182;llner Consult GmbH">
         <branche>Verkehrstelematik</branche>
         <strasse_hnr>David-Gilly-Str. 1</strasse_hnr>
         <adresszusatz>airports traffic data services</adresszusatz>
@@ -2917,7 +2891,7 @@
         <ort>Potsdam</ort>
         <land>DE</land>
         <website>http://www.soellner-consult.de</website>
-        <ansprechpartner name="Rainer Söllner">
+        <ansprechpartner name="Rainer S&#195;&#182;llner">
             <anrede>Herr</anrede>
             <titel>Prof. Dr.</titel>
             <funktion>Managing Director</funktion>
@@ -2930,7 +2904,7 @@
 
     <firma name="Solventis Unternehmensberatungsgesellschaft mbH">
         <branche>N/A</branche>
-        <strasse_hnr>Köpenicker Str. 126</strasse_hnr>
+        <strasse_hnr>K&#195;&#182;penicker Str. 126</strasse_hnr>
         <plz>10179</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -2960,7 +2934,7 @@
 
     <firma name="SUSI Technology GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Zähringerstraße 1</strasse_hnr>
+        <strasse_hnr>Z&#195;&#164;hringerstra&#195;&#376;e 1</strasse_hnr>
         <plz>69115</plz>
         <ort>Heidelberg</ort>
         <land>DE</land>
@@ -2971,7 +2945,7 @@
             <telefon>06221 9059361</telefon>
             <email>fwu@susi-tech.com</email>
         </ansprechpartner>
-        <erfassungsdatum></erfassungsdatum>
+        <erfassungsdatum />
     </firma>
 
     <firma name="symatrix GmbH">
@@ -3010,7 +2984,7 @@
 
     <firma name="Tarador GmbH">
         <branche>IT-Dienstleistung</branche>
-        <strasse_hnr>Am Bürohochhaus 2-4</strasse_hnr>
+        <strasse_hnr>Am B&#195;&#188;rohochhaus 2-4</strasse_hnr>
         <plz>14718</plz>
         <ort>Potsdam</ort>
         <land>DE</land>
@@ -3025,7 +2999,7 @@
 
     <firma name="tarent GmbH">
         <branche>Softwareentwicklung</branche>
-        <strasse_hnr>Poststraße 4 - 5</strasse_hnr>
+        <strasse_hnr>Poststra&#195;&#376;e 4 - 5</strasse_hnr>
         <plz>10178</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -3041,14 +3015,14 @@
 
     <firma name="Technologiezentrum Verkehrstechnik">
         <branche>Verkehrstelematik</branche>
-        <strasse_hnr>Neuendorfstraße 18a</strasse_hnr>
+        <strasse_hnr>Neuendorfstra&#195;&#376;e 18a</strasse_hnr>
         <plz>16761</plz>
         <ort>Hennigsdorf</ort>
         <land>DE</land>
         <website>http://www.tzv-henn.de</website>
         <ansprechpartner name="Onnen Weise">
             <anrede>Herr</anrede>
-            <funktion>Geschäftsführerin</funktion>
+            <funktion>Gesch&#195;&#164;ftsf&#195;&#188;hrerin</funktion>
             <telefon>03302 55 91 50</telefon>
             <email>info@tzv-henn.de</email>
         </ansprechpartner>
@@ -3057,7 +3031,7 @@
 
     <firma name="TEKO New Media GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Stühlinger Str. 15</strasse_hnr>
+        <strasse_hnr>St&#195;&#188;hlinger Str. 15</strasse_hnr>
         <plz>10318</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -3153,9 +3127,9 @@
 
     <firma name="TEMIC TELEFUNKEN microelectronic GmbH">
         <branche>Verkehrstelematik</branche>
-        <strasse_hnr>Sieboldstraße 19</strasse_hnr>
+        <strasse_hnr>Sieboldstra&#195;&#376;e 19</strasse_hnr>
         <plz>90411</plz>
-        <ort>Nürnberg</ort>
+        <ort>N&#195;&#188;rnberg</ort>
         <land>DE</land>
         <website>http://www.temic.com</website>
         <ansprechpartner name="Melanie Pipper">
@@ -3174,7 +3148,7 @@
         <ort>Frankfurt/Main</ort>
         <land>DE</land>
         <website>http://www.tenovis.com</website>
-        <ansprechpartner name="Frank Tönsmann">
+        <ansprechpartner name="Frank T&#195;&#182;nsmann">
             <anrede>Herr</anrede>
             <telefon>069 7505-2014</telefon>
             <fax>7505-8161</fax>
@@ -3185,7 +3159,7 @@
 
     <firma name="TH Wildau Bibliothek">
         <branche>Hochschule; Bildung</branche>
-        <strasse_hnr>Bahnhofstraße</strasse_hnr>
+        <strasse_hnr>Bahnhofstra&#195;&#376;e</strasse_hnr>
         <adresszusatz>iCampus</adresszusatz>
         <plz>15745</plz>
         <ort>Wildau</ort>
@@ -3208,7 +3182,7 @@
 
     <firma name="TH Wildau">
         <branche>Hochschule; Bildung; IT-Dienstleistung</branche>
-        <strasse_hnr>Bahnhofstraße</strasse_hnr>
+        <strasse_hnr>Bahnhofstra&#195;&#376;e</strasse_hnr>
         <adresszusatz>Hochschulrechenzentrum</adresszusatz>
         <plz>15745</plz>
         <ort>Wildau</ort>
@@ -3225,7 +3199,7 @@
 
     <firma name="ticket-web GmbH &amp; Co. KG">
         <branche>E-Commerce; Softwareentwicklung</branche>
-        <strasse_hnr>Bahnhofstraße, Halle 7</strasse_hnr>
+        <strasse_hnr>Bahnhofstra&#195;&#376;e, Halle 7</strasse_hnr>
         <plz>15745</plz>
         <ort>Wildau</ort>
         <land>DE</land>
@@ -3251,7 +3225,7 @@
         <ansprechpartner name="Michael Puke">
             <anrede>Herr</anrede>
             <titel>Dr.</titel>
-            <funktion>Geschäftsführer</funktion>
+            <funktion>Gesch&#195;&#164;ftsf&#195;&#188;hrer</funktion>
             <telefon>040- 37705-0  </telefon>
             <email>volker.puke@tietoenator.com</email>
         </ansprechpartner>
@@ -3260,7 +3234,7 @@
 
     <firma name="TimeTech GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Nobelstraße 15</strasse_hnr>
+        <strasse_hnr>Nobelstra&#195;&#376;e 15</strasse_hnr>
         <plz>70469</plz>
         <ort>Stuttgart</ort>
         <land>DE</land>
@@ -3280,7 +3254,7 @@
         <ort>Wildau</ort>
         <land>DE</land>
         <website>http://www.tm-connect.de</website>
-        <ansprechpartner name="Torsten Müller">
+        <ansprechpartner name="Torsten M&#195;&#188;ller">
             <anrede>Herr</anrede>
             <funktion>Inhaber</funktion>
             <telefon>03375 55 45 - 00</telefon>
@@ -3292,13 +3266,13 @@
 
     <firma name="TOLL COLLECT">
         <branche>Verkehrsdienstleistung</branche>
-        <strasse_hnr>Linkstraße 4</strasse_hnr>
-        <adresszusatz>Service Delivery Fahrzeuggeräte</adresszusatz>
+        <strasse_hnr>Linkstra&#195;&#376;e 4</strasse_hnr>
+        <adresszusatz>Service Delivery Fahrzeugger&#195;&#164;te</adresszusatz>
         <plz>10785</plz>
         <ort>Berlin</ort>
         <land>DE</land>
         <website>http://www.toll-collect.de</website>
-        <ansprechpartner name="Jürgen Jodeit">
+        <ansprechpartner name="J&#195;&#188;rgen Jodeit">
             <anrede>Herr</anrede>
             <funktion>Personal</funktion>
             <telefon>030 74077-9708</telefon>
@@ -3323,7 +3297,7 @@
         <erfassungsdatum>2011-07-15</erfassungsdatum>
     </firma>
 
-    <firma name="Top Control Gesellschaft für Fernwirktechnik und Telematiksysteme mbH">
+    <firma name="Top Control Gesellschaft f&#195;&#188;r Fernwirktechnik und Telematiksysteme mbH">
         <branche>Verkehrstelematik</branche>
         <strasse_hnr>Sauerwiesen 2</strasse_hnr>
         <plz>67661</plz>
@@ -3342,7 +3316,7 @@
 
     <firma name="Toptarif Internet GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Schönhauser Allee 6-7</strasse_hnr>
+        <strasse_hnr>Sch&#195;&#182;nhauser Allee 6-7</strasse_hnr>
         <plz>10119</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -3372,7 +3346,7 @@
 
     <firma name="T-Systems International GmbH - EZ">
         <branche>IT-Dienstleistung</branche>
-        <strasse_hnr>Wittestraße 30</strasse_hnr>
+        <strasse_hnr>Wittestra&#195;&#376;e 30</strasse_hnr>
         <adresszusatz>Entwicklungszentrum Berlin</adresszusatz>
         <plz>13509</plz>
         <ort>Berlin</ort>
@@ -3419,7 +3393,7 @@
 
     <firma name="T-Systems Business Services GmbH">
         <branche>IT-Dienstleistung</branche>
-        <strasse_hnr>Dernburgstraße 50</strasse_hnr>
+        <strasse_hnr>Dernburgstra&#195;&#376;e 50</strasse_hnr>
         <plz>14057</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -3437,10 +3411,10 @@
         <strasse_hnr>Gewerbepark Nord 9</strasse_hnr>
         <adresszusatz>uesa Unternehmensgruppe</adresszusatz>
         <plz>04938</plz>
-        <ort>Uebigau-Wahrenbrück</ort>
+        <ort>Uebigau-Wahrenbr&#195;&#188;ck</ort>
         <land>DE</land>
         <website>http://www.uesa.de</website>
-        <ansprechpartner name="Mathias Gärtner">
+        <ansprechpartner name="Mathias G&#195;&#164;rtner">
             <anrede>Herr</anrede>
             <telefon>035365 44 99-504</telefon>
             <email>m.gaertner@uemet.de</email>
@@ -3448,7 +3422,7 @@
         <erfassungsdatum>2008-12-09</erfassungsdatum>
     </firma>
 
-    <firma name="v3 agentur für medizinisches Marketing GmbH">
+    <firma name="v3 agentur f&#195;&#188;r medizinisches Marketing GmbH">
         <branche>N/A</branche>
         <strasse_hnr>Marburger Str. 2</strasse_hnr>
         <plz>10789</plz>
@@ -3465,12 +3439,12 @@
 
     <firma name="Verkehrsautomatisierung Berlin GmbH">
         <branche>Verkehrstelematik</branche>
-        <strasse_hnr>Fanny-Zobel-Straße 9</strasse_hnr>
+        <strasse_hnr>Fanny-Zobel-Stra&#195;&#376;e 9</strasse_hnr>
         <plz>12435</plz>
         <ort>Berlin</ort>
         <land>DE</land>
         <website>http://www.vaberlin.de</website>
-        <ansprechpartner name="Jan Möhle">
+        <ansprechpartner name="Jan M&#195;&#182;hle">
             <anrede>Herr</anrede>
             <telefon>030 5362 2531</telefon>
             <email>jan.moehle@th-wildau.de</email>
@@ -3480,7 +3454,7 @@
 
     <firma name="Vortel GmbH">
         <branche>Softwareentwicklung</branche>
-        <strasse_hnr>Knesebeckstraße 61 A</strasse_hnr>
+        <strasse_hnr>Knesebeckstra&#195;&#376;e 61 A</strasse_hnr>
         <plz>10719</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -3526,7 +3500,7 @@
         <erfassungsdatum>2008-12-09</erfassungsdatum>
     </firma>
 
-    <firma name="WG Systemhaus für IT">
+    <firma name="WG Systemhaus f&#195;&#188;r IT">
         <branche>IT-Dienstleistung</branche>
         <strasse_hnr>Landsberger Str. 262</strasse_hnr>
         <plz>12623</plz>
@@ -3544,14 +3518,14 @@
     <firma name="Wonderware GmbH">
         <branche>N/A</branche>
         <strasse_hnr>Breite 2a</strasse_hnr>
-        <adresszusatz>Geschäftsstelle Berlin</adresszusatz>
+        <adresszusatz>Gesch&#195;&#164;ftsstelle Berlin</adresszusatz>
         <plz>15806</plz>
         <ort>Zossen</ort>
         <land>DE</land>
         <website>http://woderware.de</website>
         <ansprechpartner name="Alexander Schulz">
             <anrede>Herr</anrede>
-            <funktion>Leiter der Geschäftsstelle</funktion>
+            <funktion>Leiter der Gesch&#195;&#164;ftsstelle</funktion>
             <telefon>033 77 30 36 76</telefon>
             <fax>30 36 77</fax>
             <email>thomas.schulz@wonderware.com</email>
@@ -3561,7 +3535,7 @@
 
     <firma name="YOC AG">
         <branche>IT-Dienstleistung</branche>
-        <strasse_hnr>Dirksennstraße 47</strasse_hnr>
+        <strasse_hnr>Dirksennstra&#195;&#376;e 47</strasse_hnr>
         <plz>10178</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -3576,4 +3550,4 @@
         <erfassungsdatum>2003-02-04</erfassungsdatum>
     </firma>
 
-</firmenliste>
+<firma name="A.M.M. Aktionszentrum Multi Media GmbH"><branche>Multimedia</branche><strasse_hnr>August-Bebel-Str. 68</strasse_hnr><adresszusatz>keine</adresszusatz><plz>14482</plz><ort>Potsdam</ort><land>DE</land><website>http://www.ammgruppe.de</website><ansprechpartner name="Kathrin Schwarz"><anrede>Frau</anrede><funktion>GF</funktion><telefon>0331 740 60 84</telefon><fax>740 60 85</fax><email>info@amm-gruppe.de</email></ansprechpartner><ansprechpartner name="Stefan Schwarz"><anrede>Herr</anrede><telefon>0331 740 60 84</telefon><fax>740 60 85</fax><email>info@amm-gruppe.de</email></ansprechpartner><erfassungsdatum>2010-10-05</erfassungsdatum></firma><firma name="456Firma"><branche>Verkehrsprojekte</branche><strasse_hnr>Schillerallee 1, Zimmer 107</strasse_hnr><adresszusatz>Zimmer 107</adresszusatz><plz>15745</plz><ort>Wildau</ort><land>DE</land><website>www.a.com</website><ansprechpartner name="Juanito"><anrede>Herr</anrede><titel>Dipl.-Inf. (FH)</titel><funktion>keine</funktion><telefon>01234566</telefon><email>aaa@aa.com</email></ansprechpartner><erfassungsdatum>2017-12-14</erfassungsdatum></firma></firmenliste>

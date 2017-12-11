@@ -39,11 +39,12 @@ def create_firm(content):
 # @return the searched firm, None is returned when not found
 def get_firms_by_name(name):
     firms_elements = get_firms_from_xml()
-    firmas_list = []
+    firms_list = []
     for f_element in firms_elements:
         if name in f_element.attrib['name'].lower():
-            firmas_list = get_list_of_firms_from_xml(f_element, firmas_list)
-    return firmas_list
+            firms_list = get_list_of_firms_from_xml(f_element, firms_list)
+    firms_list.sort(key=lambda x: x.name)
+    return firms_list
 
 
 # Retrive a list with all the firms
@@ -53,6 +54,7 @@ def get_all_firms():
     firms_list = []
     for f_element in firms_elements:
         firms_list = get_list_of_firms_from_xml(f_element, firms_list)
+    firms_list.sort(key=lambda x: x.name)
     return firms_list
 
 
@@ -62,8 +64,10 @@ def get_firm_branchs():
     firms = get_all_firms()
     branchs_list = []
     for a_firm in firms:
-        branchs_list.append(a_firm.branche)
-    return list(set(branchs_list))
+        if a_firm.branche not in branchs_list:
+            branchs_list.append(a_firm.branche)
+    branchs_list.sort()
+    return branchs_list
 
 
 # Populate the list of firms with the XML data
