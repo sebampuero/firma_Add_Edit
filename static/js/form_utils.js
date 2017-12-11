@@ -112,6 +112,9 @@ function enable_disable_ans_form_1(){
     if ($(this).is(':checked')) {
         $('form#ansprechpartner_form_1').removeClass('disabled').addClass('checked');
         enable_ansprechpartner_form();
+        $('html, body').animate({
+              scrollTop: $('form#ansprechpartner_form_1').offset().top - $('html, body').offset().top + $('html, body').scrollTop()
+         }, 1500);
     }else{
         $('form#ansprechpartner_form_1').removeClass('checked').addClass('disabled');
         disable_ansprechpartner_form();
@@ -121,6 +124,9 @@ function enable_disable_ans_form_2(){
     if ($(this).is(':checked')) {
         $('form#ansprechpartner_form_2').removeClass('disabled').addClass('checked');
         enable_ansprechpartner_form();
+        $('html, body').animate({
+              scrollTop: $('form#ansprechpartner_form_2').offset().top - $('html, body').offset().top + $('html, body').scrollTop()
+         }, 1500);
     }else{
         $('form#ansprechpartner_form_2').removeClass('checked').addClass('disabled');
         disable_ansprechpartner_form();
