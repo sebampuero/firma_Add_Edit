@@ -222,6 +222,9 @@
                         $('label#firm_name_error_label').hide();
                     }
                 });
+           }else{
+                $('button#submit_create').prop('disabled', false);
+                $('label#firm_name_error_label').hide();
            }
         });
     });
