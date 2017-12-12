@@ -52,6 +52,10 @@ html, body{
     background-color: #d8d8d8;
     border-radius: 10px;
 }
-.error{
+.error, .error-custom{
 	color:red;
+}
+.modal_custom_content_container{
+    padding: 20px;
+    text-align:center;
 }

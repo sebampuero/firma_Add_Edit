@@ -1,5 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
+
+<!--    MODALS     -->
+<div id="server_error_modal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal_custom_content_container">
+          Etwas ist schiefgelaufen, bitte versuchen Sie später erneut <i class="fa fa-exclamation-triangle" aria-hidden="true" style="color:red;"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="invalid_input_modal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal_custom_content_container">
+          Bitte prüfen Sie ihre Eingaben <i class="fa fa-exclamation-triangle" aria-hidden="true" style="color:red;"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
     <div class="container">
         <div class="main-wrapper">
             <h1 style="text-align:center;">Eine Firma erstellen</h1>
@@ -8,7 +30,7 @@
                 <label>Firmenname</label>
                 <input class="form-control" id="typeahead" type="text" name="name" placeholder="Firmenname" required>
                 <small class="form-text text-muted">Pflichtfeld</small>
-                <label id="firm_name_error_label" class="error" style="display:none;">Diese Firma existiert bereits, bitte wählen Sie einen anderen Namen</label>
+                <label id="firm_name_error_label" class="error-custom" style="display:none;">Diese Firma existiert bereits, bitte wählen Sie einen anderen Namen aus</label>
             </div>
             <div class="form-group">
                 <label>Straße</label>
@@ -201,10 +223,10 @@
                     if(data.status == 200)
                         window.location.replace("/?create="+result.firm_obj.name);
                     else if(data.status == 500)
-                        alert('Etwas ist schiefgelaufen, bitte versuchen Sie später erneut.')
+                        $('#server_error_modal').modal('show');
                 });
             }else{
-                alert("Bitte prüfen Sie das Formular, es gibt Fehler.");
+                $('#invalid_input_modal').modal('show');
             }
         });
 

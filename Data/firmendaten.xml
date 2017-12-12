@@ -1,21 +1,5 @@
 <firmenliste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1" xsi:noNamespaceSchemaLocation="firmendaten.xsd">
 	
-    <firma name="4system GmbH">
-        <branche>E-Learning</branche>
-        <strasse_hnr>Kurfrstenstra&#195;&#376;e 114</strasse_hnr>
-        <plz>10787</plz>
-        <ort>Berlin</ort>
-        <land>DE</land>
-        <website>http://www.4system.com</website>
-        <ansprechpartner name="Dawid Kosc">
-            <anrede>Herr</anrede>
-            <telefon>030 23 63 16 73</telefon>
-            <fax>23 63 16 74</fax>
-            <email>d.kosc@4system.com</email>
-        </ansprechpartner>
-        <erfassungsdatum>2009-06-18</erfassungsdatum>
-    </firma>
-
     <firma name="Aastra Deutschland GmbH">
         <branche>N/A</branche>
         <strasse_hnr>Zeughofstr. 1</strasse_hnr>
@@ -85,22 +69,6 @@
             <email>matthias.schmitt@airbus.de</email>
         </ansprechpartner>
         <erfassungsdatum>2011-07-15</erfassungsdatum>
-    </firma>
-
-    <firma name="Akademie der Bundeswehr f&#195;&#188;r Information und Kommunikation">
-        <branche>Verteidigung</branche>
-        <strasse_hnr>Pr&#195;&#182;tzeler Chaussee 20</strasse_hnr>
-        <plz>15344</plz>
-        <ort>Strausberg</ort>
-        <land>DE</land>
-        <website>http://www.bundeswehr.org</website>
-        <ansprechpartner name="Bernd Stichling">
-            <anrede>Herr</anrede>
-            <telefon>03341 58 16 91</telefon>
-            <fax>58 16 45</fax>
-            <email>berndstichling@bundeswehr.org</email>
-        </ansprechpartner>
-        <erfassungsdatum>2008-01-04</erfassungsdatum>
     </firma>
 
     <firma name="alphaQuest GmbH">
@@ -197,23 +165,6 @@
             <email>uwe.jaroschewski@arxes-berlin.de</email>
         </ansprechpartner>
         <erfassungsdatum>2007-02-08</erfassungsdatum>
-    </firma>
-
-    <firma name="ASCI Systemhaus GmbH">
-        <branche>IT-Dienstleistung</branche>
-        <strasse_hnr>Seddiner Stra&#195;&#376;e 5</strasse_hnr>
-        <plz>10315</plz>
-        <ort>Berlin</ort>
-        <land>DE</land>
-        <website>http://www.asci-systemhaus.de</website>
-        <ansprechpartner name="Lutz Langerwisch">
-            <anrede>Herr</anrede>
-            <titel>Dipl.-Ing.</titel>
-            <telefon>030 2934850</telefon>
-            <fax>29348511</fax>
-            <email>bewerbung@asci-systemhaus.de</email>
-        </ansprechpartner>
-        <erfassungsdatum>2012-02-02</erfassungsdatum>
     </firma>
 
     <firma name="asitos GmbH">
@@ -3550,4 +3501,4 @@
         <erfassungsdatum>2003-02-04</erfassungsdatum>
     </firma>
 
-<firma name="A.M.M. Aktionszentrum Multi Media GmbH"><branche>Multimedia</branche><strasse_hnr>August-Bebel-Str. 68</strasse_hnr><adresszusatz>keine</adresszusatz><plz>14482</plz><ort>Potsdam</ort><land>DE</land><website>http://www.ammgruppe.de</website><ansprechpartner name="Kathrin Schwarz"><anrede>Frau</anrede><funktion>GF</funktion><telefon>0331 740 60 84</telefon><fax>740 60 85</fax><email>info@amm-gruppe.de</email></ansprechpartner><ansprechpartner name="Stefan Schwarz"><anrede>Herr</anrede><telefon>0331 740 60 84</telefon><fax>740 60 85</fax><email>info@amm-gruppe.de</email></ansprechpartner><erfassungsdatum>2010-10-05</erfassungsdatum></firma><firma name="456Firma"><branche>Verkehrsprojekte</branche><strasse_hnr>Schillerallee 1, Zimmer 107</strasse_hnr><adresszusatz>Zimmer 107</adresszusatz><plz>15745</plz><ort>Wildau</ort><land>DE</land><website>www.a.com</website><ansprechpartner name="Juanito"><anrede>Herr</anrede><titel>Dipl.-Inf. (FH)</titel><funktion>keine</funktion><telefon>01234566</telefon><email>aaa@aa.com</email></ansprechpartner><erfassungsdatum>2017-12-14</erfassungsdatum></firma><firma name="Juanito"><branche>Agentur</branche><strasse_hnr>Schillerallee 1, Zimmer 107</strasse_hnr><adresszusatz>Zimmer 107</adresszusatz><plz>15745</plz><ort>Wildau</ort><land>DE</land><website>www.aa.com</website><ansprechpartner name="werwre"><anrede>Herr</anrede><titel>Dipl.-Inf. (FH)</titel><telefon>122345</telefon><email>e@a.com</email></ansprechpartner><erfassungsdatum>2017-12-07</erfassungsdatum></firma><firma name="sfsdfsdf"><branche>IT-Dienstleistung; Gesundheitswesen</branche><strasse_hnr>Schillerallee 1, Zimmer 107</strasse_hnr><adresszusatz>Zimmer 107</adresszusatz><plz>0123</plz><ort>Wildau</ort><land>AT</land><website>www.aaa.com</website><ansprechpartner name="werwer"><anrede>Herr</anrede><titel>Dipl.-Inf. (FH)</titel><funktion>erer</funktion><telefon>0123</telefon><email>sebastian.ampuerom@gmail.com</email></ansprechpartner><erfassungsdatum>2017-12-06</erfassungsdatum></firma><firma name="asdad"><branche>Agentur</branche><strasse_hnr>Schillerallee 1, Zimmer 107</strasse_hnr><adresszusatz>Zimmer 107</adresszusatz><plz>15745</plz><ort>Wildau</ort><land>DE</land><website>www.aaa.com</website><ansprechpartner name="wrwerwer"><anrede>Frau</anrede><titel>werwer</titel><funktion>wrewer</funktion><telefon>234234</telefon><email>swwer@sdfs.com</email></ansprechpartner><erfassungsdatum>2017-12-06</erfassungsdatum></firma></firmenliste>
+<firma name="A.M.M. Aktionszentrum Multi Media GmbH"><branche>Multimedia</branche><strasse_hnr>August-Bebel-Str. 68</strasse_hnr><adresszusatz>keine</adresszusatz><plz>14482</plz><ort>Potsdam</ort><land>DE</land><website>http://www.ammgruppe.de</website><ansprechpartner name="Kathrin Schwarz"><anrede>Frau</anrede><funktion>GF</funktion><telefon>0331 740 60 84</telefon><fax>740 60 85</fax><email>info@amm-gruppe.de</email></ansprechpartner><ansprechpartner name="Stefan Schwarz"><anrede>Herr</anrede><telefon>0331 740 60 84</telefon><fax>740 60 85</fax><email>info@amm-gruppe.de</email></ansprechpartner><erfassungsdatum>2010-10-05</erfassungsdatum></firma><firma name="456Firma"><branche>Verkehrsprojekte</branche><strasse_hnr>Schillerallee 1, Zimmer 107</strasse_hnr><adresszusatz>Zimmer 107</adresszusatz><plz>15745</plz><ort>Wildau</ort><land>DE</land><website>www.a.com</website><ansprechpartner name="Juanito"><anrede>Herr</anrede><titel>Dipl.-Inf. (FH)</titel><funktion>keine</funktion><telefon>01234566</telefon><email>aaa@aa.com</email></ansprechpartner><erfassungsdatum>2017-12-14</erfassungsdatum></firma><firma name="Juanito"><branche>Agentur</branche><strasse_hnr>Schillerallee 1, Zimmer 107</strasse_hnr><adresszusatz>Zimmer 107</adresszusatz><plz>15745</plz><ort>Wildau</ort><land>DE</land><website>www.aa.com</website><ansprechpartner name="werwre"><anrede>Herr</anrede><titel>Dipl.-Inf. (FH)</titel><telefon>122345</telefon><email>e@a.com</email></ansprechpartner><erfassungsdatum>2017-12-07</erfassungsdatum></firma><firma name="sfsdfsdf"><branche>IT-Dienstleistung; Gesundheitswesen</branche><strasse_hnr>Schillerallee 1, Zimmer 107</strasse_hnr><adresszusatz>Zimmer 107</adresszusatz><plz>0123</plz><ort>Wildau</ort><land>AT</land><website>www.aaa.com</website><ansprechpartner name="werwer"><anrede>Herr</anrede><titel>Dipl.-Inf. (FH)</titel><funktion>erer</funktion><telefon>0123</telefon><email>sebastian.ampuerom@gmail.com</email></ansprechpartner><erfassungsdatum>2017-12-06</erfassungsdatum></firma><firma name="asdad"><branche>Agentur</branche><strasse_hnr>Schillerallee 1, Zimmer 107</strasse_hnr><adresszusatz>Zimmer 107</adresszusatz><plz>15745</plz><ort>Wildau</ort><land>DE</land><website>www.aaa.com</website><ansprechpartner name="wrwerwer"><anrede>Frau</anrede><titel>werwer</titel><funktion>wrewer</funktion><telefon>234234</telefon><email>swwer@sdfs.com</email></ansprechpartner><erfassungsdatum>2017-12-06</erfassungsdatum></firma><firma name="ASCI Systemhaus GmbH"><branche>IT-Dienstleistung</branche><strasse_hnr>Seddiner Stra&#195;&#376;e 5</strasse_hnr><plz>10315</plz><ort>Berlin</ort><land>DE</land><website>http://www.ascisystemhaus.de</website><ansprechpartner name="Lutz Langerwisch"><anrede>Herr</anrede><titel>Dipl.-Ing.</titel><telefon>030 2934850</telefon><fax>29348511</fax><email>bewerbung@asci-systemhaus.de</email></ansprechpartner><erfassungsdatum>2012-02-02</erfassungsdatum></firma><firma name="4system GmbH"><branche>E-Learning</branche><strasse_hnr>Kurfrstenstra&#195;&#376;e 114</strasse_hnr><plz>10787</plz><ort>Berlin</ort><land>DE</land><website>http://www.4system.com</website><ansprechpartner name="Dawid Kosc"><anrede>Herr</anrede><telefon>030 23 63 16 73</telefon><fax>23 63 16 74</fax><email>d.kosc@4system.com</email></ansprechpartner><erfassungsdatum>2009-06-18</erfassungsdatum></firma><firma name="Akademie der Bundeswehr f&#195;&#188;r Information und Kommunikation"><branche>Verteidigung</branche><strasse_hnr>Pr&#195;&#182;tzeler Chaussee 20</strasse_hnr><plz>15344</plz><ort>Strausberg</ort><land>DE</land><website>http://www.bundeswehr.org</website><ansprechpartner name="Bernd Stichling"><anrede>Herr</anrede><telefon>03341 58 16 91</telefon><fax>58 16 45</fax><email>berndstichling@bundeswehr.org</email></ansprechpartner><erfassungsdatum>2008-01-04</erfassungsdatum></firma><firma name="William Co"><branche>Gesundheitstelematik</branche><strasse_hnr>Schillerallee 1, Zimmer 107</strasse_hnr><adresszusatz>Zimmer 107</adresszusatz><plz>0123</plz><ort>Wildau</ort><land>CH</land><website>www.william.com</website><ansprechpartner name="Yo"><anrede>Herr</anrede><titel>Dipl.-Inf. (FH)</titel><telefon>12345</telefon><email>wima@e.com</email></ansprechpartner><ansprechpartner name="William 2"><anrede>Herr</anrede><titel>Dr. rer. nat.</titel><telefon>12345</telefon><email>wima@w.com</email></ansprechpartner><erfassungsdatum>2017-12-07</erfassungsdatum></firma></firmenliste>

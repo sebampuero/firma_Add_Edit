@@ -1,5 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
+
+<!--    MODALS     -->
+<div id="server_error_modal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal_custom_content_container">
+          Etwas ist schiefgelaufen, bitte versuchen Sie später erneut
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="invalid_input_modal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal_custom_content_container">
+          Bitte prüfen Sie ihre Eingaben
+      </div>
+    </div>
+  </div>
+</div>
+
     <div class="container">
         <div class="main-wrapper">
             <h1 style="text-align:center;">Eine vorhandene Firma bearbeiten</h1>
@@ -242,10 +264,10 @@
                     if(data.status == 200)
                         window.location.replace("/?edit="+result.firm_obj.name);
                     else if(data.status == 500)
-                        alert('Etwas ist schiefgelaufen, bitte versuchen Sie später erneut.')
+                        $('#server_error_modal').modal('show');
                 });
             }else{
-                alert("Bitte prüfen Sie das Formular, es gibt Fehler.");
+                $('#invalid_input_modal').modal('show');
             }
         });
     });

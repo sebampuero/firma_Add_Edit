@@ -93,7 +93,6 @@ function parse_firm_obj_from_form(){
     $("form#firm_form").validate(firm_form_validation_rules);
     if(!$("form#firm_form").valid()){
         validation_flag = false;
-        return {flag: validation_flag};
     }
     $.each($("form#firm_form").serializeArray(),function(index,element){
         firm_obj[element.name] = element.value;

@@ -1,5 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
+
+<div id="confirmation_modal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal_custom_content_container">
+          <span id="message_container"></span><i class="fa fa-check" aria-hidden="true" style="color:green;"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
     <meta id="edited" data-status="{{edit}}">
     <meta id="created" data-status="{{create}}">
     <div class="container-fluid">
@@ -20,9 +31,11 @@
             if($('#edited').data().status == "" && $('#created').data().status == ""){
                 //do nothing
             }else if($('#edited').data().status != ""){
-                alert("Firma "+ $('#edited').data().status +" wurde erfolgreich bearbeitet");
+                $('#confirmation_modal').modal('show');
+                $('span#message_container').text("Firma "+ $('#edited').data().status +" wurde erfolgreich bearbeitet  ");
             }else if($('#created').data() != ""){
-                alert("Firma "+ $('#created').data().status +" wurde erfolgreich erstellt");
+                $('#confirmation_modal').modal('show');
+                $('span#message_container').text("Firma "+ $('#created').data().status +" wurde erfolgreich erstellt  ");
             }
         });
     </script>

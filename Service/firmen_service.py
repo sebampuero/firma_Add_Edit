@@ -43,7 +43,7 @@ def get_firms_by_name(name):
     for f_element in firms_elements:
         if name in f_element.attrib['name'].lower():
             firms_list = get_list_of_firms_from_xml(f_element, firms_list)
-    firms_list.sort(key=lambda x: x.name)
+    firms_list.sort(key=lambda x: x.name.lower())
     return firms_list
 
 
@@ -54,7 +54,7 @@ def get_all_firms():
     firms_list = []
     for f_element in firms_elements:
         firms_list = get_list_of_firms_from_xml(f_element, firms_list)
-    firms_list.sort(key=lambda x: x.name)
+    firms_list.sort(key=lambda x: x.name.lower())
     return firms_list
 
 
