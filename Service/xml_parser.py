@@ -68,7 +68,9 @@ def insert_firm(firma):
 def get_root():
     try:
         with open(filename, 'r') as xml_file:
-            tree = ET.parse(xml_file, ET.XMLParser(encoding='UTF-8'))
+            tree = ET.parse(xml_file, ET.XMLParser(encoding='utf-8'))
         return tree.getroot(), tree
     except Exception:
+        print(Exception)
         return None
+
