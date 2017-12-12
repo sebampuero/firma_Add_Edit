@@ -1,11 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<firmenliste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	         xsi:noNamespaceSchemaLocation="firmendaten.xsd"
-             version="1">
+<?xml version='1.0' encoding='utf-8'?>
+<firmenliste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1" xsi:noNamespaceSchemaLocation="firmendaten.xsd">
 
     <firma name="4system GmbH">
         <branche>E-Learning</branche>
-        <strasse_hnr>Kurfürstenstraße 114</strasse_hnr>
+        <strasse_hnr>KurfÃ¼rstenstraÃŸe 114</strasse_hnr>
         <plz>10787</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -26,7 +24,7 @@
         <ort>Berlin</ort>
         <land>DE</land>
         <website>http://www.aastra.de</website>
-        <ansprechpartner name="Jürgen Signer">
+        <ansprechpartner name="JÃ¼rgen Signer">
             <anrede>Herr</anrede>
             <funktion>GF</funktion>
             <telefon>030 6104 2007</telefon>
@@ -44,7 +42,7 @@
 
     <firma name="42com Telecommunication GmbH">
         <branche>Telekommunikation</branche>
-        <strasse_hnr>Straße der Pariser Kommune 12-16</strasse_hnr>
+        <strasse_hnr>StraÃŸe der Pariser Kommune 12-16</strasse_hnr>
         <plz>10243</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -99,7 +97,7 @@
 
     <firma name="Airbus Operations GmbH">
         <branche>Luftfahrt</branche>
-        <strasse_hnr>Lüneburger Schanze 30</strasse_hnr>
+        <strasse_hnr>LÃ¼neburger Schanze 30</strasse_hnr>
         <plz>21614</plz>
         <ort>Buxtehude</ort>
         <land>DE</land>
@@ -113,9 +111,9 @@
         <erfassungsdatum>2011-07-15</erfassungsdatum>
     </firma>
 
-    <firma name="Akademie der Bundeswehr für Information und Kommunikation">
+    <firma name="Akademie der Bundeswehr fÃ¼r Information und Kommunikation">
         <branche>Verteidigung</branche>
-        <strasse_hnr>Prötzeler Chaussee 20</strasse_hnr>
+        <strasse_hnr>PrÃ¶tzeler Chaussee 20</strasse_hnr>
         <plz>15344</plz>
         <ort>Strausberg</ort>
         <land>DE</land>
@@ -136,7 +134,7 @@
         <ort>Bernstadt</ort>
         <land>DE</land>
         <website>http://www.alphaQuest.de</website>
-        <ansprechpartner name="André Probst">
+        <ansprechpartner name="AndrÃ© Probst">
             <anrede>Herr</anrede>
             <telefon>07348 9670446</telefon>
             <fax>9670447</fax>
@@ -147,7 +145,7 @@
 
     <firma name="Andracor GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Mertensstraße 127 - 131</strasse_hnr>
+        <strasse_hnr>MertensstraÃŸe 127 - 131</strasse_hnr>
         <plz>13587</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -162,7 +160,7 @@
 
     <firma name="araneaNET GmbH">
         <branche>Netzwerkmanagement</branche>
-        <strasse_hnr>Steinstraße 1</strasse_hnr>
+        <strasse_hnr>SteinstraÃŸe 1</strasse_hnr>
         <plz>14482</plz>
         <ort>Potsdam</ort>
         <land>DE</land>
@@ -177,7 +175,7 @@
 
     <firma name="ARC-GREENLAB GmbH">
         <branche>Geoinformatik</branche>
-        <strasse_hnr>Eichenstraße 3b</strasse_hnr>
+        <strasse_hnr>EichenstraÃŸe 3b</strasse_hnr>
         <plz>12435</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -210,7 +208,7 @@
 
     <firma name="arxes Information Design Berlin GmbH">
         <branche>WLAN</branche>
-        <strasse_hnr>Marxstraße 3a</strasse_hnr>
+        <strasse_hnr>MarxstraÃŸe 3a</strasse_hnr>
         <plz>13347</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -227,7 +225,7 @@
 
     <firma name="ASCI Systemhaus GmbH">
         <branche>IT-Dienstleistung</branche>
-        <strasse_hnr>Seddiner Straße 5</strasse_hnr>
+        <strasse_hnr>Seddiner StraÃŸe 5</strasse_hnr>
         <plz>10315</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -244,7 +242,7 @@
 
     <firma name="asitos GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Bahnhofstraße Halle 7, Raum 8 EG</strasse_hnr>
+        <strasse_hnr>BahnhofstraÃŸe Halle 7, Raum 8 EG</strasse_hnr>
         <plz>15745</plz>
         <ort>Wildau</ort>
         <land>DE</land>
@@ -299,7 +297,7 @@
 
     <firma name="BBB Management GmbH">
         <branche>Netzwerkmanagement</branche>
-        <strasse_hnr>Robert-Rössle-Str. 10</strasse_hnr>
+        <strasse_hnr>Robert-RÃ¶ssle-Str. 10</strasse_hnr>
         <adresszusatz>Campus Berlin Buch</adresszusatz>
         <plz>13125</plz>
         <ort>Berlin</ort>
@@ -318,7 +316,7 @@
 
     <firma name="benntec Systemtechnik GmbH">
         <branche>Digitalfunk</branche>
-        <strasse_hnr>Köpenicker Str. 325</strasse_hnr>
+        <strasse_hnr>KÃ¶penicker Str. 325</strasse_hnr>
         <plz>12555</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -336,7 +334,7 @@
 
     <firma name="bercom">
         <branche>Telekommunikation</branche>
-        <strasse_hnr>Carl-Scheele-Straße 12</strasse_hnr>
+        <strasse_hnr>Carl-Scheele-StraÃŸe 12</strasse_hnr>
         <plz>12489</plz>
         <ort>Berlin</ort>
         <land>DE</land>
@@ -382,9 +380,9 @@
 
     <firma name="BHE Service">
         <branche>N/A</branche>
-        <strasse_hnr>Seestraße 19b</strasse_hnr>
+        <strasse_hnr>SeestraÃŸe 19b</strasse_hnr>
         <plz>15712</plz>
-        <ort>Königs Wusterhausen</ort>
+        <ort>KÃ¶nigs Wusterhausen</ort>
         <land>DE</land>
         <website>http://www.bhe-service.de</website>
         <ansprechpartner name="Mario Goslinowski">
@@ -397,9 +395,9 @@
 
     <firma name="BMW Group">
         <branche>Verkehrsdienstleistung</branche>
-        <strasse_hnr>Knorrstraße 147</strasse_hnr>
+        <strasse_hnr>KnorrstraÃŸe 147</strasse_hnr>
         <plz>80937</plz>
-        <ort>München</ort>
+        <ort>MÃ¼nchen</ort>
         <land>DE</land>
         <website>http://www.bmwgroup.com</website>
         <ansprechpartner name="Rainer Daude">
@@ -410,4 +408,4 @@
         </ansprechpartner>
         <erfassungsdatum>2008-04-02</erfassungsdatum>
     </firma>
-</firmenliste>
+<firma name="Muster Firma"><branche>Digitalfunk</branche><strasse_hnr>Schillerallee 1, Zimmer 107</strasse_hnr><adresszusatz>Zimmer 107</adresszusatz><plz>15745</plz><ort>Wildau</ort><land>DE</land><website>www.aa.com</website><ansprechpartner name="Name"><anrede>Herr</anrede><titel>Dr. rer. nat.</titel><telefon>012345</telefon><email>aaa@aaa.com</email></ansprechpartner><erfassungsdatum>2017-12-12</erfassungsdatum></firma></firmenliste>
