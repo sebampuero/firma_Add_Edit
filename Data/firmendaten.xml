@@ -3,379 +3,411 @@
 	         xsi:noNamespaceSchemaLocation="firmendaten.xsd"
              version="1">
 
-    <firma name="NAVTEQ GmbH">
-        <branche>N/A</branche>
-        <strasse_hnr>Brunnenstra&#195;&#376;e 128</strasse_hnr>
-        <adresszusatz>Regionalb&#195;&#188;ro Berlin</adresszusatz>
-        <plz>13355</plz>
+    <firma name="4system GmbH">
+        <branche>E-Learning</branche>
+        <strasse_hnr>Kurfürstenstraße 114</strasse_hnr>
+        <plz>10787</plz>
         <ort>Berlin</ort>
         <land>DE</land>
-        <website>http://www.navteq.com</website>
-        <ansprechpartner name="Jens Ness">
+        <website>http://www.4system.com</website>
+        <ansprechpartner name="Dawid Kosc">
             <anrede>Herr</anrede>
-            <titel>Dipl.-Ing.</titel>
-            <telefon>030 4678100</telefon>
-            <fax>46781099</fax>
-            <email>wilfried.ness@navteq.com</email>
+            <telefon>030 23 63 16 73</telefon>
+            <fax>23 63 16 74</fax>
+            <email>d.kosc@4system.com</email>
         </ansprechpartner>
-        <erfassungsdatum>2005-11-16</erfassungsdatum>
+        <erfassungsdatum>2009-06-18</erfassungsdatum>
     </firma>
 
-    <firma name="NETSYSTEMS Berlin-Brandenburg">
-        <branche>Netzwerkmanagement</branche>
-        <strasse_hnr>Landstr. 4 c</strasse_hnr>
-        <plz>15370</plz>
-        <ort>Fredersdorf</ort>
-        <land>DE</land>
-        <website>http://www.netsystems.de</website>
-        <ansprechpartner name="Holger Kurz">
-            <anrede>Herr</anrede>
-            <telefon>033439 52148</telefon>
-            <fax>52149</fax>
-            <email>hk@netsystems-online.de</email>
-        </ansprechpartner>
-        <erfassungsdatum>2008-12-09</erfassungsdatum>
-    </firma>
-
-    <firma name="NET CHECK GmbH">
+    <firma name="Aastra Deutschland GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Tempelhofer Weg 39-47</strasse_hnr>
-        <plz>10829</plz>
+        <strasse_hnr>Zeughofstr. 1</strasse_hnr>
+        <plz>10997</plz>
         <ort>Berlin</ort>
         <land>DE</land>
-        <website>http://www.netcheck.de</website>
-        <ansprechpartner name="Markus Gloy">
+        <website>http://www.aastra.de</website>
+        <ansprechpartner name="Jürgen Signer">
             <anrede>Herr</anrede>
             <funktion>GF</funktion>
-            <telefon>030 303080 600</telefon>
-            <fax>303080 668</fax>
-            <email>info@netcheck.de</email>
+            <telefon>030 6104 2007</telefon>
+            <fax>6104 2008</fax>
+            <email>info.de@aastra.com</email>
         </ansprechpartner>
-        <ansprechpartner name="Detlef Zernik">
+        <ansprechpartner name="Anthony Shen">
             <anrede>Herr</anrede>
-            <funktion>GF</funktion>
-            <telefon>030 303080 600</telefon>
-            <fax>303080 668</fax>
-            <email>info@netcheck.de</email>
+            <telefon>030 6104 2007</telefon>
+            <fax>6104 2008</fax>
+            <email>info.de@aastra.com</email>
         </ansprechpartner>
         <erfassungsdatum>2012-01-31</erfassungsdatum>
     </firma>
 
-    <firma name="tarent GmbH">
-        <branche>Softwareentwicklung</branche>
-        <strasse_hnr>Poststra&#195;&#376;e 4 - 5</strasse_hnr>
-        <plz>10178</plz>
-        <ort>Berlin</ort>
-        <land>DE</land>
-        <website>http://www.tarent.com</website>
-        <ansprechpartner name="Elmar Geese">
-            <anrede>Herr</anrede>
-            <funktion>GF</funktion>
-            <telefon>030 2759 4853</telefon>
-            <email>info@tarent.de</email>
-        </ansprechpartner>
-        <erfassungsdatum>2010-10-12</erfassungsdatum>
-    </firma>
-
-    <firma name="Technologiezentrum Verkehrstechnik">
-        <branche>Verkehrstelematik</branche>
-        <strasse_hnr>Neuendorfstra&#195;&#376;e 18a</strasse_hnr>
-        <plz>16761</plz>
-        <ort>Hennigsdorf</ort>
-        <land>DE</land>
-        <website>http://www.tzv-henn.de</website>
-        <ansprechpartner name="Onnen Weise">
-            <anrede>Herr</anrede>
-            <funktion>Gesch&#195;&#164;ftsf&#195;&#188;hrerin</funktion>
-            <telefon>03302 55 91 50</telefon>
-            <email>info@tzv-henn.de</email>
-        </ansprechpartner>
-        <erfassungsdatum>2000-01-01</erfassungsdatum>
-    </firma>
-
-    <firma name="TEKO New Media GmbH">
-        <branche>N/A</branche>
-        <strasse_hnr>St&#195;&#188;hlinger Str. 15</strasse_hnr>
-        <plz>10318</plz>
-        <ort>Berlin</ort>
-        <land>DE</land>
-        <website>http://www.teko.de</website>
-        <ansprechpartner name="Illmann Godow">
-            <anrede>Frau</anrede>
-            <telefon>030 50 10 14 - 0</telefon>
-            <fax>50 10 14 14</fax>
-            <email>ogodow@teko.de</email>
-        </ansprechpartner>
-        <erfassungsdatum>2006-02-20</erfassungsdatum>
-    </firma>
-
-    <firma name="TELCO TECH GmbH">
-        <branche>N/A</branche>
-        <strasse_hnr>Potsdamer Str. 18 A</strasse_hnr>
-        <plz>14513</plz>
-        <ort>Teltow</ort>
-        <land>DE</land>
-        <website>http://www.telco-tech.de</website>
-        <ansprechpartner name="Christian Jacob">
-            <anrede>Herr</anrede>
-            <telefon>03328 430861</telefon>
-            <email>cjacob@telco-tech.de</email>
-        </ansprechpartner>
-        <erfassungsdatum>2012-02-02</erfassungsdatum>
-    </firma>
-
-    <firma name="teleBITcom GmbH">
+    <firma name="42com Telecommunication GmbH">
         <branche>Telekommunikation</branche>
-        <strasse_hnr>Potsdamer Str. 18A</strasse_hnr>
-        <plz>14513</plz>
-        <ort>Teltow</ort>
-        <land>DE</land>
-        <website>http://www.telebitcom.de</website>
-        <ansprechpartner name="Leonal Lutz">
-            <anrede>Herr</anrede>
-            <titel>Dipl.-Ing.</titel>
-            <telefon>030 65762975</telefon>
-            <fax>65762976</fax>
-            <email>illmann@telebitcom.de</email>
-        </ansprechpartner>
-        <erfassungsdatum>2004-06-14</erfassungsdatum>
-    </firma>
-
-    <firma name="Telematic Solutions International GmbH">
-        <branche>Telematiksysteme</branche>
-        <strasse_hnr>Rudower Chaussee 29</strasse_hnr>
-        <plz>12489</plz>
+        <strasse_hnr>Straße der Pariser Kommune 12-16</strasse_hnr>
+        <plz>10243</plz>
         <ort>Berlin</ort>
         <land>DE</land>
-        <website>http://www.tsi-telematic.com</website>
-        <ansprechpartner name="Rolf Baumgarten">
+        <website>http://www.42com.com</website>
+        <ansprechpartner name="Mochael Palmer">
             <anrede>Herr</anrede>
-            <funktion>G-leitung</funktion>
-            <telefon>030 6392-6155</telefon>
-            <fax>6392-6157</fax>
-            <email>g.baumgarten@tsi-telematic.com</email>
+            <telefon>030 243 42 99 33</telefon>
+            <email>michael.palmer@42com.com</email>
         </ansprechpartner>
         <erfassungsdatum>2012-01-31</erfassungsdatum>
     </firma>
 
-    <firma name="TELEMATICA e.K.">
-        <branche>N/A</branche>
-        <strasse_hnr>Baiernrainer Weg 6</strasse_hnr>
-        <plz>83623</plz>
-        <ort>Linden</ort>
-        <land>DE</land>
-        <website>http://www.telematica.de</website>
-        <ansprechpartner name="Bernd Sievert">
-            <anrede>Herr</anrede>
-            <telefon>08027 9312</telefon>
-            <email>telematica.rsievert@t-online.de</email>
-        </ansprechpartner>
-        <erfassungsdatum>2004-05-03</erfassungsdatum>
-    </firma>
-
-    <firma name="TelematicsPro e. V.">
-        <branche>Telematiksysteme</branche>
-        <strasse_hnr>Helmholtzstr. 2 - 9</strasse_hnr>
-        <plz>10587</plz>
-        <ort>Berlin</ort>
-        <land>DE</land>
-        <website>http://www.telematicspro.de</website>
-        <ansprechpartner name="Michael Sandrock">
-            <anrede>Herr</anrede>
-            <funktion>GF</funktion>
-            <telefon>030 39902320</telefon>
-            <email>sandrock@telematicspro.de</email>
-        </ansprechpartner>
-        <erfassungsdatum>2008-12-09</erfassungsdatum>
-    </firma>
-
-    <firma name="TRUECONOMY">
-        <branche>N/A</branche>
-        <strasse_hnr>Karl-Liebknecht-Str. 7</strasse_hnr>
+    <firma name="A.M.M. Aktionszentrum Multi Media GmbH">
+        <branche>Multimedia</branche>
+        <strasse_hnr>August-Bebel-Str. 68</strasse_hnr>
         <plz>14482</plz>
         <ort>Potsdam</ort>
         <land>DE</land>
-        <website>http://www.trueconomy.net</website>
-        <ansprechpartner name="Sebastian Heinzel">
+        <website>http://www.amm-gruppe.de</website>
+        <ansprechpartner name="Kathrin Schwarz">
+            <anrede>Frau</anrede>
+            <funktion>GF</funktion>
+            <telefon>0331 740 60 84</telefon>
+            <fax>740 60 85</fax>
+            <email>info@amm-gruppe.de</email>
+        </ansprechpartner>
+        <ansprechpartner name="Stefan Schwarz">
             <anrede>Herr</anrede>
-            <telefon>0331 237 00 101</telefon>
-            <email>sebastian.heinzel@trueconomy.net</email>
+            <telefon>0331 740 60 84</telefon>
+            <fax>740 60 85</fax>
+            <email>info@amm-gruppe.de</email>
         </ansprechpartner>
         <erfassungsdatum>2010-10-05</erfassungsdatum>
     </firma>
 
-    <firma name="T-Systems International GmbH - EZ">
-        <branche>IT-Dienstleistung</branche>
-        <strasse_hnr>Wittestra&#195;&#376;e 30</strasse_hnr>
-        <adresszusatz>Entwicklungszentrum Berlin</adresszusatz>
-        <plz>13509</plz>
-        <ort>Berlin</ort>
+    <firma name="adKor GmbH">
+        <branche>Kommunikationstechnik</branche>
+        <strasse_hnr>Am Kleingewerbegebiet 8</strasse_hnr>
+        <plz>15745</plz>
+        <ort>Wildau</ort>
         <land>DE</land>
-        <website>http://www.t-systems.com</website>
-        <ansprechpartner name="Helge Kowalski">
+        <website>http://www.adkor.de</website>
+        <ansprechpartner name="Hartmut Kordus">
             <anrede>Herr</anrede>
-            <funktion>Ltr. Entw.</funktion>
-            <telefon>030 43577-599</telefon>
-            <email>info@t-systems.de</email>
+            <titel>Dipl.-Ing.</titel>
+            <telefon>03375 21 40 53</telefon>
+            <fax>21 40 56</fax>
+            <email>hartmut.kordus@adkor.de</email>
         </ansprechpartner>
-        <ansprechpartner name="Andreas Lucht">
-            <anrede>Herr</anrede>
-            <funktion>Personal</funktion>
-            <telefon>030 43577-4118</telefon>
-            <email>info@t-systems.de</email>
-        </ansprechpartner>
-        <ansprechpartner name="Reiner Behrends">
-            <anrede>Herr</anrede>
-            <funktion>Projektmanager </funktion>
-            <telefon>030 2004 67164</telefon>
-            <fax>2004 67107</fax>
-            <email>info@t-systems.de</email>
-        </ansprechpartner>
-        <erfassungsdatum>2005-11-30</erfassungsdatum>
+        <erfassungsdatum>2012-01-31</erfassungsdatum>
     </firma>
 
-    <firma name="T-Systems International GmbH - TZ">
-        <branche>IT-Dienstleistung</branche>
-        <strasse_hnr>Goslaer Ufer 35</strasse_hnr>
-        <adresszusatz>Technologiezentrum</adresszusatz>
-        <plz>10589</plz>
-        <ort>Berlin</ort>
+    <firma name="Airbus Operations GmbH">
+        <branche>Luftfahrt</branche>
+        <strasse_hnr>Lüneburger Schanze 30</strasse_hnr>
+        <plz>21614</plz>
+        <ort>Buxtehude</ort>
         <land>DE</land>
-        <website>http://www.t-systems.com</website>
-        <ansprechpartner name="Andreas Huss">
+        <website>http://www.airbus.com</website>
+        <ansprechpartner name="Matthias Schmitt">
             <anrede>Herr</anrede>
-            <telefon>030 3497-4134</telefon>
-            <fax>4139</fax>
-            <email>andreas.huss@t-systems.com</email>
+            <titel>Dipl.-Ing.</titel>
+            <telefon>040 743 784 56</telefon>
+            <email>matthias.schmitt@airbus.de</email>
         </ansprechpartner>
-        <erfassungsdatum>2006-02-20</erfassungsdatum>
+        <erfassungsdatum>2011-07-15</erfassungsdatum>
     </firma>
 
-    <firma name="uemet GmbH">
+    <firma name="Akademie der Bundeswehr für Information und Kommunikation">
+        <branche>Verteidigung</branche>
+        <strasse_hnr>Prötzeler Chaussee 20</strasse_hnr>
+        <plz>15344</plz>
+        <ort>Strausberg</ort>
+        <land>DE</land>
+        <website>http://www.bundeswehr.org</website>
+        <ansprechpartner name="Bernd Stichling">
+            <anrede>Herr</anrede>
+            <telefon>03341 58 16 91</telefon>
+            <fax>58 16 45</fax>
+            <email>berndstichling@bundeswehr.org</email>
+        </ansprechpartner>
+        <erfassungsdatum>2008-01-04</erfassungsdatum>
+    </firma>
+
+    <firma name="alphaQuest GmbH">
+        <branche>Mobile Anwendungen</branche>
+        <strasse_hnr>Theodor-Ott-Ring 34</strasse_hnr>
+        <plz>89182</plz>
+        <ort>Bernstadt</ort>
+        <land>DE</land>
+        <website>http://www.alphaQuest.de</website>
+        <ansprechpartner name="André Probst">
+            <anrede>Herr</anrede>
+            <telefon>07348 9670446</telefon>
+            <fax>9670447</fax>
+            <email>info@alphaQuest.de</email>
+        </ansprechpartner>
+        <erfassungsdatum>2012-05-29</erfassungsdatum>
+    </firma>
+
+    <firma name="Andracor GmbH">
         <branche>N/A</branche>
-        <strasse_hnr>Gewerbepark Nord 9</strasse_hnr>
-        <adresszusatz>uesa Unternehmensgruppe</adresszusatz>
-        <plz>04938</plz>
-        <ort>Uebigau-Wahrenbr&#195;&#188;ck</ort>
-        <land>DE</land>
-        <website>http://www.uesa.de</website>
-        <ansprechpartner name="Mathias G&#195;&#164;rtner">
-            <anrede>Herr</anrede>
-            <telefon>035365 44 99-504</telefon>
-            <email>m.gaertner@uemet.de</email>
-        </ansprechpartner>
-        <erfassungsdatum>2008-12-09</erfassungsdatum>
-    </firma>
-
-    <firma name="v3 agentur f&#195;&#188;r medizinisches Marketing gmbH">
-        <branche>N/A</branche>
-        <strasse_hnr>Marburger Str. 2</strasse_hnr>
-        <plz>10789</plz>
+        <strasse_hnr>Mertensstraße 127 - 131</strasse_hnr>
+        <plz>13587</plz>
         <ort>Berlin</ort>
         <land>DE</land>
-        <website>http://www.v3-marketing.de</website>
-        <ansprechpartner name="Wilfried Huber">
+        <website>http://www.andracor.com</website>
+        <ansprechpartner name="Benjamin Leschnitzer">
             <anrede>Herr</anrede>
-            <telefon>030 80 58 - 16 05</telefon>
-            <email>georg.huber@v3-marketing.de</email>
+            <telefon>030 850 14 262</telefon>
+            <email>leschnitzer@andracor.com</email>
         </ansprechpartner>
-        <erfassungsdatum>2007-03-07</erfassungsdatum>
+        <erfassungsdatum>2011-07-07</erfassungsdatum>
     </firma>
 
-    <firma name="Verkehrsautomatisierung Berlin GmbH">
-        <branche>Verkehrstelematik</branche>
-        <strasse_hnr>Fanny-Zobel-Stra&#195;&#376;e 9</strasse_hnr>
+    <firma name="araneaNET GmbH">
+        <branche>Netzwerkmanagement</branche>
+        <strasse_hnr>Steinstraße 1</strasse_hnr>
+        <plz>14482</plz>
+        <ort>Potsdam</ort>
+        <land>DE</land>
+        <website>http://www.araneanet.de</website>
+        <ansprechpartner name="Gerald Bock">
+            <anrede>Herr</anrede>
+            <telefon>0331 55035-0</telefon>
+            <email>gerald.bock@araneanet.de</email>
+        </ansprechpartner>
+        <erfassungsdatum>2008-09-12</erfassungsdatum>
+    </firma>
+
+    <firma name="ARC-GREENLAB GmbH">
+        <branche>Geoinformatik</branche>
+        <strasse_hnr>Eichenstraße 3b</strasse_hnr>
         <plz>12435</plz>
         <ort>Berlin</ort>
         <land>DE</land>
-        <website>http://www.vaberlin.de</website>
-        <ansprechpartner name="Jan M&#195;&#182;hle">
+        <website>http://www.arc-greenlab.de</website>
+        <ansprechpartner name="Wieland Busse">
             <anrede>Herr</anrede>
-            <telefon>030 5362 2531</telefon>
-            <email>jan.moehle@th-wildau.de</email>
+            <telefon>030 762933331</telefon>
+            <email>busse.wieland@arc-greenlab.de</email>
         </ansprechpartner>
-        <erfassungsdatum>2012-01-31</erfassungsdatum>
+        <erfassungsdatum>2010-10-05</erfassungsdatum>
     </firma>
 
-    <firma name="Vortel GmbH">
-        <branche>Softwareentwicklung</branche>
-        <strasse_hnr>Knesebeckstra&#195;&#376;e 61 A</strasse_hnr>
-        <plz>10719</plz>
+    <firma name="art-X Webargentur Berlin">
+        <branche>Webdesign</branche>
+        <strasse_hnr>Choriner Str. 78</strasse_hnr>
+        <plz>10119</plz>
         <ort>Berlin</ort>
         <land>DE</land>
-        <website>http://www.vortel.de</website>
-        <ansprechpartner name="Eckhart Gouras">
+        <website>http://www.art-x.de</website>
+        <ansprechpartner name="Folker Silge">
             <anrede>Herr</anrede>
-            <telefon>030 80932200</telefon>
-            <email>eckhart.gouras@vortel.de</email>
+            <titel>Dipl.-Betriebswirt</titel>
+            <funktion>Inhaber</funktion>
+            <telefon>030 440 47 874</telefon>
+            <fax>440 47 873</fax>
+            <email>mails@art-x.de</email>
         </ansprechpartner>
-        <erfassungsdatum>2008-12-09</erfassungsdatum>
+        <erfassungsdatum>2010-10-12</erfassungsdatum>
     </firma>
 
-    <firma name="webad-internet advertising GmbH">
-        <branche>N/A</branche>
-        <strasse_hnr>Surhaken 26</strasse_hnr>
-        <plz>28832</plz>
-        <ort>Achim</ort>
+    <firma name="arxes Information Design Berlin GmbH">
+        <branche>WLAN</branche>
+        <strasse_hnr>Marxstraße 3a</strasse_hnr>
+        <plz>13347</plz>
+        <ort>Berlin</ort>
         <land>DE</land>
-        <website>http://www.webad-gmbh.de</website>
-        <ansprechpartner name="Horst Freitag">
+        <website>http://www.arxes-berlin.de</website>
+        <ansprechpartner name="Uwe Jaroschewski">
             <anrede>Herr</anrede>
             <funktion>GF</funktion>
-            <telefon>04202 84161</telefon>
-            <fax>8899-16</fax>
-            <email>info@webad-gmbh.de</email>
+            <telefon>030 4606 33 33</telefon>
+            <fax>4606 31 99</fax>
+            <email>uwe.jaroschewski@arxes-berlin.de</email>
         </ansprechpartner>
-        <erfassungsdatum>2002-06-13</erfassungsdatum>
+        <erfassungsdatum>2007-02-08</erfassungsdatum>
     </firma>
 
-    <firma name="Wehrtechnische Dienststelle">
-        <branche>Verteidigung</branche>
-        <strasse_hnr>Postfach 1764</strasse_hnr>
-        <adresszusatz>WTD 91</adresszusatz>
-        <plz>49707</plz>
-        <ort>Meppen</ort>
-        <land>DE</land>
-        <website>http://www.bwb.org/wtd91/</website>
-        <ansprechpartner name="Klaus Schilling">
-            <anrede>Herr</anrede>
-            <telefon>05931 43 26 10</telefon>
-            <email>klausschilling@bwb.org</email>
-        </ansprechpartner>
-        <erfassungsdatum>2008-12-09</erfassungsdatum>
-    </firma>
-
-    <firma name="WG Systemhaus f&#195;&#188;r IT">
+    <firma name="ASCI Systemhaus GmbH">
         <branche>IT-Dienstleistung</branche>
-        <strasse_hnr>Landsberger Str. 262</strasse_hnr>
-        <plz>12623</plz>
+        <strasse_hnr>Seddiner Straße 5</strasse_hnr>
+        <plz>10315</plz>
         <ort>Berlin</ort>
         <land>DE</land>
-        <website>http://www.wg-systemhaus.de</website>
-        <ansprechpartner name="Ulrich Heckel">
+        <website>http://www.asci-systemhaus.de</website>
+        <ansprechpartner name="Lutz Langerwisch">
             <anrede>Herr</anrede>
-            <telefon>030 565 400 99 221</telefon>
-            <email>heckel@wg-systemhaus.de</email>
+            <titel>Dipl.-Ing.</titel>
+            <telefon>030 2934850</telefon>
+            <fax>29348511</fax>
+            <email>bewerbung@asci-systemhaus.de</email>
+        </ansprechpartner>
+        <erfassungsdatum>2012-02-02</erfassungsdatum>
+    </firma>
+
+    <firma name="asitos GmbH">
+        <branche>N/A</branche>
+        <strasse_hnr>Bahnhofstraße Halle 7, Raum 8 EG</strasse_hnr>
+        <plz>15745</plz>
+        <ort>Wildau</ort>
+        <land>DE</land>
+        <website>http://www.asitos.de</website>
+        <ansprechpartner name="Hans-Dieter Doll">
+            <anrede>Herr</anrede>
+            <funktion>GF</funktion>
+            <telefon>03375 52 17 86</telefon>
+            <email>info@asitos.de</email>
+        </ansprechpartner>
+        <ansprechpartner name="Tanja S. Strauss">
+            <anrede>Frau</anrede>
+            <telefon>03375 52 17 86</telefon>
+            <email>info@asitos.de</email>
+        </ansprechpartner>
+        <erfassungsdatum>2011-07-07</erfassungsdatum>
+    </firma>
+
+    <firma name="Axentris Informationssysteme GmbH">
+        <branche>N/A</branche>
+        <strasse_hnr>Hohenzollerndamm 152</strasse_hnr>
+        <plz>14199</plz>
+        <ort>Berlin</ort>
+        <land>DE</land>
+        <website>http://www.axentris.de</website>
+        <ansprechpartner name="Stefan Koch">
+            <anrede>Herr </anrede>
+            <titel>Dr.</titel>
+            <funktion>GF</funktion>
+            <telefon>030 82099-438</telefon>
+            <email>skoch@axentris.de</email>
+        </ansprechpartner>
+        <erfassungsdatum>2003-02-04</erfassungsdatum>
+    </firma>
+
+    <firma name="Baran Telecom Networks GmbH (BTN)">
+        <branche>Telekommunikation</branche>
+        <strasse_hnr>Wetzlarer Str. 52</strasse_hnr>
+        <plz>14482</plz>
+        <ort>Potsdam</ort>
+        <land>DE</land>
+        <website>http://www.bt-networks.de</website>
+        <ansprechpartner name="Amir Fass">
+            <anrede>Herr</anrede>
+            <funktion>GF</funktion>
+            <telefon>0331 704 19 35</telefon>
+            <fax>704 19 20</fax>
+            <email>thomas.kautsch@bt-networks.de</email>
+        </ansprechpartner>
+        <erfassungsdatum>2008-03-25</erfassungsdatum>
+    </firma>
+
+    <firma name="BBB Management GmbH">
+        <branche>Netzwerkmanagement</branche>
+        <strasse_hnr>Robert-Rössle-Str. 10</strasse_hnr>
+        <adresszusatz>Campus Berlin Buch</adresszusatz>
+        <plz>13125</plz>
+        <ort>Berlin</ort>
+        <land>DE</land>
+        <website>http://www.bbb-berlin.de</website>
+        <ansprechpartner name="Hans Mitulla">
+            <anrede>Herr</anrede>
+            <titel>Dipl.- Ing.</titel>
+            <funktion>Teamleiter</funktion>
+            <telefon>030 94893262</telefon>
+            <fax>94893131</fax>
+            <email>mitulla@bbb-berlin.de</email>
+        </ansprechpartner>
+        <erfassungsdatum>2004-05-03</erfassungsdatum>
+    </firma>
+
+    <firma name="benntec Systemtechnik GmbH">
+        <branche>Digitalfunk</branche>
+        <strasse_hnr>Köpenicker Str. 325</strasse_hnr>
+        <plz>12555</plz>
+        <ort>Berlin</ort>
+        <land>DE</land>
+        <website>http://www.benntec.de</website>
+        <ansprechpartner name="Karl-Heinz Ruback">
+            <anrede>Herr</anrede>
+            <titel>Dipl.- Ing.</titel>
+            <funktion>Projektmanager</funktion>
+            <telefon>030 200030911</telefon>
+            <fax>200030999</fax>
+            <email>k.h.ruback@benntec.de</email>
+        </ansprechpartner>
+        <erfassungsdatum>2010-10-05</erfassungsdatum>
+    </firma>
+
+    <firma name="bercom">
+        <branche>Telekommunikation</branche>
+        <strasse_hnr>Carl-Scheele-Straße 12</strasse_hnr>
+        <plz>12489</plz>
+        <ort>Berlin</ort>
+        <land>DE</land>
+        <website>http://www.bercom.de</website>
+        <ansprechpartner name="Michael Grubarek">
+            <anrede>Herr</anrede>
+            <telefon>030 639909-12</telefon>
+            <email>grubarek@bercom.de</email>
+        </ansprechpartner>
+        <erfassungsdatum>2010-10-05</erfassungsdatum>
+    </firma>
+
+    <firma name="Berliner Verkehrsbetriebe (BVG)">
+        <branche>Verkehrsdienstleistung</branche>
+        <strasse_hnr>Potsdamer Str. 188</strasse_hnr>
+        <plz>10783</plz>
+        <ort>Berlin</ort>
+        <land>DE</land>
+        <website>http://www.bvg.de</website>
+        <ansprechpartner name="Jeanette Labahn">
+            <anrede>Frau</anrede>
+            <funktion>Personal u. Org.</funktion>
+            <telefon>030 25 62 93 10</telefon>
+            <email>jeanette.labahn@bvg.de</email>
         </ansprechpartner>
         <erfassungsdatum>2012-01-31</erfassungsdatum>
     </firma>
 
-    <firma name="Wonderware GmbH">
+    <firma name="Berlin Hyp">
         <branche>N/A</branche>
-        <strasse_hnr>Breite 2a</strasse_hnr>
-        <adresszusatz>Gesch&#195;&#164;ftsstelle Berlin</adresszusatz>
-        <plz>15806</plz>
-        <ort>Zossen</ort>
+        <strasse_hnr>Budapester Str. 1</strasse_hnr>
+        <plz>12787</plz>
+        <ort>Berlin</ort>
         <land>DE</land>
-        <website>http://woderware.de</website>
-        <ansprechpartner name="Alexander Schulz">
+        <website>http://www.berlinhyp.de</website>
+        <ansprechpartner name="Thomas Rosenburg">
             <anrede>Herr</anrede>
-            <funktion>Leiter der Gesch&#195;&#164;ftsstelle</funktion>
-            <telefon>033 77 30 36 76</telefon>
-            <fax>30 36 77</fax>
-            <email>thomas.schulz@wonderware.com</email>
+            <telefon>030 2599 9310</telefon>
+            <email>thomas.rosenburg@berlinhyp.de</email>
         </ansprechpartner>
-        <erfassungsdatum>2000-01-01</erfassungsdatum>
+        <erfassungsdatum>2012-01-31</erfassungsdatum>
     </firma>
 
+    <firma name="BHE Service">
+        <branche>N/A</branche>
+        <strasse_hnr>Seestraße 19b</strasse_hnr>
+        <plz>15712</plz>
+        <ort>Königs Wusterhausen</ort>
+        <land>DE</land>
+        <website>http://www.bhe-service.de</website>
+        <ansprechpartner name="Mario Goslinowski">
+            <anrede>Herr</anrede>
+            <telefon>03375 528460</telefon>
+            <email>goslinowski@bhe-service.de</email>
+        </ansprechpartner>
+        <erfassungsdatum>2011-07-12</erfassungsdatum>
+    </firma>
+
+    <firma name="BMW Group">
+        <branche>Verkehrsdienstleistung</branche>
+        <strasse_hnr>Knorrstraße 147</strasse_hnr>
+        <plz>80937</plz>
+        <ort>München</ort>
+        <land>DE</land>
+        <website>http://www.bmwgroup.com</website>
+        <ansprechpartner name="Rainer Daude">
+            <anrede>Herr</anrede>
+            <titel>Dr.</titel>
+            <telefon>089 382 13 444</telefon>
+            <email>rainer.daude@bmw.de</email>
+        </ansprechpartner>
+        <erfassungsdatum>2008-04-02</erfassungsdatum>
+    </firma>
 </firmenliste>
