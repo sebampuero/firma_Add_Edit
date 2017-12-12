@@ -1,4 +1,15 @@
-$.validator.addMethod("PLZ_Validator", function(value, element) {
+/*
+* Validation rules, methods and messages for forms
+* @author Sebastian Ampuero
+* @date 05.12.2017
+*/
+
+/*
+* Custom validation method for the PLZ input in the firm form. Depending on the selecting Country (DE, AT, CH) , it
+* evaluates the correct PLZ.
+* @return true if the validation was successful, false otherwise
+*/
+function validate_PLZ(value, element) {
     var land = $('select#land_select').val();
     var valid = false;
     switch(land){
@@ -16,7 +27,11 @@ $.validator.addMethod("PLZ_Validator", function(value, element) {
             }break;
     }
     return this.optional(element) || valid;
-});
+}
+$.validator.addMethod("PLZ_Validator", validate_PLZ);
+
+// ------------------------ Validation rules ---------------------------------------
+
 var ans_form_validation_rules = {
     rules: {
        name: 'required',
@@ -57,7 +72,7 @@ var firm_form_validation_rules = {
         ort: 'required',
         website: {
             required: true,
-            pattern: /^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+\.[a-z]+(\/[a-zA-Z0-9#]+\/?)*$/
+            pattern: /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/gm
         },
         erfassungsdatum: 'required',
         land: {

@@ -13,14 +13,6 @@ class Firma:
         self.ansprechpartner_liste = ansprechpartner_liste
         self.erfassungsdatum = erfassungsdatum
 
-    @staticmethod
-    def edit_firm():
-        pass
-
-    @staticmethod
-    def create_firm():
-        pass
-
     def json(self):
         return {
             "name": self.name,

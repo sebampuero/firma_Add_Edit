@@ -1,4 +1,4 @@
-from flask import Flask, Response, redirect, request, render_template
+from flask import Flask, Response, request, render_template
 from Service.json_requests import get_firms_by_name_json, get_title_json, get_firms_json, get_branches_json
 from Service.firmen_service import create_firm, edit_firm
 

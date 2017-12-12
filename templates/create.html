@@ -25,6 +25,10 @@
     <div class="container">
         <div class="main-wrapper">
             <h1 style="text-align:center;">Eine Firma erstellen</h1>
+
+            <!--                        FIRM FORM                          -->
+
+
             <form id="firm_form">
             <div class="form-group">
                 <label>Firmenname</label>
@@ -77,6 +81,10 @@
                 <small class="form-text text-muted">Pflichtfeld</small>
             </div>
         </form>
+
+            <!--                        ANSPRECHPARTNER FORM                          -->
+
+
         <form class="ansprechpartner_form checked">
             <h4>Ansprechpartner</h4>
             <div class="form-group">
@@ -116,6 +124,10 @@
         <small class="form-text text-muted">Es muss mindestens ein Ansprechpartner geben , maximal 3</small>
         <input type="checkbox" class="checkbox_ansprechpartner" id="ansprechpartner1_checkbox">Ansprechpartner hinzufügen<br>
         <input type="checkbox" class="checkbox_ansprechpartner" id="ansprechpartner2_checkbox">Ansprechpartner hinzufügen
+
+            <!--                        ANSPRECHPARTNER FORM                          -->
+
+
         <form class="ansprechpartner_form disabled" id="ansprechpartner_form_1">
              <h4>Ansprechpartner</h4>
             <div class="form-group">
@@ -152,6 +164,10 @@
                 <small class="form-text text-muted">Pflichtfeld</small>
             </div>
         </form>
+
+            <!--                        ANSPRECHPARTNER FORM                          -->
+
+
         <form class="ansprechpartner_form disabled" id="ansprechpartner_form_2">
              <h4>Ansprechpartner</h4>
                 <div class="form-group">
@@ -199,19 +215,19 @@
 
 <script type="application/javascript">
     $(function(){
-        disable_ansprechpartner_form();
+        disable_ansprechpartner_form(); // hide all 'disabled' forms
 
-        $.get( "/branch", function( branches ) {
+        $.get( "/branch", function( branches ) { // populate branches select list
             $.each(branches.branches, function(index, branch){
                 $('select#branch_select').append($('<option>').text(branch))
             });
         });
-
+        //listeners for form checkbox activators
         $('input:checkbox#ansprechpartner1_checkbox').change(enable_disable_ans_form_1);
         $('input:checkbox#ansprechpartner2_checkbox').change(enable_disable_ans_form_2);
 
         $('button#submit_create').on('click',function(){
-            var result = parse_firm_obj_from_form();
+            var result = parse_firm_obj_from_form(); // result contains the firm obj and validation flag
             if(result.flag){
                 $.ajax({
                     type: "POST",
@@ -230,6 +246,7 @@
             }
         });
 
+        //listener for firm name input to check if the given firm already exists
         $('input#typeahead').change(function(){
            var input_text = $(this).val();
            if(input_text != ""){

@@ -26,7 +26,7 @@ def delete_firm(firma_name):
             name = firma.attrib['name'].lower()
             if name == firma_name:
                 root.remove(firma)
-        tree.write(filename)
+        tree.write(filename, encoding="utf-8", xml_declaration=True)
     except Exception:
         return None
 
@@ -58,7 +58,7 @@ def insert_firm(firma):
                 ET.SubElement(ansprechpartner_element, 'fax').text = ans.fax
             ET.SubElement(ansprechpartner_element, 'email').text = ans.email
         ET.SubElement(firma_element, 'erfassungsdatum').text = firma.erfassungsdatum
-        tree.write(filename)
+        tree.write(filename, encoding="utf-8", xml_declaration=True)
     except Exception:
         return None
 
