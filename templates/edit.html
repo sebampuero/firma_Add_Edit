@@ -38,6 +38,12 @@
                 <input class="form-control" type="text" name="name" placeholder="Firmenname" required readonly>
             </div>
             <div class="form-group">
+                <label>Branche</label>
+                <select name="branche" id="branch_select" class="form-control">
+                </select>
+                <small class="form-text text-muted">Pflichtfeld</small>
+            </div>
+            <div class="form-group">
                 <label>Straße</label>
                 <input class="form-control" type="text" name="strasse_hnr" placeholder="Straße Hausnummer" required>
                 <small class="form-text text-muted">Pflichtfeld</small>
@@ -57,16 +63,6 @@
                 <small class="form-text text-muted">Pflichtfeld</small>
             </div>
             <div class="form-group">
-                <label>Website</label>
-                <input class="form-control" type="text" name="website" placeholder="Website" required>
-                <small class="form-text text-muted">Pflichtfeld</small>
-            </div>
-            <div class="form-group">
-                <label>Erfassungsdatum</label>
-                <input class="form-control" type="date" name="erfassungsdatum" placeholder="datum" required>
-                <small class="form-text text-muted">Pflichtfeld</small>
-            </div>
-            <div class="form-group">
                 <label>Land</label>
                 <select name="land" id="land_select"  class="form-control">
                     <option>DE</option>
@@ -76,9 +72,13 @@
                 <small class="form-text text-muted">Pflichtfeld</small>
             </div>
             <div class="form-group">
-                <label>Branche</label>
-                <select name="branche" id="branch_select" class="form-control">
-                </select>
+                <label>Website</label>
+                <input class="form-control" type="text" name="website" placeholder="Website" required>
+                <small class="form-text text-muted">Pflichtfeld</small>
+            </div>
+            <div class="form-group">
+                <label>Erfassungsdatum</label>
+                <input class="form-control" type="date" name="erfassungsdatum" placeholder="datum" required>
                 <small class="form-text text-muted">Pflichtfeld</small>
             </div>
         </form>
@@ -123,8 +123,8 @@
             </div>
         </form>
         <small class="form-text text-muted">Es muss mindestens ein Ansprechpartner geben , maximal 3</small>
-        <input disabled type="checkbox" class="checkbox_ansprechpartner" id="ansprechpartner1_checkbox">Ansprechpartner hinzufügen<br>
-        <input disabled type="checkbox" class="checkbox_ansprechpartner" id="ansprechpartner2_checkbox">Ansprechpartner hinzufügen
+        <input disabled type="checkbox" class="checkbox_ansprechpartner" id="ansprechpartner1_checkbox" data-id="1">Ansprechpartner hinzufügen<br>
+        <input disabled type="checkbox" class="checkbox_ansprechpartner" id="ansprechpartner2_checkbox" data-id="2">Ansprechpartner hinzufügen
 
             <!--                        ANSPRECHPARTNER FORM                          -->
 
@@ -229,56 +229,62 @@
         // this get request returns an array of firms which then are saved in the firms_list array
         // the select is then populated with the corresponding names
         $.get( "/firms", function( firms ) {
+            var $select_firm_name = $('select#firm_name'),
+                container = "";
             firms_list = Object.assign(firms);
-            $('select#firm_name').empty();
+            $select_firm_name.empty();
             $.each(firms,function(index,firm){
-                // append the firm name as text and its index in the array as value in order to show its contents
-                // later
-                $('select#firm_name').append($('<option>').text(firm.name).attr('value',index));
+                container += "<option value='"+index+"'>"+firm.name+"</option>";
             });
+            $select_firm_name.append(container);
         });
 
         // when a firm gets selected
         $('select#firm_name').on('change', function (e) {
+            // cache variables
+            var $firm_form = $("form#firm_form"),
+                $edit_btn = $('button#submit_edit'),
+                $ansprechpartner_form_array = $('.ansprechpartner_form'),
+                $checkboxes_array = $('input.checkbox_ansprechpartner');
             // clean all forms
-            $("form#firm_form")[0].reset();
-            $("form#firm_form").show();
-            $('button#submit_edit').removeAttr('disabled');
-            $.each($('input.checkbox_ansprechpartner'),function(){
-                $(this).removeAttr("disabled");
-                $(this).prop('checked',false);
+            $firm_form[0].reset();
+            $firm_form.show();
+            $edit_btn.removeAttr('disabled');
+            $.each($checkboxes_array,function(){
+                var $checkbox = $(this);
+                $checkbox.removeAttr("disabled");
+                $checkbox.prop('checked',false);
             });
-            $.each($('.ansprechpartner_form'),function(){
-                $(this).addClass('disabled').removeClass('checked');
+            $.each($ansprechpartner_form_array,function(){
+                var $ans_form = $(this);
+                $ans_form.addClass('disabled').removeClass('checked');
                 disable_ansprechpartner_form();
-                $(this)[0].reset();
+                $ans_form[0].reset();
             });
-            var value_selected = this.value; // get the index of the firm in the firms_list array
+            // get the index of the firm in the firms_list array
+            var value_selected = this.value;
             $.each(firms_list,function(index,firm){
                 if(index == value_selected){
                     for(var i=0; i<firm.ansprechpartner.length; i++){
                         // get the list of ansprechpartner objects in the firm object and populate the forms accordingly
-                        $($('.ansprechpartner_form')[i]).removeClass('disabled').addClass('checked').populate(firm.ansprechpartner[i]);
+                        $($ansprechpartner_form_array[i]).removeClass('disabled').addClass('checked').populate(firm.ansprechpartner[i]);
                         // show the ansprechpartner form
                         enable_ansprechpartner_form();
                         if(i>=1){
-                            // if more than 1 ansprechpartner is showed, check the checkboxes which activate the ansprechpartner
+                            // if more than 1 ansprechpartner is shown, check the checkboxes which activate the ansprechpartner
                             // forms
-                            $('input.checkbox_ansprechpartner')[i-1].checked = true;
+                            $checkboxes_array[i-1].checked = true;
                         }
                     }
-                    //populate the firm form now
-                    // delete the ansprechpartner list because the firm forms
-                    // has no ansprechpartner inputs
                     var temp_firm = jQuery.extend({}, firm);
-                    delete temp_firm.ansprechpartner;
-                    $("form#firm_form").populate(temp_firm);
+                    delete temp_firm.ansprechpartner; // delete the ansprechpartner list because the firm forms has no ansprechpartner inputs
+                    $firm_form.populate(temp_firm);
                 }
             });
         });
 
-       $('input:checkbox#ansprechpartner1_checkbox').change(enable_disable_ans_form_1);
-       $('input:checkbox#ansprechpartner2_checkbox').change(enable_disable_ans_form_2);
+       $('input:checkbox#ansprechpartner1_checkbox').change(enable_disable_ans_form);
+       $('input:checkbox#ansprechpartner2_checkbox').change(enable_disable_ans_form);
 
         $('button#submit_edit').on('click',function(){
             var result = parse_firm_obj_from_form();

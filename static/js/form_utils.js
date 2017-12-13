@@ -13,14 +13,15 @@
 * rules
 */
 function parse_firm_obj_from_form(){
-    var firm_obj = {};
-    var validation_flag = true;
-    var ansprechpartner_list = []; // this list contains ansprechpartner objects. Every anspr form is an object
-    $("form#firm_form").validate(firm_form_validation_rules);
-    if(!$("form#firm_form").valid()){
+    var firm_obj = {},
+        validation_flag = true,
+        ansprechpartner_list = [], // this list contains ansprechpartner objects. Every anspr form is an object
+        $firm_form = $("form#firm_form");
+    $firm_form.validate(firm_form_validation_rules);
+    if(!$firm_form.valid()){
         validation_flag = false;
     }
-    $.each($("form#firm_form").serializeArray(),function(index,element){
+    $.each($firm_form.serializeArray(),function(index,element){
         firm_obj[element.name] = element.value;
     });
     $('.ansprechpartner_form').each(function(index, form) { //get all ansprechpartner forms
@@ -76,32 +77,21 @@ function enable_ansprechpartner_form(){
     });
 }
 /*
-* Enable or disable ansprechpartner form 1 depending on the checkbox
+* Enable or disable ansprechpartner form depending on checkbox id
 */
-function enable_disable_ans_form_1(){
-    if ($(this).is(':checked')) { // $(this) is the checkbox for ansprechpartner form 1
-        $('form#ansprechpartner_form_1').removeClass('disabled').addClass('checked');
+function enable_disable_ans_form(){
+    var $checkbox = $(this),
+         checkbox_id = $checkbox.data('id'),
+         $ans_form = $('form#ansprechpartner_form_'+checkbox_id),
+         $dom_html_body = $('html, body');
+    if ($checkbox.is(':checked')) {
+        $ans_form.removeClass('disabled').addClass('checked');
         enable_ansprechpartner_form();
-        $('html, body').animate({ // smooth animation to show new form
-              scrollTop: $('form#ansprechpartner_form_1').offset().top - $('html, body').offset().top + $('html, body').scrollTop()
+        $dom_html_body.animate({ // smooth animation to show new form
+              scrollTop: $ans_form.offset().top - $dom_html_body.offset().top + $dom_html_body.scrollTop()
          }, 1500);
     }else{
-        $('form#ansprechpartner_form_1').removeClass('checked').addClass('disabled');
-        disable_ansprechpartner_form();
-    }
-}
-/*
-* Enable or disable ansprechpartner form 2 depending on the checkbox
-*/
-function enable_disable_ans_form_2(){
-    if ($(this).is(':checked')) {
-        $('form#ansprechpartner_form_2').removeClass('disabled').addClass('checked');
-        enable_ansprechpartner_form();
-        $('html, body').animate({
-              scrollTop: $('form#ansprechpartner_form_2').offset().top - $('html, body').offset().top + $('html, body').scrollTop()
-         }, 1500);
-    }else{
-        $('form#ansprechpartner_form_2').removeClass('checked').addClass('disabled');
+        $ans_form.removeClass('checked').addClass('disabled');
         disable_ansprechpartner_form();
     }
 }
@@ -114,12 +104,10 @@ function enable_disable_ans_form_2(){
     var month = dtToday.getMonth() + 1;
     var day = dtToday.getDate();
     var year = dtToday.getFullYear();
-
     if(month < 10)
         month = '0' + month.toString();
     if(day < 10)
         day = '0' + day.toString();
-
     var maxDate = year + '-' + month + '-' + day;
     $('input[type="date"]').attr('max', maxDate);
 })();

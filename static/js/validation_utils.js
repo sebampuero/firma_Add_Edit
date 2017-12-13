@@ -28,10 +28,28 @@ function validate_PLZ(value, element) {
     }
     return this.optional(element) || valid;
 }
+/*
+* Custom validation method for the amount of given cellphone numbers
+* @return true if the amount is less than 4, false otherwise
+*/
 function validate_telefon_list_size(value, element){
+    //check regex here too
     var telefon_input = $(this.currentForm).find('input[name="telefon[]"]').val();
     var telefon_list = telefon_input.split(',');
     return this.optional(element) || telefon_list.length <= 4;
+}
+/*
+* Custom validation method for format of the given cellphone numbers
+* @return true if the validation was successful, false otherwise
+*/
+function validate_telefon_format(value, element){
+    var telefon_input = $(this.currentForm).find('input[name="telefon[]"]').val();
+    var telefon_list = telefon_input.split(',');
+    for(var i=0, tested_telefon_index=0; i<telefon_list.length; i++){
+        //test every telefon with regex
+        //if there is one invalid phone, return false with the indicated telefon index
+    }
+    return this.optional(element) || true;
 }
 $.validator.addMethod("PLZ_Validator", validate_PLZ);
 $.validator.addMethod("Telefon_list_size_validator",validate_telefon_list_size);
@@ -49,8 +67,7 @@ var ans_form_validation_rules = {
        },
        'telefon[]': {
             required: true,
-            Telefon_list_size_validator: true,
-            pattern: /[0-9]*(\+49)*[ ]*(\([0-9]+\))*([ ]*(-|–)*[ ]*[0-9]+)*/
+            Telefon_list_size_validator: true
 
        }
     },
@@ -63,9 +80,8 @@ var ans_form_validation_rules = {
             pattern: 'Es muss eine gültige Adresse angegeben werden'
         },
         'telefon[]': {
-            required: 'Eine Telefonnummer muss angegeben werden',
-            Telefon_list_size_validator: 'Maximale Anzahl von Telefonnnumern ist 4',
-            pattern: 'Ungültiges Format'
+            required: 'Mindestens eine Telefonnummer muss angegeben werden',
+            Telefon_list_size_validator: 'Maximale Anzahl von Telefonnnumern ist 4'
         }
     }
 };
