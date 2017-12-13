@@ -53,4 +53,43 @@
         </ansprechpartner>
         <erfassungsdatum>2012-01-31</erfassungsdatum>
     </firma>
+  <firma name="A.M.M. Aktionszentrum Multi Media GmbH" letztes_speichern_datum="12/13/2017 23:43:26">
+        <branche>Multimedia</branche>
+        <strasse_hnr>August-Bebel-Str. 68</strasse_hnr>
+        <plz>14482</plz>
+        <ort>Potsdam</ort>
+        <land>DE</land>
+        <website>http://www.amm-gruppe.de</website>
+        <ansprechpartner name="Kathrin Schwarz">
+            <anrede>Frau</anrede>
+            <funktion>GF</funktion>
+            <telefon>0331 740 60 84</telefon>
+            <fax>740 60 85</fax>
+            <email>info@amm-gruppe.de</email>
+        </ansprechpartner>
+        <ansprechpartner name="Stefan Schwarz">
+            <anrede>Herr</anrede>
+            <telefon>0331 740 60 84</telefon>
+            <fax>740 60 85</fax>
+            <email>info@amm-gruppe.de</email>
+        </ansprechpartner>
+        <erfassungsdatum>2010-10-05</erfassungsdatum>
+    </firma>
+
+    <firma name="adKor GmbH" letztes_speichern_datum="12/13/2017 23:43:26">
+        <branche>Kommunikationstechnik</branche>
+        <strasse_hnr>Am Kleingewerbegebiet 8</strasse_hnr>
+        <plz>15745</plz>
+        <ort>Wildau</ort>
+        <land>DE</land>
+        <website>http://www.adkor.de</website>
+        <ansprechpartner name="Hartmut Kordus">
+            <anrede>Herr</anrede>
+            <titel>Dipl.-Ing.</titel>
+            <telefon>03375 21 40 53</telefon>
+            <fax>21 40 56</fax>
+            <email>hartmut.kordus@adkor.de</email>
+        </ansprechpartner>
+        <erfassungsdatum>2012-01-31</erfassungsdatum>
+    </firma>
 </firmenliste>

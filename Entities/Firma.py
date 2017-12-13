@@ -1,7 +1,8 @@
 class Firma:
     'Firma Objekt'
 
-    def __init__(self,name,branche,strasse_hnr,plz,ort,land,website,ansprechpartner_liste,erfassungsdatum,adresszusatz=None):
+    def __init__(self,name,branche,strasse_hnr,plz,ort,land,website,ansprechpartner_liste,erfassungsdatum,letztes_speichern_datum,
+                 adresszusatz=None):
         self.name = name
         self.branche = branche
         self.strasse_hnr = strasse_hnr
@@ -12,6 +13,7 @@ class Firma:
         self.website = website
         self.ansprechpartner_liste = ansprechpartner_liste
         self.erfassungsdatum = erfassungsdatum
+        self.letztes_speichern_datum = letztes_speichern_datum
 
     def json(self):
         return {
@@ -24,6 +26,7 @@ class Firma:
             "ansprechpartner": [ans.json() for ans in self.ansprechpartner_liste],
             "website": self.website,
             "land": self.land,
-            "erfassungsdatum": self.erfassungsdatum
+            "erfassungsdatum": self.erfassungsdatum,
+            "letztes_speichern_datum": self.letztes_speichern_datum
         }
 

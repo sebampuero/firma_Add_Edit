@@ -24,7 +24,7 @@
 
     <div class="container">
         <div class="row justify-content-center">
-            <div class="alert alert-danger" id="ans_form_remove_confirm" role="alert" style="position:fixed; display:none;">
+            <div class="alert alert-danger" id="ans_form_remove_confirm" role="alert">
                 Ansprechpartner wurde entfernt
             </div>
         </div>
@@ -38,6 +38,7 @@
 
 
             <form id="firm_form" style="display:none;">
+            <small class="form-text text-muted">Datum des letzten Speicherns: <span id="last_data_save_date"></span></small>
             <div class="form-group">
                 <label>Firmenname</label>
                 <input class="form-control" type="text" name="name" placeholder="Firmenname" required readonly>
@@ -250,7 +251,8 @@
             var $firm_form = $("form#firm_form"),
                 $edit_btn = $('button#submit_edit'),
                 $ansprechpartner_form_array = $('.ansprechpartner_form'),
-                $checkboxes_array = $('input.checkbox_ansprechpartner');
+                $checkboxes_array = $('input.checkbox_ansprechpartner'),
+                $last_data_save_span = $('#last_data_save_date');
             // clean all forms
             $firm_form[0].reset();
             $firm_form.show();
@@ -284,6 +286,7 @@
                     var temp_firm = jQuery.extend({}, firm);
                     delete temp_firm.ansprechpartner; // delete the ansprechpartner list because the firm forms has no ansprechpartner inputs
                     $firm_form.populate(temp_firm);
+                    $last_data_save_span.text(temp_firm.letztes_speichern_datum);
                 }
             });
         });
@@ -313,6 +316,9 @@
     });
 </script>
 <script src="{{ url_for('static', filename='js/validation_utils.js') }}"></script>
+<script src="{{ url_for('static', filename='js/time_utils.js') }}"></script>
+<script src="{{ url_for('static', filename='js/form_utils.js') }}"></script>
+<script src="{{ url_for('static', filename='js/form_obj_parser.js') }}"></script>
 <script src="{{ url_for('static', filename='js/form_utils.js') }}"></script>
 <script src="{{ url_for('static', filename='js/typeahead_utils.js') }}"></script>
 {% endblock %}

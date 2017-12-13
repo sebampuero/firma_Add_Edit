@@ -59,3 +59,8 @@ html, body{
     padding: 20px;
     text-align:center;
 }
+#ans_form_remove_confirm{
+    position: fixed;
+    display: none;
+}
+
