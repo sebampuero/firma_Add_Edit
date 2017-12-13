@@ -31,7 +31,7 @@ def create_firm(content):
         firma = Firma(firma_dict['name'], firma_dict['branche'], firma_dict['strasse_hnr'], firma_dict['plz'],
                       firma_dict['ort'],
                       firma_dict['land'], firma_dict['website'], ansprechpartner_list, firma_dict['erfassungsdatum'],
-                      firma_dict['letztes_speichern_datum'],firma_dict['adresszusatz'])
+                      firma_dict['letztes_speichern_datum'], firma_dict['adresszusatz'])
         insert_firm(firma)
         return "ok", 200
     except:
