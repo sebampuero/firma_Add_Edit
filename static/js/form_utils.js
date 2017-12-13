@@ -1,9 +1,3 @@
-/*
-* Functions for forms in the create and edit view.
-* @author Sebastian Ampuero
-* @date 05.12.2017
-*/
-
 
 /*
 * Loop through all ansprechpartner forms and hide the form if it has been marked as disabled
