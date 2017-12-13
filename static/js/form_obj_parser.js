@@ -18,7 +18,7 @@ function parse_firm_obj_from_form(){
     $.each($firm_form.serializeArray(),function(index,element){
         firm_obj[element.name] = element.value;
     });
-    firm_obj['letztes_speichern_datum'] = now;
+    firm_obj['erfassungsdatum'] = now;
     $('.ansprechpartner_form').each(function(index, form) { //get all ansprechpartner forms
         var ans_obj = {}
         if($(this).hasClass('checked')){ //if this form is visible

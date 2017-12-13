@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <firmenliste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1" xsi:noNamespaceSchemaLocation="firmendaten.xsd">
-<firma name="4system GmbH" letztes_speichern_datum="12/13/2017 23:43:26">
+    <firma name="4system GmbH">
         <branche>E-Learning</branche>
         <strasse_hnr>Kurfürstenstraße 114</strasse_hnr>
         <plz>10787</plz>
@@ -16,7 +16,7 @@
         <erfassungsdatum>2009-06-18</erfassungsdatum>
     </firma>
 
-    <firma name="Aastra Deutschland GmbH" letztes_speichern_datum="12/13/2017 23:43:26">
+    <firma name="Aastra Deutschland GmbH">
         <branche>N/A</branche>
         <strasse_hnr>Zeughofstr. 1</strasse_hnr>
         <plz>10997</plz>
@@ -39,7 +39,7 @@
         <erfassungsdatum>2012-01-31</erfassungsdatum>
     </firma>
 
-    <firma name="42com Telecommunication GmbH" letztes_speichern_datum="12/13/2017 23:43:26">
+    <firma name="42com Telecommunication GmbH">
         <branche>Telekommunikation</branche>
         <strasse_hnr>Straße der Pariser Kommune 12-16</strasse_hnr>
         <plz>10243</plz>
@@ -53,7 +53,8 @@
         </ansprechpartner>
         <erfassungsdatum>2012-01-31</erfassungsdatum>
     </firma>
-  <firma name="A.M.M. Aktionszentrum Multi Media GmbH" letztes_speichern_datum="12/13/2017 23:43:26">
+
+    <firma name="A.M.M. Aktionszentrum Multi Media GmbH">
         <branche>Multimedia</branche>
         <strasse_hnr>August-Bebel-Str. 68</strasse_hnr>
         <plz>14482</plz>
@@ -76,7 +77,7 @@
         <erfassungsdatum>2010-10-05</erfassungsdatum>
     </firma>
 
-    <firma name="adKor GmbH" letztes_speichern_datum="12/13/2017 22:43:26">
+    <firma name="adKor GmbH">
         <branche>Kommunikationstechnik</branche>
         <strasse_hnr>Am Kleingewerbegebiet 8</strasse_hnr>
         <plz>15745</plz>
@@ -92,4 +93,116 @@
         </ansprechpartner>
         <erfassungsdatum>2012-01-31</erfassungsdatum>
     </firma>
+
+    <firma name="Airbus Operations GmbH">
+        <branche>Luftfahrt</branche>
+        <strasse_hnr>Lüneburger Schanze 30</strasse_hnr>
+        <plz>21614</plz>
+        <ort>Buxtehude</ort>
+        <land>DE</land>
+        <website>http://www.airbus.com</website>
+        <ansprechpartner name="Matthias Schmitt">
+            <anrede>Herr</anrede>
+            <titel>Dipl.-Ing.</titel>
+            <telefon>040 743 784 56</telefon>
+            <email>matthias.schmitt@airbus.de</email>
+        </ansprechpartner>
+        <erfassungsdatum>2011-07-15</erfassungsdatum>
+    </firma>
+
+    <firma name="Akademie der Bundeswehr für Information und Kommunikation">
+        <branche>Verteidigung</branche>
+        <strasse_hnr>Prötzeler Chaussee 20</strasse_hnr>
+        <plz>15344</plz>
+        <ort>Strausberg</ort>
+        <land>DE</land>
+        <website>http://www.bundeswehr.org</website>
+        <ansprechpartner name="Bernd Stichling">
+            <anrede>Herr</anrede>
+            <telefon>03341 58 16 91</telefon>
+            <fax>58 16 45</fax>
+            <email>berndstichling@bundeswehr.org</email>
+        </ansprechpartner>
+        <erfassungsdatum>2008-01-04</erfassungsdatum>
+    </firma>
+
+    <firma name="alphaQuest GmbH">
+        <branche>Mobile Anwendungen</branche>
+        <strasse_hnr>Theodor-Ott-Ring 34</strasse_hnr>
+        <plz>89182</plz>
+        <ort>Bernstadt</ort>
+        <land>DE</land>
+        <website>http://www.alphaQuest.de</website>
+        <ansprechpartner name="André Probst">
+            <anrede>Herr</anrede>
+            <telefon>07348 9670446</telefon>
+            <fax>9670447</fax>
+            <email>info@alphaQuest.de</email>
+        </ansprechpartner>
+        <erfassungsdatum>2012-05-29</erfassungsdatum>
+    </firma>
+
+    <firma name="Andracor GmbH">
+        <branche>N/A</branche>
+        <strasse_hnr>Mertensstraße 127 - 131</strasse_hnr>
+        <plz>13587</plz>
+        <ort>Berlin</ort>
+        <land>DE</land>
+        <website>http://www.andracor.com</website>
+        <ansprechpartner name="Benjamin Leschnitzer">
+            <anrede>Herr</anrede>
+            <telefon>030 850 14 262</telefon>
+            <email>leschnitzer@andracor.com</email>
+        </ansprechpartner>
+        <erfassungsdatum>2011-07-07</erfassungsdatum>
+    </firma>
+
+    <firma name="araneaNET GmbH">
+        <branche>Netzwerkmanagement</branche>
+        <strasse_hnr>Steinstraße 1</strasse_hnr>
+        <plz>14482</plz>
+        <ort>Potsdam</ort>
+        <land>DE</land>
+        <website>http://www.araneanet.de</website>
+        <ansprechpartner name="Gerald Bock">
+            <anrede>Herr</anrede>
+            <telefon>0331 550350</telefon>
+            <email>gerald.bock@araneanet.de</email>
+        </ansprechpartner>
+        <erfassungsdatum>2008-09-12</erfassungsdatum>
+    </firma>
+
+    <firma name="ARC-GREENLAB GmbH">
+        <branche>Geoinformatik</branche>
+        <strasse_hnr>Eichenstraße 3b</strasse_hnr>
+        <plz>12435</plz>
+        <ort>Berlin</ort>
+        <land>DE</land>
+        <website>http://www.arc-greenlab.de</website>
+        <ansprechpartner name="Wieland Busse">
+            <anrede>Herr</anrede>
+            <telefon>030 762933331</telefon>
+            <email>busse.wieland@arc-greenlab.de</email>
+        </ansprechpartner>
+        <erfassungsdatum>2010-10-05</erfassungsdatum>
+    </firma>
+
+    <firma name="art-X Webargentur Berlin">
+        <branche>Webdesign</branche>
+        <strasse_hnr>Choriner Str. 78</strasse_hnr>
+        <plz>10119</plz>
+        <ort>Berlin</ort>
+        <land>DE</land>
+        <website>http://www.art-x.de</website>
+        <ansprechpartner name="Folker Silge">
+            <anrede>Herr</anrede>
+            <titel>Dipl.-Betriebswirt</titel>
+            <funktion>Inhaber</funktion>
+            <telefon>030 440 47 874</telefon>
+            <fax>440 47 873</fax>
+            <email>mails@art-x.de</email>
+        </ansprechpartner>
+        <erfassungsdatum>2010-10-12</erfassungsdatum>
+    </firma>
+
 </firmenliste>

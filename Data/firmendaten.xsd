@@ -19,7 +19,6 @@
                             <xs:element name='erfassungsdatum' type='xs:date'/>
                         </xs:sequence>
                         <xs:attribute name='name' use='required'/>
-                        <xs:attribute name='letztes_speichern_datum' use='required'/>
                     </xs:complexType>
                 </xs:element>
                 

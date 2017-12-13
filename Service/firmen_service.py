@@ -30,8 +30,8 @@ def create_firm(content):
             ansprechpartner_list.append(ansprechpartner)
         firma = Firma(firma_dict['name'], firma_dict['branche'], firma_dict['strasse_hnr'], firma_dict['plz'],
                       firma_dict['ort'],
-                      firma_dict['land'], firma_dict['website'], ansprechpartner_list, firma_dict['erfassungsdatum'],
-                      firma_dict['letztes_speichern_datum'], firma_dict['adresszusatz'])
+                      firma_dict['land'], firma_dict['website'], ansprechpartner_list, firma_dict['erfassungsdatum']
+                      , firma_dict['adresszusatz'])
         insert_firm(firma)
         return "ok", 200
     except:
@@ -92,7 +92,6 @@ def get_list_of_firms_from_xml(f_element, firmas_list):
     firma = Firma(f_element.attrib['name'], f_element.find('branche').text, f_element.find('strasse_hnr').text,
                   f_element.find('plz').text, f_element.find('ort').text, f_element.find('land').text,
                   f_element.find('website').text, ansprechpartner_list, f_element.find('erfassungsdatum').text,
-                  f_element.attrib['letztes_speichern_datum'],
                   "" if f_element.find('adresszusatz') is None else f_element.find('adresszusatz').text)
     firmas_list.append(firma)
     return firmas_list

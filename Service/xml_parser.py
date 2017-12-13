@@ -36,7 +36,7 @@ def delete_firm(firma_name):
 def insert_firm(firma):
     try:
         root, tree = get_root()
-        firma_attrib = {'name': firma.name, 'letztes_speichern_datum': firma.letztes_speichern_datum}
+        firma_attrib = {'name': firma.name}
         firma_element = ET.SubElement(root, 'firma', firma_attrib)
         ET.SubElement(firma_element, 'branche').text = firma.branche
         ET.SubElement(firma_element, 'strasse_hnr').text = firma.strasse_hnr

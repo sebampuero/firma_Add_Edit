@@ -102,7 +102,6 @@ var firm_form_validation_rules = {
             required: true,
             pattern: /^(https?:\/\/)?(www?)\.([a-zA-Z0-9-\.]+)\.([a-z]{2,3})$/
         },
-        erfassungsdatum: 'required',
         land: {
             required: true,
             pattern: /(DE|CH|AT)/
@@ -121,7 +120,6 @@ var firm_form_validation_rules = {
             required: 'Eine Website muss angegeben werden',
             pattern: 'Es muss eine gültige Adresse angegeben werden'
         },
-        erfassungsdatum: 'Erfassungsdatum ist pflicht',
         land: {
             required: "Ein Land muss angegeben werden",
             pattern: "Kein gültiges Format"

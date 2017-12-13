@@ -16,12 +16,16 @@
 })();
 
 function get_formated_date(){
-var d = new Date,
-    dformat = [d.getMonth()+1,
-               d.getDate(),
-               d.getFullYear()].join('/')+' '+
-              [d.getHours(),
-               d.getMinutes(),
-               d.getSeconds()].join(':');
-    return dformat;
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1;
+
+    var yyyy = today.getFullYear();
+    if(dd<10){
+        dd='0'+dd;
+    }
+    if(mm<10){
+        mm='0'+mm;
+    }
+    return yyyy+'-'+mm+'-'+dd;
 }
