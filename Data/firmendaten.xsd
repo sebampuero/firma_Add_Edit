@@ -19,6 +19,7 @@
                             <xs:element name='erfassungsdatum' type='xs:date'/>
                         </xs:sequence>
                         <xs:attribute name='name' use='required'/>
+                        <xs:attribute name='letztes_speichern_datum' use='required'/>
                     </xs:complexType>
                 </xs:element>
                 
@@ -48,7 +49,7 @@
     </xs:simpleType>
 
     <xs:simpleType name="emailAdresse"> 
-        <xs:restriction base="xsd:string"> 
+        <xs:restriction base="xs:string">
             <xs:pattern value="[^@]+@[^\.]+\..+"/>
         </xs:restriction> 
     </xs:simpleType> 

@@ -34,8 +34,8 @@ function validate_PLZ(value, element) {
 */
 function validate_telefon_list_size(value, element){
     //check regex here too
-    var telefon_input = $(this.currentForm).find('input[name="telefon[]"]').val();
-    var telefon_list = telefon_input.split(',');
+    var telefon_input = $(this.currentForm).find('input[name="telefon[]"]').val(),
+        telefon_list = telefon_input.split(',');
     return this.optional(element) || telefon_list.length <= 4;
 }
 /*
@@ -43,16 +43,18 @@ function validate_telefon_list_size(value, element){
 * @return true if the validation was successful, false otherwise
 */
 function validate_telefon_format(value, element){
-    var telefon_input = $(this.currentForm).find('input[name="telefon[]"]').val();
-    var telefon_list = telefon_input.split(',');
-    for(var i=0, tested_telefon_index=0; i<telefon_list.length; i++){
-        //test every telefon with regex
-        //if there is one invalid phone, return false with the indicated telefon index
+    var telefon_input = $(this.currentForm).find('input[name="telefon[]"]').val(),
+        telefon_list = telefon_input.split(','),
+        regex = /^(\d\s*\d\s*\d\s*\d\s*\d\s*\d\s*\d\s*\d\s*\d\s*\d\s*\d?\s*\d?\s*)$/;
+    for(var i=0; i<telefon_list.length; i++){
+        if(!regex.test(telefon_list[i]))
+            return false;
     }
     return this.optional(element) || true;
 }
 $.validator.addMethod("PLZ_Validator", validate_PLZ);
 $.validator.addMethod("Telefon_list_size_validator",validate_telefon_list_size);
+$.validator.addMethod("Telefon_format_validator",validate_telefon_format);
 
 // ------------------------ Validation rules ---------------------------------------
 
@@ -63,11 +65,12 @@ var ans_form_validation_rules = {
        email: {
             required: true,
             email: true,
-            pattern: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+            pattern: /^([a-zA-Z0-9_\.-]+)@([a-zA-Z0-9_\.-]+)\.([a-z\.]{2,6})$/
        },
        'telefon[]': {
             required: true,
-            Telefon_list_size_validator: true
+            Telefon_list_size_validator: true,
+            Telefon_format_validator: true
 
        }
     },
@@ -81,7 +84,8 @@ var ans_form_validation_rules = {
         },
         'telefon[]': {
             required: 'Mindestens eine Telefonnummer muss angegeben werden',
-            Telefon_list_size_validator: 'Maximale Anzahl von Telefonnnumern ist 4'
+            Telefon_list_size_validator: 'Maximale Anzahl von Telefonnnumern ist 4',
+            Telefon_format_validator: 'Überprüfen Sie das Format der angegebenen Telefonnumern'
         }
     }
 };
@@ -95,7 +99,8 @@ var firm_form_validation_rules = {
         },
         ort: 'required',
         website: {
-            required: true
+            required: true,
+            pattern: /^(https?:\/\/)?(www?)\.([a-zA-Z0-9-\.]+)\.([a-z]{2,3})$/
         },
         erfassungsdatum: 'required',
         land: {
@@ -113,7 +118,8 @@ var firm_form_validation_rules = {
         },
         ort: 'Ein Ort muss angegeben werden',
         website: {
-            required: 'Eine Website muss angegeben werden'
+            required: 'Eine Website muss angegeben werden',
+            pattern: 'Es muss eine gültige Adresse angegeben werden'
         },
         erfassungsdatum: 'Erfassungsdatum ist pflicht',
         land: {
