@@ -26,6 +26,7 @@ def delete_firm(firma_name):
             name = firma.attrib['name'].lower()
             if name == firma_name:
                 root.remove(firma)
+        indent(root)
         tree.write(filename, encoding="utf-8", xml_declaration=True)
     except Exception:
         return None
@@ -58,6 +59,7 @@ def insert_firm(firma):
                 ET.SubElement(ansprechpartner_element, 'fax').text = ans.fax
             ET.SubElement(ansprechpartner_element, 'email').text = ans.email
         ET.SubElement(firma_element, 'erfassungsdatum').text = firma.erfassungsdatum
+        indent(root)
         tree.write(filename, encoding="utf-8", xml_declaration=True)
     except Exception:
         return None
@@ -68,9 +70,29 @@ def insert_firm(firma):
 def get_root():
     try:
         with open(filename, 'r') as xml_file:
-            tree = ET.parse(xml_file, ET.XMLParser(encoding='utf-8'))
+            tree = ET.parse(xml_file)
         return tree.getroot(), tree
     except Exception:
-        print(Exception)
         return None
 
+
+# Apply an indent to the XML File write whenever a firm gets updated or created. Useful utility function taken from
+# https://exceptionshub.com/pretty-printing-xml-in-python.html Without this function, added firms are appended to
+# the XML File in a single line
+# @return the root element with indents
+def indent(elem, level=0):
+    i = "\n" + level * "  "
+    j = "\n" + (level - 1) * "  "
+    if len(elem):
+        if not elem.text or not elem.text.strip():
+            elem.text = i + "  "
+        if not elem.tail or not elem.tail.strip():
+            elem.tail = i
+        for subelem in elem:
+            indent(subelem, level + 1)
+        if not elem.tail or not elem.tail.strip():
+            elem.tail = j
+    else:
+        if level and (not elem.tail or not elem.tail.strip()):
+            elem.tail = j
+    return elem
