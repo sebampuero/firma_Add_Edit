@@ -47,7 +47,7 @@ function validate_telefon_format(value, element){
         telefon_list = telefon_input.split(','),
         regex = /^(\d\s*\d\s*\d\s*\d\s*\d\s*\d\s*\d\s*\d\s*\d\s*\d\s*\d?\s*\d?\s*)$/;
     for(var i=0; i<telefon_list.length; i++){
-        if(!regex.test(telefon_list[i]))
+        if(!regex.test(telefon_list[i].trim()))
             return false;
     }
     return this.optional(element) || true;
