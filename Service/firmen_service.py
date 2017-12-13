@@ -22,7 +22,10 @@ def create_firm(content):
         firma_dict = content
         ansprechpartner_list = []
         for ans in firma_dict['ansprechpartner']:
-            ansprechpartner = Ansprechpartner(ans['name'], ans['anrede'], ans['telefon'], ans['email'], ans['titel'],
+            telefon_list = []
+            for telefon in ans['telefon[]']:
+                telefon_list.append(telefon)
+            ansprechpartner = Ansprechpartner(ans['name'], ans['anrede'], telefon_list, ans['email'], ans['titel'],
                                               ans['funktion'], ans['fax'])
             ansprechpartner_list.append(ansprechpartner)
         firma = Firma(firma_dict['name'], firma_dict['branche'], firma_dict['strasse_hnr'], firma_dict['plz'],
@@ -75,8 +78,11 @@ def get_firm_branchs():
 def get_list_of_firms_from_xml(f_element, firmas_list):
     ansprechpartner_list = []
     for a_element in f_element.findall('ansprechpartner'):
+        telefon_list = []
+        for telefon in a_element.findall('telefon'):
+            telefon_list.append(telefon.text)
         ansprechpartner = Ansprechpartner(a_element.attrib['name'], a_element.find('anrede').text,
-                                          a_element.find('telefon').text, a_element.find('email').text,
+                                          telefon_list, a_element.find('email').text,
                                           "" if a_element.find('titel') is None else a_element.find(
                                               'titel').text,
                                           "" if a_element.find('funktion') is None else a_element.find(

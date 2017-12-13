@@ -28,7 +28,13 @@ function validate_PLZ(value, element) {
     }
     return this.optional(element) || valid;
 }
+function validate_telefon_list_size(value, element){
+    var telefon_input = $(this.currentForm).find('input[name="telefon[]"]').val();
+    var telefon_list = telefon_input.split(',');
+    return this.optional(element) || telefon_list.length <= 4;
+}
 $.validator.addMethod("PLZ_Validator", validate_PLZ);
+$.validator.addMethod("Telefon_list_size_validator",validate_telefon_list_size);
 
 // ------------------------ Validation rules ---------------------------------------
 
@@ -41,8 +47,9 @@ var ans_form_validation_rules = {
             email: true,
             pattern: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
        },
-       telefon: {
+       'telefon[]': {
             required: true,
+            Telefon_list_size_validator: true,
             pattern: /[0-9]*(\+49)*[ ]*(\([0-9]+\))*([ ]*(-|–)*[ ]*[0-9]+)*/
 
        }
@@ -55,8 +62,9 @@ var ans_form_validation_rules = {
             email: 'Es muss eine gültige Adresse angegeben werden',
             pattern: 'Es muss eine gültige Adresse angegeben werden'
         },
-        telefon: {
+        'telefon[]': {
             required: 'Eine Telefonnummer muss angegeben werden',
+            Telefon_list_size_validator: 'Maximale Anzahl von Telefonnnumern ist 4',
             pattern: 'Ungültiges Format'
         }
     }
@@ -71,8 +79,7 @@ var firm_form_validation_rules = {
         },
         ort: 'required',
         website: {
-            required: true,
-            pattern: /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/gm
+            required: true
         },
         erfassungsdatum: 'required',
         land: {
@@ -90,8 +97,7 @@ var firm_form_validation_rules = {
         },
         ort: 'Ein Ort muss angegeben werden',
         website: {
-            required: 'Eine Website muss angegeben werden',
-            pattern: 'Es muss eine gültige Adresse angegeben werden'
+            required: 'Eine Website muss angegeben werden'
         },
         erfassungsdatum: 'Erfassungsdatum ist pflicht',
         land: {

@@ -1,3 +1,6 @@
+/*
+* http://davestewart.io/plugins/jquery/jquery-populate/
+*/
 jQuery.fn.populate = function(obj, options) {
 
 

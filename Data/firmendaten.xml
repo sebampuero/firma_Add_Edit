@@ -1,128 +1,66 @@
 <?xml version='1.0' encoding='utf-8'?>
 <firmenliste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1" xsi:noNamespaceSchemaLocation="firmendaten.xsd">
-<firma name="4system GmbH">
-        <branche>E-Learning</branche>
-        <strasse_hnr>Kurfürstenstraße 114</strasse_hnr>
-        <plz>10787</plz>
-        <ort>Berlin</ort>
-        <land>DE</land>
-        <website>http://www.4system.com</website>
-        <ansprechpartner name="Dawid Kosc">
-            <anrede>Herr</anrede>
-            <telefon>030 23 63 16 73</telefon>
-            <fax>23 63 16 74</fax>
-            <email>d.kosc@4system.com</email>
-        </ansprechpartner>
-        <erfassungsdatum>2009-06-18</erfassungsdatum>
-    </firma>
-
-    <firma name="Aastra Deutschland GmbH">
-        <branche>N/A</branche>
-        <strasse_hnr>Zeughofstr. 1</strasse_hnr>
-        <plz>10997</plz>
-        <ort>Berlin</ort>
-        <land>DE</land>
-        <website>http://www.aastra.de</website>
-        <ansprechpartner name="Jürgen Signer">
-            <anrede>Herr</anrede>
-            <funktion>GF</funktion>
-            <telefon>030 6104 2007</telefon>
-            <fax>6104 2008</fax>
-            <email>info.de@aastra.com</email>
-        </ansprechpartner>
-        <ansprechpartner name="Anthony Shen">
-            <anrede>Herr</anrede>
-            <telefon>030 6104 2007</telefon>
-            <fax>6104 2008</fax>
-            <email>info.de@aastra.com</email>
-        </ansprechpartner>
-        <erfassungsdatum>2012-01-31</erfassungsdatum>
-    </firma>
-
-    <firma name="42com Telecommunication GmbH">
-        <branche>Telekommunikation</branche>
-        <strasse_hnr>Straße der Pariser Kommune 12-16</strasse_hnr>
-        <plz>10243</plz>
-        <ort>Berlin</ort>
-        <land>DE</land>
-        <website>http://www.42com.com</website>
-        <ansprechpartner name="Mochael Palmer">
-            <anrede>Herr</anrede>
-            <telefon>030 243 42 99 33</telefon>
-            <email>michael.palmer@42com.com</email>
-        </ansprechpartner>
-        <erfassungsdatum>2012-01-31</erfassungsdatum>
-    </firma>
-
-    <firma name="A.M.M. Aktionszentrum Multi Media GmbH">
-        <branche>Multimedia</branche>
-        <strasse_hnr>August-Bebel-Str. 68</strasse_hnr>
-        <plz>14482</plz>
-        <ort>Potsdam</ort>
-        <land>DE</land>
-        <website>http://www.amm-gruppe.de</website>
-        <ansprechpartner name="Kathrin Schwarz">
-            <anrede>Frau</anrede>
-            <funktion>GF</funktion>
-            <telefon>0331 740 60 84</telefon>
-            <fax>740 60 85</fax>
-            <email>info@amm-gruppe.de</email>
-        </ansprechpartner>
-        <ansprechpartner name="Stefan Schwarz">
-            <anrede>Herr</anrede>
-            <telefon>0331 740 60 84</telefon>
-            <fax>740 60 85</fax>
-            <email>info@amm-gruppe.de</email>
-        </ansprechpartner>
-        <erfassungsdatum>2010-10-05</erfassungsdatum>
-    </firma>
-
-    <firma name="adKor GmbH">
-        <branche>Kommunikationstechnik</branche>
-        <strasse_hnr>Am Kleingewerbegebiet 8</strasse_hnr>
-        <plz>15745</plz>
-        <ort>Wildau</ort>
-        <land>DE</land>
-        <website>http://www.adkor.de</website>
-        <ansprechpartner name="Hartmut Kordus">
-            <anrede>Herr</anrede>
-            <titel>Dipl.-Ing.</titel>
-            <telefon>03375 21 40 53</telefon>
-            <fax>21 40 56</fax>
-            <email>hartmut.kordus@adkor.de</email>
-        </ansprechpartner>
-        <erfassungsdatum>2012-01-31</erfassungsdatum>
-    </firma>
-
-    <firma name="Airbus Operations GmbH">
-        <branche>Luftfahrt</branche>
-        <strasse_hnr>Lüneburger Schanze 30</strasse_hnr>
-        <plz>21614</plz>
-        <ort>Buxtehude</ort>
-        <land>DE</land>
-        <website>http://www.airbus.com</website>
-        <ansprechpartner name="Matthias Schmitt">
-            <anrede>Herr</anrede>
-            <titel>Dipl.-Ing.</titel>
-            <telefon>040 743 784 56</telefon>
-            <email>matthias.schmitt@airbus.de</email>
-        </ansprechpartner>
-        <erfassungsdatum>2011-07-15</erfassungsdatum>
-    </firma>
-
-    <firma name="Akademie der Bundeswehr für Information und Kommunikation">
-        <branche>Verteidigung</branche>
-        <strasse_hnr>Prötzeler Chaussee 20</strasse_hnr>
-        <plz>15344</plz>
-        <ort>Strausberg</ort>
-        <land>DE</land>
-        <website>http://www.bundeswehr.org</website>
-        <ansprechpartner name="Bernd Stichling">
-            <anrede>Herr</anrede>
-            <telefon>03341 58 16 91</telefon>
-            <fax>58 16 45</fax>
-            <email>berndstichling@bundeswehr.org</email>
-        </ansprechpartner>
-        <erfassungsdatum>2008-01-04</erfassungsdatum>
-    </firma>
+  <firma name="4system GmbH">
+    <branche>E-Learning</branche>
+  <strasse_hnr>sdfsdf</strasse_hnr>
+  <plz>10787</plz>
+  <ort>Berlin</ort>
+  <land>DE</land>
+  <website>http://www.4system.com</website>
+  <ansprechpartner name="Dawid Kosc">
+      <anrede>Herr</anrede>
+    <telefon>030 23 63 16 73</telefon>
+    <fax>23 63 16 74</fax>
+    <email>d.kosc@4system.com</email>
+    </ansprechpartner>
+  <erfassungsdatum>2009-06-18</erfassungsdatum>
+  </firma>
+<firma name="Aastra Deutschland GmbH">
+    <branche>N/A</branche>
+  <strasse_hnr>Zeughofstr. 1</strasse_hnr>
+  <plz>10997</plz>
+  <ort>Berlin</ort>
+  <land>DE</land>
+  <website>http://www.aastra.de</website>
+  <ansprechpartner name="JÃ¼rgen Signer">
+      <anrede>Herr</anrede>
+    <funktion>GF</funktion>
+    <telefon>1</telefon>
+    <telefon>2</telefon>
+    <telefon>3</telefon>
+    <telefon>4</telefon>
+    <fax>6104 2008</fax>
+    <email>info.de@aastra.com</email>
+    </ansprechpartner>
+  <ansprechpartner name="Anthony Shen">
+      <anrede>Herr</anrede>
+    <telefon>6</telefon>
+    <telefon>6</telefon>
+    <telefon>6</telefon>
+    <telefon>6</telefon>
+    <fax>6104 2008</fax>
+    <email>info.de@aastra.com</email>
+    </ansprechpartner>
+  <erfassungsdatum>2012-01-31</erfassungsdatum>
+  </firma>
+<firma name="werwr">
+    <branche>E-Learning</branche>
+  <strasse_hnr>Schillerallee 1</strasse_hnr>
+  <adresszusatz>werwe</adresszusatz>
+  <plz>12345</plz>
+  <ort>werwer</ort>
+  <land>DE</land>
+  <website>www.beispiel.de</website>
+  <ansprechpartner name="Name">
+      <anrede>Herr</anrede>
+    <titel>Dipl.-Ing. (FH)</titel>
+    <funktion>werr</funktion>
+    <telefon>123</telefon>
+    <telefon>45</telefon>
+    <telefon>45</telefon>
+    <telefon>45</telefon>
+    <email>www@aaa.com</email>
+    </ansprechpartner>
+  <erfassungsdatum>2017-12-13</erfassungsdatum>
+  </firma>
 </firmenliste>

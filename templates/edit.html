@@ -118,8 +118,8 @@
             </div>
             <div class="form-group">
                 <label>Telefon</label><br>
-                <input class="form-control" type="text" name="telefon" placeholder="Telefon" required>
-                <small class="form-text text-muted">Pflichtfeld</small>
+                <input class="form-control" type="text" name="telefon[]" placeholder="Telefonnnummer 1, Telefonnummer 2, ..." required>
+                <small class="form-text text-muted">Telefonnnumer müssen mit Komma getrennt werden. Maximale Anzahl: 4. Pflichtfeld</small>
             </div>
         </form>
         <small class="form-text text-muted">Es muss mindestens ein Ansprechpartner geben , maximal 3</small>
@@ -161,8 +161,8 @@
             </div>
             <div class="form-group">
                 <label>Telefon</label><br>
-                <input class="form-control" type="text" name="telefon" placeholder="Telefon" required>
-                <small class="form-text text-muted">Pflichtfeld</small>
+                <input class="form-control" type="text" name="telefon[]" placeholder="Telefonnnummer 1, Telefonnummer 2, ..." required>
+                <small class="form-text text-muted">Telefonnnumer müssen mit Komma getrennt werden. Maximale Anzahl: 4. Pflichtfeld</small>
             </div>
         </form>
 
@@ -202,8 +202,8 @@
             </div>
             <div class="form-group">
                 <label>Telefon</label><br>
-                <input class="form-control" type="text" name="telefon" placeholder="Telefon" required>
-                <small class="form-text text-muted">Pflichtfeld</small>
+                <input class="form-control" type="text" name="telefon[]" placeholder="Telefonnnummer 1, Telefonnummer 2, ..." required>
+                <small class="form-text text-muted">Telefonnnumer müssen mit Komma getrennt werden. Maximale Anzahl: 4. Pflichtfeld</small>
             </div>
         </form>
         <div class="row justify-content-center">
@@ -268,6 +268,8 @@
                         }
                     }
                     //populate the firm form now
+                    // delete the ansprechpartner list because the firm forms
+                    // has no ansprechpartner inputs
                     var temp_firm = jQuery.extend({}, firm);
                     delete temp_firm.ansprechpartner;
                     $("form#firm_form").populate(temp_firm);
@@ -303,4 +305,3 @@
 <script src="{{ url_for('static', filename='js/form_utils.js') }}"></script>
 <script src="{{ url_for('static', filename='js/typeahead_utils.js') }}"></script>
 {% endblock %}
-

@@ -35,7 +35,12 @@ function parse_firm_obj_from_form(){
                 if(form[i].type == "radio" && form[i].checked){ // filter special inputs such as radio
                     ans_obj[form[i].name] = form[i].value;
                 }else if(form[i].type != "radio"){
-                    ans_obj[form[i].name] = form[i].value;
+                    if(form[i].name == "telefon[]"){
+                        var telefon_list = form[i].value.split(',');
+                        ans_obj[form[i].name] = telefon_list;
+                    }else{
+                        ans_obj[form[i].name] = form[i].value;
+                    }
                 }
             });
             ansprechpartner_list.push(ans_obj);
