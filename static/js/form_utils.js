@@ -93,6 +93,7 @@ function enable_disable_ans_form(){
     }else{
         $ans_form.removeClass('checked').addClass('disabled');
         disable_ansprechpartner_form();
+        $('#ans_form_remove_confirm').show().fadeOut(2000);
     }
 }
 /*

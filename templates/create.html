@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
+
+
 <!--    MODALS     -->
 <div id="server_error_modal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
@@ -23,9 +25,13 @@
 </div>
 
     <div class="container">
+        <div class="row justify-content-center">
+            <div class="alert alert-danger" id="ans_form_remove_confirm" role="alert" style="position:fixed; display:none;">
+                Ansprechpartner wurde entfernt
+            </div>
+        </div>
         <div class="main-wrapper">
             <h1 style="text-align:center;">Eine Firma erstellen</h1>
-
             <!--                        FIRM FORM                          -->
 
 
