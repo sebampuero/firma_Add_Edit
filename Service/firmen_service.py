@@ -12,30 +12,37 @@ from Service.xml_parser import get_firms_from_xml, insert_firm, delete_firm
 def edit_firm(content):
     firma_dict = content
     delete_firm(firma_dict['name'].lower())
-    status, code = create_firm(content)
-    return status, code
+    status = create_firm(content)
+    return status
 
 
 # Insert a new firm
 def create_firm(content):
     try:
         firma_dict = content
-        ansprechpartner_list = []
-        for ans in firma_dict['ansprechpartner']:
-            telefon_list = []
-            for telefon in ans['telefon[]']:
-                telefon_list.append(telefon)
-            ansprechpartner = Ansprechpartner(ans['name'], ans['anrede'], telefon_list, ans['email'], ans['titel'],
-                                              ans['funktion'], ans['fax'])
-            ansprechpartner_list.append(ansprechpartner)
-        firma = Firma(firma_dict['name'], firma_dict['branche'], firma_dict['strasse_hnr'], firma_dict['plz'],
-                      firma_dict['ort'],
-                      firma_dict['land'], firma_dict['website'], ansprechpartner_list, firma_dict['erfassungsdatum']
-                      , firma_dict['adresszusatz'])
+        firma = create_new_firm_object(firma_dict)
         insert_firm(firma)
-        return "ok", 200
+        return 200
     except:
-        return "error", 500
+        return 500
+
+
+# Create a firm object from a dictionary containing its values
+# @return the firm object
+def create_new_firm_object(dict_content):
+    ansprechpartner_list = []
+    for ans in dict_content['ansprechpartner']:
+        telefon_list = []
+        for telefon in ans['telefon[]']:
+            telefon_list.append(telefon)
+        ansprechpartner = Ansprechpartner(ans['name'], ans['anrede'], telefon_list, ans['email'], ans['titel'],
+                                          ans['funktion'], ans['fax'])
+        ansprechpartner_list.append(ansprechpartner)
+    firma = Firma(dict_content['name'], dict_content['branche'], dict_content['strasse_hnr'], dict_content['plz'],
+                  dict_content['ort'],
+                  dict_content['land'], dict_content['website'], ansprechpartner_list, dict_content['erfassungsdatum']
+                  , dict_content['adresszusatz'])
+    return firma
 
 
 # Retrieve a firm from the list by name

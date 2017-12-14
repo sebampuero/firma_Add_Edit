@@ -10,10 +10,10 @@ $(function(){
                     data: JSON.stringify(result.firm_obj),
                     contentType: 'application/json',
                     dataType: 'json'
-                }).always(function(data){
-                    if(data.status == 200)
+                }).always(function(status){
+                    if(status == 200)
                         window.location.replace("/?create="+result.firm_obj.name);
-                    else if(data.status == 500)
+                    else if(status == 500)
                         $('#server_error_modal').modal('show');
                 });
             }else{

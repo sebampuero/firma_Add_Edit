@@ -27,21 +27,15 @@ def edit_template():
 @app.route('/firm/create', methods=['POST'])
 def create():
     content = request.get_json()
-    status, code = create_firm(content)
-    if status == "ok" and code == 200:
-        return status, code
-    else:
-        return status, code
+    status = create_firm(content)
+    return status
 
 
 @app.route('/firm/edit', methods=['PUT'])
 def edit():
     content = request.get_json()
-    status, code = edit_firm(content)
-    if status == "ok" and code == 200:
-        return status, code
-    else:
-        return status, code
+    status = edit_firm(content)
+    return status
 
 
 @app.route('/firms', methods=['GET'])
