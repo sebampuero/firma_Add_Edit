@@ -5,12 +5,12 @@
 * @return an object containing the firm object and a validation flag which indicates if all forms passed the validation
 * rules
 */
-function parse_firm_obj_from_form(){
+function parseFirmObject(){
     var firm_obj = {},
         validation_flag = true,
         ansprechpartner_list = [], // this list contains ansprechpartner objects. Every anspr form is an object
         $firm_form = $("form#firm_form"),
-        now = get_formated_date();
+        now = getTodayDate();
     $firm_form.validate(firm_form_validation_rules);
     if(!$firm_form.valid()){
         validation_flag = false;

@@ -1,10 +1,3 @@
-/*
-* Utilities for the autocomplete function
-* @author Sebastian Ampuero
-* @date 05.12.2017
-*/
-
-
 
 var firm_names = new Bloodhound({
     queryTokenizer: Bloodhound.tokenizers.whitespace,

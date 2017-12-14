@@ -130,7 +130,7 @@
             <!--                        ANSPRECHPARTNER FORM                          -->
 
 
-        <form class="ansprechpartner_form disabled" id="ansprechpartner_form_1">
+        <form class="ansprechpartner_form disabled" id="ansprechpartner_form_1" style="display:none;">
              <h4>Ansprechpartner</h4>
             <div class="form-group">
                 <label>Name</label><br>
@@ -170,7 +170,7 @@
             <!--                        ANSPRECHPARTNER FORM                          -->
 
 
-        <form class="ansprechpartner_form disabled" id="ansprechpartner_form_2">
+        <form class="ansprechpartner_form disabled" id="ansprechpartner_form_2" style="display:none;">
              <h4>Ansprechpartner</h4>
                 <div class="form-group">
                     <label>Name</label><br>
@@ -215,21 +215,14 @@
         </div>
     </div>
 
-<script type="application/javascript">
+<script type="text/javascript">
     $(function(){
-        disable_ansprechpartner_form(); // hide all 'disabled' forms
-
-        $.get( "/branch", function( branches ) { // populate branches select list
-            $.each(branches.branches, function(index, branch){
-                $('select#branch_select').append($('<option>').text(branch))
-            });
-        });
         //listeners for form checkbox activators
-        $('input:checkbox#ansprechpartner1_checkbox').change(enable_disable_ans_form);
-        $('input:checkbox#ansprechpartner2_checkbox').change(enable_disable_ans_form);
+        $('input:checkbox#ansprechpartner1_checkbox').change(enableOrDisableAnsprechpartnerForm);
+        $('input:checkbox#ansprechpartner2_checkbox').change(enableOrDisableAnsprechpartnerForm);
 
         $('button#submit_create').on('click',function(){
-            var result = parse_firm_obj_from_form(); // result contains the firm obj and validation flag
+            var result = parseFirmObject(); // result contains the firm obj and validation flag
             $('#loading_spinner').show();
             if(result.flag){
                 $.ajax({
@@ -238,7 +231,7 @@
                     data: JSON.stringify(result.firm_obj),
                     contentType: 'application/json',
                     dataType: 'json'
-                    }).always(function(data){
+                }).always(function(data){
                     if(data.status == 200)
                         window.location.replace("/?create="+result.firm_obj.name);
                     else if(data.status == 500)
@@ -246,6 +239,7 @@
                 });
             }else{
                 $('#invalid_input_modal').modal('show');
+                $('#loading_spinner').hide();
             }
         });
 

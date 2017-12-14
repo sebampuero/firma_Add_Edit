@@ -90,7 +90,7 @@
             <!--                        ANSPRECHPARTNER FORM                          -->
 
 
-        <form class="ansprechpartner_form disabled">
+        <form class="ansprechpartner_form disabled" style="display:none;">
             <h4>Ansprechpartner</h4>
             <div class="form-group">
                 <label>Name</label><br>
@@ -133,7 +133,7 @@
             <!--                        ANSPRECHPARTNER FORM                          -->
 
 
-        <form class="ansprechpartner_form disabled" id="ansprechpartner_form_1">
+        <form class="ansprechpartner_form disabled" id="ansprechpartner_form_1" style="display:none;">
             <h4>Ansprechpartner</h4>
             <div class="form-group">
                 <label>Name</label><br>
@@ -173,7 +173,7 @@
             <!--                        ANSPRECHPARTNER FORM                          -->
 
 
-        <form class="ansprechpartner_form disabled" id="ansprechpartner_form_2">
+        <form class="ansprechpartner_form disabled" id="ansprechpartner_form_2" style="display:none;">
             <h4>Ansprechpartner</h4>
             <div class="form-group">
                 <label>Name</label><br>
@@ -219,17 +219,12 @@
         </div>
     </div>
 <script src="{{ url_for('static', filename='js/populate.js') }}"></script>
-<script>
+<script type="text/javascript">
     $(function(){
-        var firms_list = [];
-        disable_ansprechpartner_form();
-
-        $.get( "/branch", function( branches ) { //populate select branches list
-            $.each(branches.branches, function(index, branch){
-                $('select#branch_select').append($('<option>').text(branch))
-            });
-        });
-
+        var firms_list = []; //array for firms
+        //listeners for form checkbox activators
+        $('input:checkbox#ansprechpartner1_checkbox').change(enableOrDisableAnsprechpartnerForm);
+        $('input:checkbox#ansprechpartner2_checkbox').change(enableOrDisableAnsprechpartnerForm);
         // this get request returns an array of firms which then are saved in the firms_list array
         // the select is then populated with the corresponding names
         $.get( "/firms", function( firms ) {
@@ -249,8 +244,7 @@
             var $firm_form = $("form#firm_form"),
                 $edit_btn = $('button#submit_edit'),
                 $ansprechpartner_form_array = $('.ansprechpartner_form'),
-                $checkboxes_array = $('input.checkbox_ansprechpartner'),
-                $last_data_save_span = $('#last_data_save_date');
+                $checkboxes_array = $('input.checkbox_ansprechpartner');
             // clean all forms
             $firm_form[0].reset();
             $firm_form.show();
@@ -263,7 +257,7 @@
             $.each($ansprechpartner_form_array,function(){
                 var $ans_form = $(this);
                 $ans_form.addClass('disabled').removeClass('checked');
-                disable_ansprechpartner_form();
+                disableAnsprechpartnerForm();
                 $ans_form[0].reset();
             });
             // get the index of the firm in the firms_list array
@@ -274,7 +268,7 @@
                         // get the list of ansprechpartner objects in the firm object and populate the forms accordingly
                         $($ansprechpartner_form_array[i]).removeClass('disabled').addClass('checked').populate(firm.ansprechpartner[i]);
                         // show the ansprechpartner form
-                        enable_ansprechpartner_form();
+                        enableAnsprechpartnerForm();
                         if(i>=1){
                             // if more than 1 ansprechpartner is shown, check the checkboxes which activate the ansprechpartner
                             // forms
@@ -284,16 +278,12 @@
                     var temp_firm = jQuery.extend({}, firm);
                     delete temp_firm.ansprechpartner; // delete the ansprechpartner list because the firm forms has no ansprechpartner inputs
                     $firm_form.populate(temp_firm);
-                    $last_data_save_span.text(temp_firm.letztes_speichern_datum);
                 }
             });
         });
 
-       $('input:checkbox#ansprechpartner1_checkbox').change(enable_disable_ans_form);
-       $('input:checkbox#ansprechpartner2_checkbox').change(enable_disable_ans_form);
-
         $('button#submit_edit').on('click',function(){
-            var result = parse_firm_obj_from_form();
+            var result = parseFirmObject();
             $('#loading_spinner').show();
             if(result.flag){
                 $.ajax({
@@ -302,7 +292,7 @@
                     data: JSON.stringify(result.firm_obj),
                     contentType: 'application/json',
                     dataType: 'json'
-                    }).always(function(data){
+                }).always(function(data){
                     if(data.status == 200)
                         window.location.replace("/?edit="+result.firm_obj.name);
                     else if(data.status == 500)
@@ -310,6 +300,7 @@
                 });
             }else{
                 $('#invalid_input_modal').modal('show');
+                $('#loading_spinner').hide();
             }
         });
     });

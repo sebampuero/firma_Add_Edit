@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <firmenliste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1" xsi:noNamespaceSchemaLocation="firmendaten.xsd">
-    <firma name="4system GmbH">
+      <firma name="4system GmbH">
         <branche>E-Learning</branche>
         <strasse_hnr>Kurfürstenstraße 114</strasse_hnr>
         <plz>10787</plz>
@@ -166,7 +166,7 @@
         <website>http://www.araneanet.de</website>
         <ansprechpartner name="Gerald Bock">
             <anrede>Herr</anrede>
-            <telefon>0331 550350</telefon>
+            <telefon>0331 55035-0</telefon>
             <email>gerald.bock@araneanet.de</email>
         </ansprechpartner>
         <erfassungsdatum>2008-09-12</erfassungsdatum>
@@ -204,5 +204,4 @@
         </ansprechpartner>
         <erfassungsdatum>2010-10-12</erfassungsdatum>
     </firma>
-
 </firmenliste>
