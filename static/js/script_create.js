@@ -1,7 +1,4 @@
 $(function(){
-        //listeners for form checkbox activators
-        $('input:checkbox#ansprechpartner1_checkbox').change(enableOrDisableAnsprechpartnerForm);
-        $('input:checkbox#ansprechpartner2_checkbox').change(enableOrDisableAnsprechpartnerForm);
 
         $('button#submit_create').on('click',function(){
             var result = parseFirmObject(); // result contains the firm obj and validation flag

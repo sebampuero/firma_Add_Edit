@@ -1,8 +1,6 @@
 $(function(){
         var firms_list = []; //array for firms
-        //listeners for form checkbox activators
-        $('input:checkbox#ansprechpartner1_checkbox').change(enableOrDisableAnsprechpartnerForm);
-        $('input:checkbox#ansprechpartner2_checkbox').change(enableOrDisableAnsprechpartnerForm);
+
         // this get request returns an array of firms which then are saved in the firms_list array
         // the select is then populated with the corresponding names
         $.get( "/firms", function( firms ) {

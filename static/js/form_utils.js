@@ -1,3 +1,6 @@
+//listeners for form checkbox activators
+$('input:checkbox#ansprechpartner1_checkbox').change(enableOrDisableAnsprechpartnerForm);
+$('input:checkbox#ansprechpartner2_checkbox').change(enableOrDisableAnsprechpartnerForm);
 /*
 * Anonymous self calling function which populates the branches list in both
 * forms
