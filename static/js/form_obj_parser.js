@@ -10,7 +10,9 @@ function parseFirmObject(){
         validation_flag = true,
         ansprechpartner_list = [], // this list contains ansprechpartner objects. Every anspr form is an object
         $firm_form = $("form#firm_form"),
-        now = getTodayDate();
+        now = getTodayDate(),
+        telefon_input = "",
+        telefon_list = [];
     $firm_form.validate(firm_form_validation_rules);
     if(!$firm_form.valid()){
         validation_flag = false;
@@ -32,7 +34,8 @@ function parseFirmObject(){
                     ans_obj[form[i].name] = form[i].value;
                 }else if(form[i].type != "radio"){
                     if(form[i].name == "telefon[]"){
-                        var telefon_list = form[i].value.split(',');
+                        telefon_input = form[i].value.trim().replace(/ +/g, "");
+                        telefon_list = telefon_input.split(',');
                         ans_obj[form[i].name] = telefon_list;
                     }else{
                         ans_obj[form[i].name] = form[i].value;
