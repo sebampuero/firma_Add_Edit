@@ -40,9 +40,11 @@ function validateTelefonListSize(value, element){
 function validateTelefonFormat(value, element){
     var telefon_input = $(this.currentForm).find('input[name="telefon[]"]').val(),
         telefon_list = telefon_input.split(','),
-        regex = /^(\d\s*\d\s*\d\s*\d\s*\d\s*\d\s*\d\s*\d\s*\d\s*\d\s*\d?\s*\d?\s*)$/;
+        regex = /^(\+|0)?\d-?\d-?\d-?\d-?\d-?\d-?\d-?\d-?\d-?\d-?\d?-?\d?-?\d?-?\d?$/,
+        telefon = "";
     for(var i=0; i<telefon_list.length; i++){
-        if(!regex.test(telefon_list[i].trim()))
+        telefon = telefon_list[i].trim().replace(/ +/g, "");
+        if(!regex.test(telefon))
             return false;
     }
     return this.optional(element) || true;
