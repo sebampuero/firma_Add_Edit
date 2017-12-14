@@ -28,14 +28,14 @@ def edit_template():
 def create():
     content = request.get_json()
     status = create_firm(content)
-    return status
+    return str(status)
 
 
 @app.route('/firm/edit', methods=['PUT'])
 def edit():
     content = request.get_json()
     status = edit_firm(content)
-    return status
+    return str(status)
 
 
 @app.route('/firms', methods=['GET'])
