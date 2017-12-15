@@ -37,7 +37,7 @@ function parseFirmObject(){
                         telefon_list = telefon_input.split(',');
                         ans_obj[ans_form[i].name] = telefon_list;
                     }else{
-                        ans_obj[ans_form[i].name] = form[i].value;
+                        ans_obj[ans_form[i].name] = ans_form[i].value;
                     }
                 }
             });
