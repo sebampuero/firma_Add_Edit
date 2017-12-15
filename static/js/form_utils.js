@@ -15,6 +15,73 @@ $('input:checkbox#ansprechpartner2_checkbox').change(enableOrDisableAnsprechpart
   });
 })();
 
+function checkIfChanged(submit_btn,cancel_btn){
+    var form_inputs_obj = {},
+        new_form_inputs_obj = {},
+        onclick_no_changes = 'window.location.href="/"',
+        onclick_changes = 'if(!confirm("Möchten Sie wirklich abbrechen?"))return false;else{window.location.replace("/")}',
+        $firm_form = $('#firm_form'),
+        $ans_form = $('.ansprechpartner_form');
+    $firm_form.each(function(){
+        var $form = $(this);
+        for(var i=0; i<$form[0].length; i++){
+         $($form[0][i]).on('change',inputListener);
+         if(!$($form[0][i]).hasClass('tt-hint')){
+            if($form[0][i].type != 'select-one'){
+                index = i-1;
+                form_inputs_obj[$form[0][i].name+index] = $form[0][i].value;
+            }
+         }
+        }
+    })
+    $ans_form.each(function(ans_form_index){
+        var $form = $(this);
+           for(var i=0,j=0; i<$form[0].length; i++,j++){
+             $($form[0][i]).on('change',inputListener);
+             if($form[0][i].type != "radio"){
+                if($($form[0][i]).hasClass('tt-hint')){
+                    j--;
+                }else{
+                    form_inputs_obj[$form[0][i].name+j+'ans'+ans_form_index] = $form[0][i].value;
+                }
+             }
+           }
+    })
+    function inputListener(){
+       $firm_form.each(function(){
+          var $form = $(this),
+               index = 0;
+          for(var i=0; i<$form[0].length; i++){
+            if(!$($form[0][i]).hasClass('tt-hint')){
+                if($form[0][i].type != 'select-one'){
+                    index = i-1;
+                    new_form_inputs_obj[$form[0][i].name+index] = $form[0][i].value;
+                }
+            }
+          }
+       })
+       $ans_form.each(function(ans_form_index){
+           var $form = $(this);
+              for(var i=0,j=0; i<$form[0].length; i++,j++){
+                if($form[0][i].type != "radio"){
+                    if($($form[0][i]).hasClass('tt-hint')){
+                        j--;
+                    }else{
+                        new_form_inputs_obj[$form[0][i].name+j+'ans'+ans_form_index] = $form[0][i].value;
+                    }
+                }
+              }
+       })
+       if(JSON.stringify(form_inputs_obj) === JSON.stringify(new_form_inputs_obj)){
+            submit_btn.prop('disabled',true);
+            cancel_btn.attr('onclick',onclick_no_changes);
+       }else{
+            submit_btn.removeAttr('disabled');
+            cancel_btn.attr('onclick',onclick_changes);
+       }
+    }
+};
+
 /*
 * Loop through all ansprechpartner forms and hide the form if it has been marked as disabled
 */

@@ -1,5 +1,7 @@
 $(function(){
-    var firms_list = []; //array for firms
+    var firms_list = [], //array for firms
+        $submit_edit = $('button#submit'),
+        $cancel_submit = $('button#cancel_submit');
     // this get request returns an array of firms which then are saved in the firms_list array
     // the select is then populated with the corresponding names
     $.get( "/firms", function( firms ) {
@@ -17,7 +19,7 @@ $(function(){
         // cache variables
        var $firm_form = $("form#firm_form"),
             $edit_btn = $('button#submit_edit'),
-            $ansprechpartner_form_array = $('.ansprechpartner_form'),
+            $ansprechpartner_form = $('.ansprechpartner_form'),
             $checkboxes_array = $('input.checkbox_ansprechpartner');
         // clean all forms
        $firm_form[0].reset();
@@ -28,7 +30,7 @@ $(function(){
            $checkbox.removeAttr("disabled");
            $checkbox.prop('checked',false);
        });
-       $.each($ansprechpartner_form_array,function(){
+       $.each($ansprechpartner_form,function(){
            var $ans_form = $(this);
            $ans_form.addClass('disabled').removeClass('checked');
             disableAnsprechpartnerForm();
@@ -40,7 +42,7 @@ $(function(){
            if(index == value_selected){
                for(var i=0; i<firm.ansprechpartner.length; i++){
                    // get the list of ansprechpartner objects in the firm object and populate the forms accordingly
-                   $($ansprechpartner_form_array[i]).removeClass('disabled').addClass('checked').populate(firm.ansprechpartner[i]);
+                   $($ansprechpartner_form[i]).removeClass('disabled').addClass('checked').populate(firm.ansprechpartner[i]);
                    // show the ansprechpartner form
                    enableAnsprechpartnerForm();
                    if(i>=1){
@@ -54,8 +56,9 @@ $(function(){
                $firm_form.populate(temp_firm);
            }
        });
+       checkIfChanged($submit_edit,$cancel_submit);
    });
-    $('button#submit_edit').on('click',function(){
+    $submit_edit.on('click',function(){
        var result = parseFirmObject();
        $('#loading_spinner').show();
        if(result.flag){
