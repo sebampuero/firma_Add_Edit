@@ -52,10 +52,10 @@ function enableOrDisableAnsprechpartnerForm(){
         enableAnsprechpartnerForm();
         $dom_html_body.animate({ // smooth animation to show new form
               scrollTop: $ans_form.offset().top - $dom_html_body.offset().top + $dom_html_body.scrollTop()
-         }, 1500);
+         }, 1000);
     }else{
         $ans_form.removeClass('checked').addClass('disabled');
         disableAnsprechpartnerForm();
-        $('#ans_form_remove_confirm').show().fadeOut(2000);
+        $('#ans_form_remove_confirm').show().fadeOut(2500);
     }
 }
