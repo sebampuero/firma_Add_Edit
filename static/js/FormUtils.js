@@ -6,7 +6,8 @@ FormUtils = (function(){
   var form_inputs_obj = {},
       new_form_inputs_obj = {},
       onclick_no_changes = 'window.location.href="/"',
-      onclick_changes = 'if(!confirm("Möchten Sie wirklich abbrechen?"))return false;else{window.location.replace("/")}',
+      onclick_changes = 'if(!confirm("Möchten Sie wirklich abbrechen? Geänderte Daten gehen veloren"))'
+      +'return false;else{window.location.replace("/")}',
       $firm_form = $('#firm_form'),
       $ans_form = $('.ansprechpartner_form'),
       submit_btn = $('button#submit'),
