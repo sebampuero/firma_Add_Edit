@@ -31,16 +31,16 @@ $(function(){
             $.get( "/firms?query="+input_text, function( firm ) {
                 if(firm.length==1){
                     if(input_text == firm[0].name){
-                        $('button#submit_create').prop('disabled', true);
+                        $submit_create.prop('disabled', true);
                         $('label#firm_name_error_label').show();
                     }
                 }else{
-                    $('button#submit_create').prop('disabled', false);
+                    $submit_create.prop('disabled', false);
                     $('label#firm_name_error_label').hide();
                 }
             });
        }else{
-            $('button#submit_create').prop('disabled', false);
+            $submit_create.prop('disabled', false);
             $('label#firm_name_error_label').hide();
        }
     });
