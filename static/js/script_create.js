@@ -1,9 +1,10 @@
 $(function(){
     var $submit_create = $('button#submit'),
         $cancel_submit = $('button#cancel_submit');
-    checkIfChanged($submit_create,$cancel_submit);
+    FormUtils.listBranches();
+    FormUtils.checkifChanged();
     $submit_create.on('click',function(){
-        var result = parseFirmObject(); // result contains the firm obj and validation flag
+        var result = FormObjectParser.parseFirmObject(); // result contains the firm obj and validation flag
         $('#loading_spinner').show();
         if(result.flag){
             $.ajax({

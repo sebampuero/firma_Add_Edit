@@ -1,7 +1,6 @@
 $(function(){
-    var firms_list = [], //array for firms
-        $submit_edit = $('button#submit'),
-        $cancel_submit = $('button#cancel_submit');
+    var firms_list = []; //array for firms
+    FormUtils.listBranches();
     // this get request returns an array of firms which then are saved in the firms_list array
     // the select is then populated with the corresponding names
     $.get( "/firms", function( firms ) {
@@ -33,7 +32,7 @@ $(function(){
        $.each($ansprechpartner_form,function(){
            var $ans_form = $(this);
            $ans_form.addClass('disabled').removeClass('checked');
-            disableAnsprechpartnerForm();
+            FormUtils.disableAnsprechpartnerForm();
            $ans_form[0].reset();
        });
        // get the index of the firm in the firms_list array
@@ -44,7 +43,7 @@ $(function(){
                    // get the list of ansprechpartner objects in the firm object and populate the forms accordingly
                    $($ansprechpartner_form[i]).removeClass('disabled').addClass('checked').populate(firm.ansprechpartner[i]);
                    // show the ansprechpartner form
-                   enableAnsprechpartnerForm();
+                   FormUtils.enableAnsprechpartnerForm();
                    if(i>=1){
                        // if more than 1 ansprechpartner is shown, check the checkboxes which activate the ansprechpartner
                        // forms
@@ -56,10 +55,10 @@ $(function(){
                $firm_form.populate(temp_firm);
            }
        });
-       checkIfChanged($submit_edit,$cancel_submit);
+       FormUtils.checkifChanged();
    });
-    $submit_edit.on('click',function(){
-       var result = parseFirmObject();
+    $('button#submit').on('click',function(){
+       var result = FormObjectParser.parseFirmObject();
        $('#loading_spinner').show();
        if(result.flag){
            $.ajax({
