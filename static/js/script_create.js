@@ -35,12 +35,10 @@ $(function(){
                         $('label#firm_name_error_label').show();
                     }
                 }else{
-                    $submit_create.prop('disabled', false);
                     $('label#firm_name_error_label').hide();
                 }
             });
        }else{
-            $submit_create.prop('disabled', false);
             $('label#firm_name_error_label').hide();
        }
     });

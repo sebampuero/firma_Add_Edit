@@ -57,7 +57,7 @@ FormUtils = (function(){
          submit_btn.prop('disabled',true);
          cancel_btn.attr('onclick',onclick_no_changes);
     }else{
-         submit_btn.removeAttr('disabled');
+         submit_btn.prop('disabled',false);
          cancel_btn.attr('onclick',onclick_changes);
     }
   }
