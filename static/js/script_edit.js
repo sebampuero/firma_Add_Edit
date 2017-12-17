@@ -68,9 +68,11 @@ $(function(){
            }).always(function( status ){
                if(status == 200)
                    window.location.replace("/?edit="+result.firm_obj.name);
-               else if(status == 500)
-                   $('#server_error_modal').modal('show');
-                   $('#loading_spinner').hide();
+               else if(status == 500){
+                 $('#server_error_modal').modal('show');
+                 $('#loading_spinner').hide();
+               }
+
            });
        }else{
            $('#invalid_input_modal').modal('show');
