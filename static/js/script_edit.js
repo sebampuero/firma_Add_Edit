@@ -11,7 +11,7 @@ $(function(){
         $.each(firms,function(index,firm){
             container += "<option value='"+index+"'>"+firm.name+"</option>";
         });
-        $select_firm_name.append(container);
+        $select_firm_name.append( container );
     });
      // when a firm gets selected
     $('select#firm_name').on('change', function (e) {
@@ -19,12 +19,12 @@ $(function(){
        var $firm_form = $("form#firm_form"),
             $edit_btn = $('button#submit_edit'),
             $ansprechpartner_form = $('.ansprechpartner_form'),
-            $checkboxes_array = $('input.checkbox_ansprechpartner');
+            $checkboxes = $('input.checkbox_ansprechpartner');
         // clean all forms
        $firm_form[0].reset();
        $firm_form.show();
        $edit_btn.removeAttr('disabled');
-       $.each($checkboxes_array,function(){
+       $.each($checkboxes,function(){
            var $checkbox = $(this);
            $checkbox.removeAttr("disabled");
            $checkbox.prop('checked',false);
@@ -47,7 +47,7 @@ $(function(){
                    if(i>=1){
                        // if more than 1 ansprechpartner is shown, check the checkboxes which activate the ansprechpartner
                        // forms
-                       $checkboxes_array[i-1].checked = true;
+                       $checkboxes[i-1].checked = true;
                    }
                }
                var temp_firm = jQuery.extend({}, firm);
@@ -60,14 +60,14 @@ $(function(){
     $('button#submit').on('click',function(){
        var result = FormObjectParser.parseFirmObject();
        $('#loading_spinner').show();
-       if(result.flag){
+       if( result.flag ){
            $.ajax({
                type: "PUT",
                url: "/firm/edit",
                data: JSON.stringify(result.firm_obj),
                contentType: 'application/json',
                dataType: 'json'
-           }).always(function(status){
+           }).always(function( status ){
                if(status == 200)
                    window.location.replace("/?edit="+result.firm_obj.name);
                else if(status == 500)

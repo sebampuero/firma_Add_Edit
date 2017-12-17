@@ -14,23 +14,23 @@ FormObjectParser = (function(){
           $firm_form = $("form#firm_form"),
           telefon_input = "",
           telefon_list = [];
-      $firm_form.validate(ValidationUtils.firm_form_validation_rules);
+      $firm_form.validate( ValidationUtils.firm_form_validation_rules );
       if(!$firm_form.valid()){
           validation_flag = false;
       }
-      $.each($firm_form.serializeArray(),function(index,element){
+      $.each($firm_form.serializeArray(),function( index, element ){
           firm_obj[element.name] = element.value;
       });
       firm_obj['erfassungsdatum'] = TimeUtils.getTodayDate();
-      $('.ansprechpartner_form').each(function(index, ans_form) { //get all ansprechpartner forms
+      $('.ansprechpartner_form').each(function( index, ans_form ) { //get all ansprechpartner forms
           var ans_obj = {}
           if($(this).hasClass('checked')){ //if this form is visible
-              $(this).validate(ValidationUtils.ans_form_validation_rules);
+              $(this).validate( ValidationUtils.ans_form_validation_rules );
               if(!$(this).valid()){ //if the form is invalid, exit and return validation_flag = false
                   validation_flag = false;
                   return;
               }
-              $.each(ans_form,function(i,data){ // loop through each input element and populate the ansprechpartner_list
+              $.each(ans_form,function( i, data ){ // loop through each input element and populate the ansprechpartner_list
                   if(ans_form[i].type == "radio" && ans_form[i].checked){ // filter special inputs such as radio
                       ans_obj[ans_form[i].name] = ans_form[i].value;
                   }else if(ans_form[i].type != "radio"){
@@ -43,11 +43,11 @@ FormObjectParser = (function(){
                       }
                   }
               });
-              ansprechpartner_list.push(ans_obj);
+              ansprechpartner_list.push( ans_obj );
           }
       });
       firm_obj['ansprechpartner'] = ansprechpartner_list;
-      if(!validation_flag)
+      if( !validation_flag )
           return {flag:validation_flag};
       return {flag: validation_flag, firm_obj: firm_obj};
   }

@@ -7,20 +7,20 @@ ValidationUtils = (function(){
   * evaluates the correct PLZ.
   * @return true if the validation was successful, false otherwise
   */
-  function validatePLZ(value, element) {
+  function validatePLZ( value, element ) {
       var land = $('select#land_select').val();
       var valid = false;
       switch(land){
           case 'DE':
-              if(/(^\d{5}$)/i.test(value)){
+              if(/(^\d{5}$)/i.test( value )){
                   valid = true;
               }break;
           case 'CH':
-              if(/(^\d{4}$)/i.test(value)){
+              if(/(^\d{4}$)/i.test( value )){
                   valid = true;
               }break;
           case 'AT':
-              if(/(^\d{4}$)|(^\d{4}-\d{4}$)/i.test(value)){
+              if(/(^\d{4}$)|(^\d{4}-\d{4}$)/i.test( value )){
                   valid = true;
               }break;
       }
@@ -30,7 +30,7 @@ ValidationUtils = (function(){
   * Custom validation method for the amount of given cellphone numbers
   * @return true if the amount is less than 4, false otherwise
   */
-  function validateTelefonListSize(value, element){
+  function validateTelefonListSize( value, element ){
       //check regex here too
       var telefon_input = $(this.currentForm).find('input[name="telefon[]"]').val(),
           telefon_list = telefon_input.split(',');
@@ -40,7 +40,7 @@ ValidationUtils = (function(){
   * Custom validation method for format of the given cellphone numbers
   * @return true if the validation was successful, false otherwise
   */
-  function validateTelefonFormat(value, element){
+  function validateTelefonFormat( value, element ){
       var telefon_input = $(this.currentForm).find('input[name="telefon[]"]').val(),
           telefon_list = telefon_input.split(','),
           regex = /^(\+|0)?\d-?\d-?\d-?\d-?\d-?\d-?\d-?\d-?\d-?\d-?\d?-?\d?-?\d?-?\d?$/,

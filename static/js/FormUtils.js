@@ -1,8 +1,5 @@
 FormUtils = {}
 FormUtils = (function(){
-  //listeners for form checkbox activators
-  $('input:checkbox#ansprechpartner1_checkbox').change(enableOrDisableAnsprechpartnerForm);
-  $('input:checkbox#ansprechpartner2_checkbox').change(enableOrDisableAnsprechpartnerForm);
   var form_inputs_obj = {},
       new_form_inputs_obj = {},
       onclick_no_changes = 'window.location.href="/"',
@@ -16,10 +13,10 @@ FormUtils = (function(){
   function listBranches(){
     $.get( "/branch", function( branches ) { //populate select branches list
         var container = "";
-        $.each(branches.branches, function(index, branch){
+        $.each(branches.branches, function( index, branch ){
             container += "<option>"+branch+"</option>";
         });
-        $('select#branch_select').append(container);
+        $('select#branch_select').append( container );
     });
   };
 
@@ -27,7 +24,7 @@ FormUtils = (function(){
     $firm_form.each(function(){
         var $form = $(this);
         for(var i=0; i<$form[0].length; i++){
-         $($form[0][i]).on('change',inputListener);
+         $($form[0][i]).on( 'change', inputListener );
          if(!$($form[0][i]).hasClass('tt-hint')){
             if($form[0][i].type != 'select-one'){
                 index = i-1;
@@ -36,10 +33,10 @@ FormUtils = (function(){
          }
         }
     })
-    $ans_form.each(function(ans_form_index){
+    $ans_form.each(function( ans_form_index ){
         var $form = $(this);
             for(var i=0,j=0; i<$form[0].length; i++,j++){
-             $($form[0][i]).on('change',inputListener);
+             $($form[0][i]).on( 'change', inputListener );
                 if($($form[0][i]).hasClass('tt-hint')){
                     j--;
                 }else{
@@ -54,12 +51,12 @@ FormUtils = (function(){
   }
 
   function checkIfObjectsEqual(){
-    if(JSON.stringify(form_inputs_obj) === JSON.stringify(new_form_inputs_obj)){
-         submit_btn.prop('disabled',true);
-         cancel_btn.attr('onclick',onclick_no_changes);
+    if(JSON.stringify( form_inputs_obj ) === JSON.stringify( new_form_inputs_obj )){
+         submit_btn.prop( 'disabled', true );
+         cancel_btn.attr( 'onclick', onclick_no_changes );
     }else{
-         submit_btn.prop('disabled',false);
-         cancel_btn.attr('onclick',onclick_changes);
+         submit_btn.prop( 'disabled', false );
+         cancel_btn.attr( 'onclick', onclick_changes );
     }
   }
 
@@ -80,7 +77,7 @@ FormUtils = (function(){
           }
         }
      })
-     $ans_form.each(function(ans_form_index){
+     $ans_form.each(function( ans_form_index ){
          var $form = $(this);
               for(var i=0,j=0; i<$form[0].length; i++,j++){
               if($($form[0][i]).hasClass('tt-hint')){
@@ -100,7 +97,7 @@ FormUtils = (function(){
   * Loop through all ansprechpartner forms and hide the form if it has been marked as disabled
   */
   function disableAnsprechpartnerForm(){
-      $ans_form.each(function(index, form) {
+      $ans_form.each(function( index, form ) {
           if($(this).hasClass('disabled')){
               for(var i=0; i<form.length; i++){
                   $(this).hide();
@@ -112,7 +109,7 @@ FormUtils = (function(){
   * Loop through all ansprechpartner forms and show the form if it has been marked as checked
   */
   function enableAnsprechpartnerForm(){
-      $ans_form.each(function(index, form) {
+      $ans_form.each(function( index, form ) {
           if($(this).hasClass('checked')){
               for(var i=0; i<form.length; i++){
                   $(this).show();
@@ -141,11 +138,14 @@ FormUtils = (function(){
       }
   }
 
+  //listeners for form checkbox activators
+  $('input:checkbox#ansprechpartner1_checkbox').change( enableOrDisableAnsprechpartnerForm );
+  $('input:checkbox#ansprechpartner2_checkbox').change( enableOrDisableAnsprechpartnerForm );
+
   return {
     listBranches: listBranches,
     checkifChanged: checkifChanged,
     disableAnsprechpartnerForm: disableAnsprechpartnerForm,
-    enableAnsprechpartnerForm: enableAnsprechpartnerForm,
-    enableOrDisableAnsprechpartnerForm: enableOrDisableAnsprechpartnerForm
+    enableAnsprechpartnerForm: enableAnsprechpartnerForm
   }
 })();
