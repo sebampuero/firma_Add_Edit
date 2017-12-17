@@ -45,9 +45,7 @@ $(function(){
                    // show the ansprechpartner form
                    FormUtils.enableAnsprechpartnerForm();
                    if(i>=1){
-                       // if more than 1 ansprechpartner is shown, check the checkboxes which activate the ansprechpartner
-                       // forms
-                       $checkboxes[i-1].checked = true;
+                       $checkboxes[i-1].checked = true; // check corresponding check boxes
                    }
                }
                var temp_firm = jQuery.extend({}, firm);

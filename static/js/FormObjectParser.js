@@ -10,7 +10,7 @@ FormObjectParser = (function(){
   function parseFirmObject(){
       var firm_obj = {},
           validation_flag = true,
-          ansprechpartner_list = [], // this list contains ansprechpartner objects. Every anspr form is an object
+          ansprechpartner_list = [],
           $firm_form = $("form#firm_form"),
           telefon_input = "",
           telefon_list = [];
@@ -22,26 +22,21 @@ FormObjectParser = (function(){
           firm_obj[element.name] = element.value;
       });
       firm_obj['erfassungsdatum'] = TimeUtils.getTodayDate();
-      $('.ansprechpartner_form').each(function( index, ans_form ) { //get all ansprechpartner forms
-          var ans_obj = {}
-          if($(this).hasClass('checked')){ //if this form is visible
-              $(this).validate( ValidationUtils.ans_form_validation_rules );
-              if(!$(this).valid()){ //if the form is invalid, exit and return validation_flag = false
+      $('.ansprechpartner_form').each(function() { //get all ansprechpartner forms
+          var ans_obj = {},
+              $ans_form = $(this);
+          if($ans_form.hasClass('checked')){ //if this form is visible
+              $ans_form.validate( ValidationUtils.ans_form_validation_rules );
+              if(!$ans_form.valid()){ //if the form is invalid, exit and return validation_flag = false
                   validation_flag = false;
                   return;
               }
-              $.each(ans_form,function( i, data ){ // loop through each input element and populate the ansprechpartner_list
-                  if(ans_form[i].type == "radio" && ans_form[i].checked){ // filter special inputs such as radio
-                      ans_obj[ans_form[i].name] = ans_form[i].value;
-                  }else if(ans_form[i].type != "radio"){
-                      if(ans_form[i].name == "telefon[]"){
-                          telefon_input = ans_form[i].value.trim().replace(/ +/g, "");
-                          telefon_list = telefon_input.split(',');
-                          ans_obj[ans_form[i].name] = telefon_list;
-                      }else{
-                          ans_obj[ans_form[i].name] = ans_form[i].value;
-                      }
-                  }
+              $.each( $ans_form.serializeArray(), function( index, element ){
+                if(element.name === "telefon[]"){
+                  ans_obj[element.name] = element.value.trim().replace(/ +/g, "").split(',');
+                }else{
+                  ans_obj[element.name] = element.value;
+                }
               });
               ansprechpartner_list.push( ans_obj );
           }
