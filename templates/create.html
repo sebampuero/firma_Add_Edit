@@ -96,8 +96,8 @@
             </div>
             <div class="form-group">
                 <label>Anrede</label><br>
-                <input type="radio" name="anrede" value="Herr"> Herr
-                <input type="radio" name="anrede" value="Frau"> Frau
+                <input type="radio" name="anrede" value="Herr" required> Herr
+                <input type="radio" name="anrede" value="Frau" required> Frau
                 <small class="form-text text-muted">Pflichtfeld</small>
             </div>
             <div class="form-group">
@@ -208,7 +208,7 @@
         </form>
         <div class="row justify-content-center">
             <div class="col-lg-auto">
-                <button id="submit" class="btn btn-primary" disabled>Erstellen<i id="loading_spinner" style="display:none;" class="fa fa-cog fa-spin fa-1x fa-fw"></i></button>
+                <button id="submit" class="btn btn-primary">Erstellen<i id="loading_spinner" style="display:none;" class="fa fa-cog fa-spin fa-1x fa-fw"></i></button>
                 <button id="cancel_submit" class="btn btn-danger" onclick="window.location.href='/'">Abbrechen</button>
             </div>
         </div><br>

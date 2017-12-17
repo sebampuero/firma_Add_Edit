@@ -1,15 +1,16 @@
 $(function(){
     var firm_name_exists = false;
     FormUtils.listBranches();
-    FormUtils.checkifChanged();
+    FormUtils.checkForChanges();
 
      //listener for firm name input to check if the given firm already exists
      $('input#typeahead').focusout(function(){
        var input_text = $(this).val();
        if(input_text != ""){
             $.get( "/firms?query="+input_text, function( firm ) {
+                console.log(firm)
                 if(firm.length==1){
-                    if(input_text == firm[0].name){
+                    if(input_text.toLowerCase() == firm[0].name.toLowerCase()){
                         $('label#firm_name_error_label').show();
                         firm_name_exists = true;
                     }else{
@@ -42,6 +43,7 @@ $(function(){
                     window.location.replace("/?create="+result.firm_obj.name);
                 else if(status == 500)
                     $('#server_error_modal').modal('show');
+                    $('#loading_spinner').hide();
             });
         }else{
             $('#invalid_input_modal').modal('show');

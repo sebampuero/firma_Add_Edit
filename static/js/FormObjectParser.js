@@ -11,9 +11,8 @@ FormObjectParser = (function(){
       var firm_obj = {},
           validation_flag = true,
           ansprechpartner_list = [],
-          $firm_form = $("form#firm_form"),
-          telefon_input = "",
-          telefon_list = [];
+          $firm_form = $("form#firm_form");
+
       $firm_form.validate( ValidationUtils.firm_form_validation_rules );
       if(!$firm_form.valid()){
           validation_flag = false;

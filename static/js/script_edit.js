@@ -53,7 +53,7 @@ $(function(){
                $firm_form.populate(temp_firm);
            }
        });
-       FormUtils.checkifChanged();
+       FormUtils.checkForChanges();
    });
     $('button#submit').on('click',function(){
        var result = FormObjectParser.parseFirmObject();
@@ -70,6 +70,7 @@ $(function(){
                    window.location.replace("/?edit="+result.firm_obj.name);
                else if(status == 500)
                    $('#server_error_modal').modal('show');
+                   $('#loading_spinner').hide();
            });
        }else{
            $('#invalid_input_modal').modal('show');

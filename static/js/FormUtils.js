@@ -2,13 +2,8 @@ FormUtils = {}
 FormUtils = (function(){
   var form_inputs_obj = {},
       new_form_inputs_obj = {},
-      onclick_no_changes = 'window.location.href="/"',
-      onclick_changes = 'if(!confirm("Möchten Sie wirklich abbrechen? Geänderte Daten gehen veloren"))'
-      +'return false;else{window.location.replace("/")}',
       $firm_form = $('#firm_form'),
-      $ans_form = $('.ansprechpartner_form'),
-      submit_btn = $('button#submit'),
-      cancel_btn = $('button#cancel_submit');
+      $ans_form = $('.ansprechpartner_form');
 
   function listBranches(){
     $.get( "/branch", function( branches ) { //populate select branches list
@@ -20,7 +15,7 @@ FormUtils = (function(){
     });
   };
 
-  function checkifChanged(){
+  function checkForChanges(){
     $firm_form.each(function(){
         var $form = $(this);
         for(var i=0; i<$form[0].length; i++){
@@ -51,13 +46,10 @@ FormUtils = (function(){
   }
 
   function checkIfObjectsEqual(){
-    if(JSON.stringify( form_inputs_obj ) === JSON.stringify( new_form_inputs_obj )){
-         submit_btn.prop( 'disabled', true );
-         cancel_btn.attr( 'onclick', onclick_no_changes );
-    }else{
-         submit_btn.prop( 'disabled', false );
-         cancel_btn.attr( 'onclick', onclick_changes );
-    }
+    var equal = JSON.stringify( form_inputs_obj ) === JSON.stringify( new_form_inputs_obj );
+    var onclick_changes = equal ? 'window.location.href="/"' : 'if(!confirm("Möchten Sie wirklich abbrechen? Geänderte Daten gehen veloren"))'
+    +'return false;else{window.location.replace("/")}';
+    $('button#cancel_submit').attr( 'onclick', onclick_changes );
   }
 
   function inputListener(){
@@ -90,6 +82,18 @@ FormUtils = (function(){
      checkIfObjectsEqual();
   }
 
+  /*function checkForRequiredInputs(){
+    $firm_form.each(function(){
+      var $form = $(this);
+      for(var i=0; i<$form[0].length; i++){
+        if(!$($form[0][i]).hasClass('tt-hint')){
+            console.log($form[0][i].required);
+        }
+      }
+    })
+  }
+  checkForRequiredInputs();*/
+  
   /*
   * Loop through all ansprechpartner forms and hide the form if it has been marked as disabled
   */
@@ -141,7 +145,7 @@ FormUtils = (function(){
 
   return {
     listBranches: listBranches,
-    checkifChanged: checkifChanged,
+    checkForChanges: checkForChanges,
     disableAnsprechpartnerForm: disableAnsprechpartnerForm,
     enableAnsprechpartnerForm: enableAnsprechpartnerForm
   }
