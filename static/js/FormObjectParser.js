@@ -30,8 +30,9 @@ FormObjectParser = (function(){
                   validation_flag = false;
                   return;
               }
-              ans_obj[element.name] = element.name === "telefon[]" ?
-                  element.value.trim().replace(/ +/g, "").split(',') : ans_obj[element.name] = element.value;
+              $.each( $ans_form.serializeArray(), function( index, element ){
+                ans_obj[element.name] = element.name === "telefon[]" ?
+                    element.value.trim().replace(/ +/g, "").split(',') : ans_obj[element.name] = element.value;
               });
               ansprechpartner_list.push( ans_obj );
           }
