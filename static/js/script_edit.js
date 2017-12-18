@@ -17,7 +17,7 @@ $(function(){
     $('select#firm_name').on('change', function (e) {
         // cache variables
        var $firm_form = $("form#firm_form"),
-            $edit_btn = $('button#submit_edit'),
+            $edit_btn = $('button#submit'),
             $ansprechpartner_form = $('.ansprechpartner_form'),
             $checkboxes = $('input.checkbox_ansprechpartner');
         // clean all forms
