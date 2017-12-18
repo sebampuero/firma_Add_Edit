@@ -20,27 +20,20 @@ FormUtils = (function(){
         var $form = $(this);
         for(var i=0; i<$form[0].length; i++){
          $($form[0][i]).on( 'change', inputListener );
-         if(!$($form[0][i]).hasClass('tt-hint')){
             if($form[0][i].type != 'select-one'){
-                index = i-1;
-                form_inputs_obj[$form[0][i].name+index] = $form[0][i].value;
+                form_inputs_obj[$form[0][i].name+i] = $form[0][i].value;
             }
-         }
         }
     })
     $ans_form.each(function( ans_form_index ){
         var $form = $(this);
-            for(var i=0,j=0; i<$form[0].length; i++,j++){
+            for(var i=0; i<$form[0].length; i++){
              $($form[0][i]).on( 'change', inputListener );
-                if($($form[0][i]).hasClass('tt-hint')){
-                    j--;
-                }else{
                     if($form[0][i].type != "radio"){
-                        form_inputs_obj[$form[0][i].name+j+'ans'+ans_form_index] = $form[0][i].value;
+                        form_inputs_obj[$form[0][i].name+i+'ans'+ans_form_index] = $form[0][i].value;
                     }else{
-                        form_inputs_obj[$form[0][i].name+j+'ans'+ans_form_index] = $form[0][i].checked;
+                        form_inputs_obj[$form[0][i].name+i+'ans'+ans_form_index] = $form[0][i].checked;
                     }
-                }
            }
     })
   }
@@ -54,29 +47,21 @@ FormUtils = (function(){
 
   function inputListener(){
     $firm_form.each(function(){
-       var $form = $(this),
-            index = 0;
+       var $form = $(this);
        for(var i=0; i<$form[0].length; i++){
-         if(!$($form[0][i]).hasClass('tt-hint')){
              if($form[0][i].type != 'select-one'){
-                 index = i-1;
-                 new_form_inputs_obj[$form[0][i].name+index] = $form[0][i].value;
+                 new_form_inputs_obj[$form[0][i].name+i] = $form[0][i].value;
              }
-         }
        }
     })
     $ans_form.each(function( ans_form_index ){
         var $form = $(this);
              for(var i=0,j=0; i<$form[0].length; i++,j++){
-             if($($form[0][i]).hasClass('tt-hint')){
-                 j--;
-             }else{
                 if($form[0][i].type != "radio"){
-                     new_form_inputs_obj[$form[0][i].name+j+'ans'+ans_form_index] = $form[0][i].value;
+                     new_form_inputs_obj[$form[0][i].name+i+'ans'+ans_form_index] = $form[0][i].value;
                 }else{
-                     new_form_inputs_obj[$form[0][i].name+j+'ans'+ans_form_index] = $form[0][i].checked;
+                     new_form_inputs_obj[$form[0][i].name+i+'ans'+ans_form_index] = $form[0][i].checked;
                 }
-             }
            }
     });
      checkIfObjectsEqual();
@@ -93,7 +78,7 @@ FormUtils = (function(){
     })
   }
   checkForRequiredInputs();*/
-  
+
   /*
   * Loop through all ansprechpartner forms and hide the form if it has been marked as disabled
   */

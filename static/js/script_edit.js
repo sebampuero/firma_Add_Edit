@@ -56,8 +56,8 @@ $(function(){
        FormUtils.checkForChanges();
    });
     $('button#submit').on('click',function(){
-       var result = FormObjectParser.parseFirmObject();
-       $('#loading_spinner').show();
+       var result = FormObjectParser.parseFirmObject(),
+           $loading_anim = $('#loading_spinner').show();
        if( result.flag ){
            $.ajax({
                type: "PUT",
@@ -70,13 +70,13 @@ $(function(){
                    window.location.replace("/?edit="+result.firm_obj.name);
                else if(status == 500){
                  $('#server_error_modal').modal('show');
-                 $('#loading_spinner').hide();
+                 $loading_anim.hide();
                }
 
            });
        }else{
            $('#invalid_input_modal').modal('show');
-           $('#loading_spinner').hide();
+           $loading_anim.hide();
        }
    });
 });
