@@ -42,7 +42,6 @@ $(function(){
                for(var i=0; i<firm.ansprechpartner.length; i++){
                    // get the list of ansprechpartner objects in the firm object and populate the forms accordingly
                    $($ansprechpartner_form[i]).removeClass('disabled').addClass('checked').populate(firm.ansprechpartner[i]);
-                   // show the ansprechpartner form
                    FormUtils.enableAnsprechpartnerForm();
                    if(i>=1){
                        $checkboxes[i-1].checked = true; // check corresponding check boxes

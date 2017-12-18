@@ -56,7 +56,7 @@ FormUtils = (function(){
     })
     $ans_form.each(function( ans_form_index ){
         var $form = $(this);
-             for(var i=0,j=0; i<$form[0].length; i++,j++){
+             for(var i=0; i<$form[0].length; i++){
                 if($form[0][i].type != "radio"){
                      new_form_inputs_obj[$form[0][i].name+i+'ans'+ans_form_index] = $form[0][i].value;
                 }else{
