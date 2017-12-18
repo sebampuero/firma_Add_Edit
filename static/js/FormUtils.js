@@ -120,7 +120,7 @@ FormUtils = (function(){
       }else{
           $the_ans_form.removeClass('checked').addClass('disabled');
           disableAnsprechpartnerForm();
-          $('#ans_form_remove_confirm').show().fadeOut(2500);
+          $('#ans_form_remove_confirm').show().fadeOut(4500);
       }
   }
 
