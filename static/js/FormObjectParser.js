@@ -14,11 +14,9 @@ FormObjectParser = (function(){
           $firm_form = $("form#firm_form");
 
       $firm_form.validate( ValidationUtils.firm_form_validation_rules );
-      if(!$firm_form.valid()){
-          validation_flag = false;
-      }
+      if(!$firm_form.valid()) validation_flag = false;
       $.each($firm_form.serializeArray(),function( index, element ){
-          firm_obj[element.name] = element.value;
+          firm_obj[element.name] = element.value.trim();
       });
       firm_obj['erfassungsdatum'] = TimeUtils.getTodayDate();
       $('.ansprechpartner_form').each(function() { //get all ansprechpartner forms
@@ -32,14 +30,14 @@ FormObjectParser = (function(){
               }
               $.each( $ans_form.serializeArray(), function( index, element ){
                 ans_obj[element.name] = element.name === "telefon[]" ?
-                    element.value.trim().replace(/ +/g, "").split(',') : ans_obj[element.name] = element.value;
+                    element.value.trim().replace(/ +/g, "").split(',') :
+                      ans_obj[element.name] = element.value.trim();
               });
               ansprechpartner_list.push( ans_obj );
           }
       });
       firm_obj['ansprechpartner'] = ansprechpartner_list;
-      if( !validation_flag )
-          return {flag:validation_flag};
+      if( !validation_flag ) return {flag:validation_flag};
       return {flag: validation_flag, firm_obj: firm_obj};
   }
   return {

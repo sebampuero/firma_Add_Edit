@@ -1,11 +1,14 @@
 (function(){
+  /*
+  * Utils for the autocomplete function of the firm name and ansprechpartner title
+  */
 
   $('input#name-autocomplete').easyAutocomplete({
       url: function(name){
-        return "firms?query="+name;
+        return "firms?query="+name; // get request to firms
       },
       getValue: function(element){
-        return element.name;
+        return element.name; // return the name of the firm only
       }
   })
 

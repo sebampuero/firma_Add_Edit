@@ -1,7 +1,7 @@
 $(function(){
     var firm_name_exists = false;
     FormUtils.listBranches();
-    FormUtils.checkForChanges(0);
+    FormUtils.checkForChanges();
 
      //listener for firm name input to check if the given firm already exists
      $('input#name-autocomplete').change(function(){
@@ -9,7 +9,6 @@ $(function(){
            $error_label = $('label#firm_name_error_label');
        if(input_text != ""){
             $.get( "/firms?query="+input_text, function( firm ) {
-                console.log(firm)
                 if(firm.length==1){
                     if(input_text.toLowerCase() == firm[0].name.toLowerCase()){
                         $error_label.show();

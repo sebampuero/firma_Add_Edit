@@ -52,6 +52,8 @@ ValidationUtils = (function(){
       }
       return this.optional(element) || true;
   }
+
+
   $.validator.addMethod("PLZ_Validator", validatePLZ);
   $.validator.addMethod("telefon_list_size_validator",validateTelefonListSize);
   $.validator.addMethod("telefon_format_validator",validateTelefonFormat);
@@ -60,7 +62,10 @@ ValidationUtils = (function(){
 
   var ans_form_validation_rules = {
       rules: {
-         name: 'required',
+         name: {
+           required: true,
+           nowhitespace: true
+         },
          anrede: 'required',
          email: {
               required: true,
@@ -91,13 +96,22 @@ ValidationUtils = (function(){
   };
   var firm_form_validation_rules = {
       rules: {
-          name: 'required',
-          strasse_hnr: 'required',
+          name: {
+            required: true,
+            nowhitespace: true
+          },
+          strasse_hnr: {
+            required: true,
+            nowhitespace: true
+          },
           plz: {
               required: true,
               PLZ_Validator: true
           },
-          ort: 'required',
+          ort: {
+            required: true,
+            nowhitespace: true
+          },
           website: {
               required: true,
               pattern: /^(https?:\/\/)?(www?)\.([a-zA-Z0-9-\.]+)\.([a-z]{2,3})$/
