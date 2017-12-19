@@ -34,6 +34,7 @@ $(function(){
             FormUtils.disableAnsprechpartnerForm();
            $ans_form[0].reset();
        });
+       $edit_btn.prop('disabled',true);
        // get the index of the firm in the firms_list array
        var value_selected = this.value;
        $.each(firms_list,function(index,firm){
