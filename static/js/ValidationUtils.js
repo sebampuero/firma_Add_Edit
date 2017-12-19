@@ -62,10 +62,7 @@ ValidationUtils = (function(){
 
   var ans_form_validation_rules = {
       rules: {
-         name: {
-           required: true,
-           nowhitespace: true
-         },
+         name: 'required',
          anrede: 'required',
          email: {
               required: true,
@@ -96,22 +93,13 @@ ValidationUtils = (function(){
   };
   var firm_form_validation_rules = {
       rules: {
-          name: {
-            required: true,
-            nowhitespace: true
-          },
-          strasse_hnr: {
-            required: true,
-            nowhitespace: true
-          },
+          name: 'required',
+          strasse_hnr: 'required',
           plz: {
               required: true,
               PLZ_Validator: true
           },
-          ort: {
-            required: true,
-            nowhitespace: true
-          },
+          ort: 'required',
           website: {
               required: true,
               pattern: /^(https?:\/\/)?(www?)\.([a-zA-Z0-9-\.]+)\.([a-z]{2,3})$/
