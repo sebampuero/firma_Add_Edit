@@ -83,7 +83,7 @@ FormUtils = (function(){
     var onclick_changes = areObjectsEqual() ? 'window.location.href="/"' : 'if(!confirm("Möchten Sie wirklich abbrechen? Geänderte Daten gehen veloren"))'
     +'return false;else{window.location.replace("/")}';
     $('button#cancel_submit').attr( 'onclick', onclick_changes );
-    if( areObjectsEqual() ){
+    if( areObjectsEqual() || $.isEmptyObject(new_form_inputs_obj) ){
       $('button#submit').prop('disabled',true);
     }else{
       $('button#submit').prop('disabled',false);
