@@ -53,17 +53,25 @@ ValidationUtils = (function(){
       return this.optional(element) || true;
   }
 
+  /*
+  * Custom method to trim values before being validated.
+  * https://stackoverflow.com/a/44332560/5704156
+  */
+  function trimValues( value, element ) {
+    return $.validator.methods.required.call(this, $.trim(value), element);
+  }
 
   $.validator.addMethod("PLZ_Validator", validatePLZ);
   $.validator.addMethod("telefon_list_size_validator",validateTelefonListSize);
   $.validator.addMethod("telefon_format_validator",validateTelefonFormat);
+  $.validator.addMethod('requiredNotBlank',trimValues, $.validator.messages.required);
 
   // ------------------------ Validation rules ---------------------------------------
 
   var ans_form_validation_rules = {
       rules: {
-         name: 'required',
-         anrede: 'required',
+         name: 'requiredNotBlank',
+         anrede: 'requiredNotBlank',
          email: {
               required: true,
               email: true,
@@ -93,13 +101,13 @@ ValidationUtils = (function(){
   };
   var firm_form_validation_rules = {
       rules: {
-          name: 'required',
-          strasse_hnr: 'required',
+          name: 'requiredNotBlank',
+          strasse_hnr: 'requiredNotBlank',
           plz: {
               required: true,
               PLZ_Validator: true
           },
-          ort: 'required',
+          ort: 'requiredNotBlank',
           website: {
               required: true,
               pattern: /^(https?:\/\/)?(www?)\.([a-zA-Z0-9-\.]+)\.([a-z]{2,3})$/
