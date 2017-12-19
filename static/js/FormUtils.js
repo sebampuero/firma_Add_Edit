@@ -15,69 +15,107 @@ FormUtils = (function(){
     });
   };
 
-  function checkForChanges(){
+  function checkForChanges(initialIndex){
     $firm_form.each(function(){
         var $form = $(this);
         for(var i=0; i<$form[0].length; i++){
-         $($form[0][i]).on( 'change', inputListener );
+         $($form[0][i]).change( inputListener );
             if($form[0][i].type != 'select-one'){
-                form_inputs_obj[$form[0][i].name+i] = $form[0][i].value;
+                form_inputs_obj[$form[0][i].name] = $form[0][i].value;
             }
         }
     })
+    insertAnsObject(initialIndex);
+  }
+
+  function insertAnsObject(initialIndex){
     $ans_form.each(function( ans_form_index ){
         var $form = $(this);
-            for(var i=0; i<$form[0].length; i++){
-             $($form[0][i]).on( 'change', inputListener );
+            if( initialIndex == undefined){
+              if($form.hasClass('checked')){
+                var ans_obj = {};
+                for(var i=0; i<$form[0].length; i++){
+                 $($form[0][i]).change( inputListener );
                     if($form[0][i].type != "radio"){
-                        form_inputs_obj[$form[0][i].name+i+'ans'+ans_form_index] = $form[0][i].value;
+                        ans_obj[$form[0][i].name] = $form[0][i].value;
                     }else{
-                        form_inputs_obj[$form[0][i].name+i+'ans'+ans_form_index] = $form[0][i].checked;
+                        ans_obj[$form[0][i].name] = $form[0][i].checked;
                     }
-           }
+               }
+               form_inputs_obj['ans_obj'+ans_form_index] = ans_obj;
+              }
+            }
+            else if( ans_form_index == initialIndex ){
+              if($form.hasClass('checked')){
+                var ans_obj = {};
+                for(var i=0; i<$form[0].length; i++){
+                 $($form[0][i]).change( inputListener );
+                    if($form[0][i].type != "radio"){
+                        ans_obj[$form[0][i].name] = $form[0][i].value;
+                    }else{
+                        ans_obj[$form[0][i].name] = $form[0][i].checked;
+                    }
+               }
+               form_inputs_obj['ans_obj'+ans_form_index] = ans_obj;
+              }
+            }
     })
   }
 
-  function checkIfObjectsEqual(){
-    var equal = JSON.stringify( form_inputs_obj ) === JSON.stringify( new_form_inputs_obj );
-    var onclick_changes = equal ? 'window.location.href="/"' : 'if(!confirm("Möchten Sie wirklich abbrechen? Geänderte Daten gehen veloren"))'
+  function removeAnsObject(){
+    $ans_form.each(function( ans_form_index ){
+        var $form = $(this);
+            if($form.hasClass('disabled')){
+              for(var i=0; i<$form[0].length; i++){
+               $($form[0][i]).off();
+               }
+               delete form_inputs_obj['ans_obj'+ans_form_index];
+               delete new_form_inputs_obj['ans_obj'+ans_form_index];
+            }
+    })
+  }
+
+  function areObjectsEqual(){
+    return  JSON.stringify( form_inputs_obj ) === JSON.stringify( new_form_inputs_obj );
+  }
+
+  function editCancelSubmitButton(){
+    var onclick_changes = areObjectsEqual() ? 'window.location.href="/"' : 'if(!confirm("Möchten Sie wirklich abbrechen? Geänderte Daten gehen veloren"))'
     +'return false;else{window.location.replace("/")}';
     $('button#cancel_submit').attr( 'onclick', onclick_changes );
+    if( areObjectsEqual() ){
+      $('button#submit').prop('disabled',true);
+    }else{
+      $('button#submit').prop('disabled',false);
+    }
   }
 
-  function inputListener(){
-    $firm_form.each(function(){
-       var $form = $(this);
-       for(var i=0; i<$form[0].length; i++){
-             if($form[0][i].type != 'select-one'){
-                 new_form_inputs_obj[$form[0][i].name+i] = $form[0][i].value;
-             }
-       }
-    })
-    $ans_form.each(function( ans_form_index ){
-        var $form = $(this);
-             for(var i=0; i<$form[0].length; i++){
-                if($form[0][i].type != "radio"){
-                     new_form_inputs_obj[$form[0][i].name+i+'ans'+ans_form_index] = $form[0][i].value;
-                }else{
-                     new_form_inputs_obj[$form[0][i].name+i+'ans'+ans_form_index] = $form[0][i].checked;
-                }
-           }
-    });
-     checkIfObjectsEqual();
-  }
 
-  /*function checkForRequiredInputs(){
+  function inputListener(e){
     $firm_form.each(function(){
       var $form = $(this);
       for(var i=0; i<$form[0].length; i++){
-        if(!$($form[0][i]).hasClass('tt-hint')){
-            console.log($form[0][i].required);
+        if($form[0][i].type != 'select-one'){
+            new_form_inputs_obj[$form[0][i].name] = $form[0][i].value;
         }
       }
-    })
-  }
-  checkForRequiredInputs();*/
+   })
+   $ans_form.each(function( ans_form_index ){
+       var $form = $(this);
+       if($form.hasClass('checked')){
+         var ans_obj = {};
+         for(var i=0; i<$form[0].length; i++){
+            if($form[0][i].type != "radio"){
+                ans_obj[$form[0][i].name] = $form[0][i].value;
+            }else{
+                ans_obj[$form[0][i].name] = $form[0][i].checked;
+            }
+        }
+        new_form_inputs_obj['ans_obj'+ans_form_index] = ans_obj;
+       }
+      editCancelSubmitButton();
+  })
+ }
 
   /*
   * Loop through all ansprechpartner forms and hide the form if it has been marked as disabled
@@ -114,12 +152,15 @@ FormUtils = (function(){
       if ($checkbox.is(':checked')) {
           $the_ans_form.removeClass('disabled').addClass('checked');
           enableAnsprechpartnerForm();
+          insertAnsObject(checkbox_id);
           $dom_html_body.animate({ // smooth animation to show new form
                 scrollTop: $the_ans_form.offset().top - $dom_html_body.offset().top + $dom_html_body.scrollTop()
            }, 1000);
       }else{
           $the_ans_form.removeClass('checked').addClass('disabled');
           disableAnsprechpartnerForm();
+          removeAnsObject();
+          editCancelSubmitButton();
           $('#ans_form_remove_confirm').show().fadeOut(4500);
       }
   }

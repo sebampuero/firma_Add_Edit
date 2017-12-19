@@ -23,7 +23,6 @@ $(function(){
         // clean all forms
        $firm_form[0].reset();
        $firm_form.show();
-       $edit_btn.prop('disabled',false);
        $.each($checkboxes,function(){
            var $checkbox = $(this);
            $checkbox.removeAttr("disabled");
