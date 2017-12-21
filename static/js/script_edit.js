@@ -52,7 +52,7 @@ $(function(){
                $firm_form.populate(temp_firm);
            }
        });
-       FormUtils.checkForChanges();
+       FormChangesUtils.checkForChanges();
    });
     $('button#submit').on('click',function(){
        var result = FormObjectParser.parseFirmObject(),

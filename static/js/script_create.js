@@ -1,7 +1,7 @@
 $(function(){
     var firm_name_exists = false;
     FormUtils.listBranches();
-    FormUtils.checkForChanges();
+    FormChangesUtils.checkForChanges();
 
      //listener for firm name input to check if the given firm already exists
      $('input#name-autocomplete').change(function(){
