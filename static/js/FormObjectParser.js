@@ -1,5 +1,11 @@
 FormObjectParser = {}
 FormObjectParser = (function(){
+
+  /*
+  * Parse Object from the forms
+  * Date 20.12.2017
+  */
+
   /*
   * Create and populate a firm object using the input fields in the forms. This method loops through both the
   * firm form and ansprechpartner forms(depending on if the form is 'visible', if it is not visible then it is not

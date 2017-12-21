@@ -1,6 +1,5 @@
 """
 Module for retrieving objects in json format
-@author Sebastian Ampuero
 @date 8.12.2017
 """
 import json
@@ -9,6 +8,7 @@ from Service.firmen_service import get_firms_by_name, get_all_firms, get_firm_br
 
 
 # Retrieve a firm as json format by name
+# @param name the name to query
 # @return the firm in json format, if not found null is returned
 def get_firms_by_name_json(name):
     firmas = get_firms_by_name(name)
@@ -35,6 +35,7 @@ def get_firms_json():
 
 
 # Retrive a list of titles in json format
+# @param title the title to query
 # @return a list of titles in json format
 def get_title_json(title):
     titles = Ansprechpartner.title_list

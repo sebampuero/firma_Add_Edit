@@ -1,5 +1,11 @@
 TimeUtils = {}
 TimeUtils = (function(){
+
+  /*
+  * Utils for time formatting
+  * Date 18.12.2017
+  */
+
   /*
   * Get the current date in format yyyy-mm-dd
   * @return the formated date of today

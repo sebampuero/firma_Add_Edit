@@ -1,6 +1,5 @@
 """
 Service for creating, editing and retrieving firms
-@author Sebastian Ampuero
 @date 8.12.2017
 """
 from Entities.Ansprechpartner import Ansprechpartner
@@ -9,6 +8,7 @@ from Service.xml_parser import get_firms_from_xml, insert_firm, delete_firm
 
 
 # Edit a firm. Delete and then create a new element with the new data
+# @param content dictionary containing info of received firm from client
 def edit_firm(content):
     firma_dict = content
     delete_firm(firma_dict['name'].lower())
@@ -17,6 +17,7 @@ def edit_firm(content):
 
 
 # Insert a new firm
+# @param content dictionary containing info of received firm from client
 def create_firm(content):
     try:
         firma_dict = content
@@ -28,6 +29,7 @@ def create_firm(content):
 
 
 # Create a firm object from a dictionary containing its values
+# @param dict_content dictionary containing info of received firm from client
 # @return the firm object
 def create_new_firm_object(dict_content):
     ansprechpartner_list = []
@@ -46,6 +48,7 @@ def create_new_firm_object(dict_content):
 
 
 # Retrieve a firm from the list by name
+# @param name the name of the firm to search for
 # @return the searched firm, None is returned when not found
 def get_firms_by_name(name):
     firms_elements = get_firms_from_xml()
@@ -81,6 +84,8 @@ def get_firm_branchs():
 
 
 # Populate the list of firms with the XML data
+# @param f_element the firm element from the xml file
+# @param firmas_list the list that has to be populated
 # @return the populated list
 def get_list_of_firms_from_xml(f_element, firmas_list):
     ansprechpartner_list = []

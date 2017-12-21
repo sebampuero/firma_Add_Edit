@@ -4,6 +4,7 @@ FormChangesUtils = (function(){
   /*
   * Module responsible for checking for changes in both the firm and ansprechpartner form
   * Depending on changes submit and cancel buttons are edited
+  * Date 21.12.2017
   */
 
   var form_inputs_obj = {}, // initial form object containing initial values

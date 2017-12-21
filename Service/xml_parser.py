@@ -1,6 +1,5 @@
 """
 Parses the XML File containing firm elements
-@author Sebastian Ampuero
 @date 8.12.2017
 """
 import xml.etree.ElementTree as ET
@@ -19,6 +18,7 @@ def get_firms_from_xml():
 
 
 # Delete a firm in the XML File by name
+# @param firma_name the name of the firm to delete
 def delete_firm(firma_name):
     try:
         root, tree = get_root()
@@ -33,6 +33,7 @@ def delete_firm(firma_name):
 
 
 # Insert a new firm into the XML file
+# @param firma the firm object to insert into the xml file
 def insert_firm(firma):
     try:
         root, tree = get_root()
