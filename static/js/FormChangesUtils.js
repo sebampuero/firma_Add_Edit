@@ -12,7 +12,9 @@ FormChangesUtils = (function(){
       $ans_form = $('.ansprechpartner_form');
 
       /*
-      * First calling function to check for changes in the forms
+      * First calling function to check for changes in the forms. This function is
+      * called whenever the creating or editing form initiates with its initial values
+      * The form_inputs_obj is populated with those initial values
       */
       function checkForChanges(){
         $firm_form.each(function(){
@@ -27,14 +29,14 @@ FormChangesUtils = (function(){
 
         $ans_form.each(function( ans_form_index ){
             var $form = $(this);
-            if( $form.hasClass('checked') ){
+            if( $form.hasClass('checked') ){ // insert ansprechpartner objects from forms that are already visible
               insertAnsObject($form, ans_form_index);
             }
         })
       }
 
       /*
-      * Insert a new ansprechpartner object in the firm object
+      * Insert a new ansprechpartner object in the form_inputs_obj
       * @param $form the ansprechpartner form to be scanned
       * @param ans_form_index the index of the ans form object to be inserted
       */
@@ -52,10 +54,11 @@ FormChangesUtils = (function(){
       }
 
       /*
-      * Add an ansprechpartner object in the firm object when a ansprechpartner form
+      * Add an ansprechpartner object in the form_inputs_obj when a ansprechpartner form
       * is added via a checkbox click
       * @param initialIndex the index which indicates the ansprechpartner form
-      * that has to be added
+      * that has to be added. E.g checkbox n2 was clicked, then insert the ansprechpartner object
+      * corresponding to the index number 2 in the array
       */
       function addAnsObjectFromCheckbox(initialIndex){
         $ans_form.each(function( ans_form_index ){
@@ -93,7 +96,9 @@ FormChangesUtils = (function(){
 
       /*
       * Depending on the changed state of the forms, both the submit and cancel buttons
-      * are edited.
+      * are edited. If the objects are equal, submit button is disabled and cancel button
+      * does not show "changes made" alert. If the objects are not equal, submit button is
+      * enabled and when the user clicks on cancel submit, there is a "changes made" alert
       */
       function editCancelSubmitButton(){
         var onclick_changes = (areObjectsEqual() || $.isEmptyObject(new_form_inputs_obj)) ?
@@ -108,8 +113,8 @@ FormChangesUtils = (function(){
       }
 
       /*
-      * The listener for the input fields in the forms. This updates the dynamically created form object,
-      * which is used to be compared against the initial firm object to see if there are changes
+      * The listener for the input fields in the forms. This updates the dynamically created form object new_form_inputs_obj,
+      * which is used to be compared against the form_inputs_obj to see if there are changes
       * on the forms
       */
       function inputListener(e){

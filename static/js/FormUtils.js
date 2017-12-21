@@ -45,7 +45,7 @@ FormUtils = (function(){
       });
   }
   /*
-  * Enable or disable ansprechpartner form depending on checkbox id
+  * Enable or disable ansprechpartner form depending on checkbox the checkbox clicked
   */
   function enableOrDisableAnsprechpartnerForm(){
       var $checkbox = $(this),
