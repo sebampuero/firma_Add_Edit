@@ -10,6 +10,10 @@ $(function(){
         $select_firm_name.empty();
         $.each(firms,function(index,firm){
             container += "<option value='"+index+"'>"+firm.name+"</option>";
+            // unfortunately it couldnt be possible to include a way to prevent
+            // xss client side without inclusion of ES6 Syntax
+            // so if someone writes malicious code as a firm name it will be
+            // executed
         });
         $select_firm_name.append( container );
     });
@@ -65,7 +69,7 @@ $(function(){
                contentType: 'application/json',
                dataType: 'json'
            }).always(function( status ){
-               if(status == 200)
+               if(status == 204)
                    window.location.replace("/?edit="+result.firm_obj.name);
                else if(status == 500){
                  $('#server_error_modal').modal('show');

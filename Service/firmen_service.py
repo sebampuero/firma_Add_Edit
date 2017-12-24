@@ -12,8 +12,8 @@ from Service.xml_parser import get_firms_from_xml, insert_firm, delete_firm
 def edit_firm(content):
     firma_dict = content
     delete_firm(firma_dict['name'].lower())
-    status = create_firm(content)
-    return status
+    create_firm(content)
+    return 204
 
 
 # Insert a new firm
@@ -23,7 +23,7 @@ def create_firm(content):
         firma_dict = content
         firma = create_new_firm_object(firma_dict)
         insert_firm(firma)
-        return 200
+        return 201
     except:
         return 500
 

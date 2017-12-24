@@ -48,7 +48,7 @@ ValidationUtils = (function(){
   function validateTelefonFormat( value, element ){
       var telefon_input = $(this.currentForm).find('input[name="telefon[]"]').val(),
           telefon_list = telefon_input.split(','),
-          regex = /^(\+|0)?\d-?\d-?\d-?\d-?\d-?\d-?\d-?\d-?\d-?\d-?\d?-?\d?-?\d?-?\d?$/,
+          regex = /^(\+|00)?\d-?\d-?\d-?\d-?\d-?\d-?\d-?\d-?\d-?\d-?\d?-?\d?-?\d?-?\d?$/,
           telefon = "";
       for(var i=0; i<telefon_list.length; i++){
           telefon = telefon_list[i].trim().replace(/ +/g, "");

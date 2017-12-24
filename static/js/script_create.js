@@ -39,7 +39,7 @@ $(function(){
                 contentType: 'application/json',
                 dataType: 'json'
             }).always(function( status ){
-                if(status == 200)
+                if(status == 201)
                     window.location.replace("/?create="+result.firm_obj.name);
                 else if(status == 500){
                   $('#server_error_modal').modal('show');

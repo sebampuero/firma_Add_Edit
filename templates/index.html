@@ -26,9 +26,7 @@
     </div>
     <script>
         $(function(){
-            if($('#edited').data().status == "" && $('#created').data().status == ""){
-                //do nothing
-            }else if($('#edited').data().status != ""){
+            if($('#edited').data().status != ""){
                 $('#confirmation_modal').modal('show');
                 $('span#message_container').text("Firma "+ $('#edited').data().status +" wurde erfolgreich bearbeitet  ");
             }else if($('#created').data() != ""){
