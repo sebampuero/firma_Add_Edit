@@ -1,0 +1,40 @@
+<script id="ansprechpartner_form_template" type="text/html">
+  <form class="ansprechpartner_form">
+      <h4>Ansprechpartner</h4>
+      <div class="form-group">
+          <label>Name</label><br>
+          <input class="form-control" type="text" name="name" placeholder="Name" required>
+          <small class="form-text text-muted">Pflichtfeld</small>
+      </div>
+      <div class="form-group">
+          <label>Anrede</label><br>
+          <input type="radio" name="anrede" value="Herr"> Herr
+          <input type="radio" name="anrede" value="Frau"> Frau
+          <small class="form-text text-muted">Pflichtfeld</small>
+      </div>
+      <div class="form-group">
+          <label>Titel</label><br>
+          <input class="form-control autocomplete" type="text" name="titel" placeholder="Titel">
+      </div>
+      <div class="form-group">
+          <label>Funktion</label><br>
+          <input class="form-control" type="text" name="funktion" placeholder="Funktion">
+      </div>
+      <div class="form-group">
+          <label>Email</label><br>
+          <input class="form-control" type="email" name="email" placeholder="Email" required>
+          <small class="form-text text-muted">Pflichtfeld</small>
+      </div>
+      <div class="form-group">
+          <label>Fax</label><br>
+          <input class="form-control" type="text" name="fax" placeholder="Fax">
+      </div>
+      <div class="form-group">
+          <label>Telefon</label><br>
+          <input class="form-control" type="text" name="telefon[]" placeholder="01234 12345678, 01234 12345678" required>
+          <small class="form-text text-muted">Die Telefonnnumer müssen mit Komma getrennt werden. Maximale Anzahl: 4. Leerzeichen und - Zeichen sind erlaubt. Pflichtfeld</small>
+      </div>
+  </form>
+
+      <!--                        ANSPRECHPARTNER FORM                          -->
+</script>
