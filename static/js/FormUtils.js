@@ -15,6 +15,7 @@ FormUtils = (function(){
         $.each(branches.branches, function( index, branch ){
             container += "<option>"+branch+"</option>";
         });
+        $('select#branch_select').empty();
         $('select#branch_select').append( container );
     });
   };
