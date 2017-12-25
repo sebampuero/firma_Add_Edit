@@ -1,211 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
-
-
-
-<!--    MODALS     -->
-<div id="server_error_modal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal_custom_content_container">
-          Etwas ist schiefgelaufen, bitte versuchen Sie später erneut <i class="fa fa-exclamation-triangle" aria-hidden="true" style="color:red;"></i>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="invalid_input_modal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal_custom_content_container">
-          Bitte prüfen Sie ihre Eingaben <i class="fa fa-exclamation-triangle" aria-hidden="true" style="color:red;"></i>
-      </div>
-    </div>
-  </div>
-</div>
-
+{% include 'modals.html' %}
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="alert alert-danger" id="ans_form_remove_confirm" role="alert" style="position:fixed; display:none;">
-                Ansprechpartner Formular wurde entfernt
-            </div>
-        </div>
         <div class="main-wrapper">
             <h1 style="text-align:center;">Eine Firma erstellen</h1>
+            {% include 'firm_form_create_template.html' %}
+            {% include 'ansprechpartner_form_template.html' %}
             <!--                        FIRM FORM                          -->
 
+            <div class="firm_form_container"></div>
 
-            <form id="firm_form">
-            <div class="form-group">
-                <label>Firmenname</label>
-                <input class="form-control" id="name-autocomplete" type="text" name="name" placeholder="Firmenname" required>
-                <small class="form-text text-muted">Pflichtfeld</small>
-                <label id="firm_name_error_label" class="error-custom" style="display:none;">Diese Firma existiert bereits, bitte wählen Sie einen anderen Namen aus</label>
-            </div>
-            <div class="form-group">
-                <label>Branche</label>
-                <select name="branche" id="branch_select" class="form-control">
-                </select>
-                <small class="form-text text-muted">Pflichtfeld</small>
-            </div>
-            <div class="form-group">
-                <label>Straße</label>
-                <input class="form-control" type="text" name="strasse_hnr" placeholder="Straße Hausnummer" required>
-                <small class="form-text text-muted">Pflichtfeld</small>
-            </div>
-            <div class="form-group">
-                <label>Adresszusatz</label>
-                <input class="form-control" type="text" name="adresszusatz" placeholder="Adresszusatz">
-            </div>
-            <div class="form-group">
-                <label>PLZ</label>
-                <input class="form-control" type="text" name="plz" placeholder="PLZ" required>
-                <small class="form-text text-muted">Pflichtfeld</small>
-            </div>
-            <div class="form-group">
-                <label>Ort</label>
-                <input class="form-control" type="text" name="ort" placeholder="Ort" required>
-                <small class="form-text text-muted">Pflichtfeld</small>
-            </div>
-            <div class="form-group">
-                <label>Land</label>
-                <select name="land" id="land_select" class="form-control">
-                    <option>DE</option>
-                    <option>CH</option>
-                    <option>AT</option>
-                </select>
-                <small class="form-text text-muted">Pflichtfeld</small>
-            </div>
-            <div class="form-group">
-                <label>Website</label>
-                <input class="form-control" type="text" name="website" placeholder="http://www.beispiel.de" required>
-                <small class="form-text text-muted">Pflichtfeld</small>
-            </div>
 
-        </form>
 
             <!--                        ANSPRECHPARTNER FORM                          -->
 
+            <div class="ansprechpartner_form_container"></div>
+            <input type="checkbox" class="checkbox_ansprechpartner" id="ansprechpartner1_checkbox">Ansprechpartner 2<br>
+            <input type="checkbox" class="checkbox_ansprechpartner" id="ansprechpartner2_checkbox">Ansprechpartner 3
 
-        <form class="ansprechpartner_form checked">
-            <h4>Ansprechpartner</h4>
-            <div class="form-group">
-                <label>Name</label><br>
-                <input class="form-control" type="text" name="name" placeholder="Name" required>
-                <small class="form-text text-muted">Pflichtfeld</small>
-            </div>
-            <div class="form-group">
-                <label>Anrede</label><br>
-                <input type="radio" name="anrede" value="Herr" required> Herr
-                <input type="radio" name="anrede" value="Frau" required> Frau
-                <small class="form-text text-muted">Pflichtfeld</small>
-            </div>
-            <div class="form-group">
-                <label>Titel</label><br>
-                <input class="form-control autocomplete" type="text" name="titel" placeholder="Titel">
-            </div>
-            <div class="form-group">
-                <label>Funktion</label><br>
-                <input class="form-control" type="text" name="funktion" placeholder="Funktion">
-            </div>
-            <div class="form-group">
-                <label>Email</label><br>
-                <input class="form-control" type="email" name="email" placeholder="Email" required>
-                <small class="form-text text-muted">Pflichtfeld</small>
-            </div>
-            <div class="form-group">
-                <label>Fax</label><br>
-                <input class="form-control" type="text" name="fax" placeholder="Fax">
-            </div>
-            <div class="form-group">
-                <label>Telefon</label><br>
-                <input class="form-control" type="text" name="telefon[]" placeholder="01234 12345678, 01234 12345678" required>
-                <small class="form-text text-muted">Die Telefonnnumer müssen mit Komma getrennt werden. Maximale Anzahl: 4. Leerzeichen und - Zeichen sind erlaubt. Pflichtfeld</small>
-            </div>
-        </form>
-        <small class="form-text text-muted">Es muss mindestens ein Ansprechpartner geben , maximal 3</small>
-        <input type="checkbox" class="checkbox_ansprechpartner" id="ansprechpartner1_checkbox" data-id="1">Ansprechpartner hinzufügen<br>
-        <input type="checkbox" class="checkbox_ansprechpartner" id="ansprechpartner2_checkbox" data-id="2">Ansprechpartner hinzufügen
-
-            <!--                        ANSPRECHPARTNER FORM                          -->
-
-
-        <form class="ansprechpartner_form disabled" id="ansprechpartner_form_1" style="display:none;">
-             <h4>Ansprechpartner</h4>
-            <div class="form-group">
-                <label>Name</label><br>
-                <input class="form-control" type="text" name="name" placeholder="Name" required>
-                <small class="form-text text-muted">Pflichtfeld</small>
-            </div>
-            <div class="form-group">
-                <label>Anrede</label><br>
-                <input type="radio" name="anrede" value="Herr"> Herr
-                <input type="radio" name="anrede" value="Frau"> Frau
-                <small class="form-text text-muted">Pflichtfeld</small>
-            </div>
-            <div class="form-group">
-                <label>Titel</label><br>
-                <input class="form-control autocomplete" type="text" name="titel" placeholder="Titel">
-            </div>
-            <div class="form-group">
-                <label>Funktion</label><br>
-                <input class="form-control" type="text" name="funktion" placeholder="Funktion">
-            </div>
-            <div class="form-group">
-                <label>Email</label><br>
-                <input class="form-control" type="email" name="email" placeholder="Email" required>
-                <small class="form-text text-muted">Pflichtfeld</small>
-            </div>
-            <div class="form-group">
-                <label>Fax</label><br>
-                <input class="form-control" type="text" name="fax" placeholder="Fax">
-            </div>
-            <div class="form-group">
-                <label>Telefon</label><br>
-                <input class="form-control" type="text" name="telefon[]" placeholder="01234 12345678, 01234 12345678" required>
-                <small class="form-text text-muted">Die Telefonnnumer müssen mit Komma getrennt werden. Maximale Anzahl: 4. Leerzeichen und - Zeichen sind erlaubt. Pflichtfeld</small>
-            </div>
-        </form>
-
-            <!--                        ANSPRECHPARTNER FORM                          -->
-
-
-        <form class="ansprechpartner_form disabled" id="ansprechpartner_form_2" style="display:none;">
-             <h4>Ansprechpartner</h4>
-                <div class="form-group">
-                    <label>Name</label><br>
-                    <input class="form-control" type="text" name="name" placeholder="Name" required>
-                <small class="form-text text-muted">Pflichtfeld</small>
-            </div>
-            <div class="form-group">
-                <label>Anrede</label><br>
-                <input type="radio" name="anrede" value="Herr"> Herr
-                <input type="radio" name="anrede" value="Frau"> Frau
-                <small class="form-text text-muted">Pflichtfeld</small>
-            </div>
-            <div class="form-group">
-                <label>Titel</label><br>
-                <input class="form-control autocomplete" type="text" name="titel" placeholder="Titel">
-            </div>
-            <div class="form-group">
-                <label>Funktion</label><br>
-                <input class="form-control" type="text" name="funktion" placeholder="Funktion">
-            </div>
-            <div class="form-group">
-                <label>Email</label><br>
-                <input class="form-control" type="email" name="email" placeholder="Email" required>
-                <small class="form-text text-muted">Pflichtfeld</small>
-            </div>
-            <div class="form-group">
-                <label>Fax</label><br>
-                <input class="form-control" type="text" name="fax" placeholder="Fax">
-            </div>
-            <div class="form-group">
-                <label>Telefon</label><br>
-                <input class="form-control" type="text" name="telefon[]" placeholder="01234 12345678, 01234 12345678" required>
-                <small class="form-text text-muted">Die Telefonnnumer müssen mit Komma getrennt werden. Maximale Anzahl: 4. Leerzeichen und - Zeichen sind erlaubt. Pflichtfeld</small>
-            </div>
-        </form>
         <div class="row justify-content-center">
             <div class="col-lg-auto">
                 <button id="submit" class="btn btn-primary" disabled>Erstellen<i id="loading_spinner" style="display:none;" class="fa fa-cog fa-spin fa-1x fa-fw"></i></button>
@@ -214,8 +26,8 @@
         </div><br>
         </div>
     </div>
-<script src="{{ url_for('static', filename='js/autocomplete-utils.js') }}"></script>
 <script src="{{ url_for('static', filename='js/ValidationUtils.js') }}"></script>
+<script src="{{ url_for('static', filename='js/autocomplete-utils.js') }}"></script>
 <script src="{{ url_for('static', filename='js/FormUtils.js') }}"></script>
 <script src="{{ url_for('static', filename='js/FormChangesUtils.js') }}"></script>
 <script src="{{ url_for('static', filename='js/TimeUtils.js') }}"></script>

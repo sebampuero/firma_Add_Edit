@@ -8,9 +8,8 @@ FormChangesUtils = (function(){
   */
 
   var form_inputs_obj = {}, // initial form object containing initial values
-      new_form_inputs_obj = {}, // form object which is dynamically changed and compared against form_inputs_obj to check for changes
-      $firm_form = $('#firm_form'),
-      $ans_form = $('.ansprechpartner_form');
+      new_form_inputs_obj = {}; // form object which is dynamically changed and compared against form_inputs_obj to check for changes
+
 
       /*
       * First calling function to check for changes in the forms. This function is
@@ -18,6 +17,8 @@ FormChangesUtils = (function(){
       * The form_inputs_obj is populated with those initial values
       */
       function checkForChanges(){
+        var $firm_form = $('#firm_form'),
+            $ans_form = $('.ansprechpartner_form');
         $firm_form.each(function(){
             var $form = $(this);
             for(var i=0; i<$form[0].length; i++){
@@ -27,12 +28,9 @@ FormChangesUtils = (function(){
                 }
             }
         })
-
         $ans_form.each(function( ans_form_index ){
             var $form = $(this);
-            if( $form.hasClass('checked') ){ // insert ansprechpartner objects from forms that are already visible
               insertAnsObject($form, ans_form_index);
-            }
         })
       }
 
@@ -57,17 +55,10 @@ FormChangesUtils = (function(){
       /*
       * Add an ansprechpartner object in the form_inputs_obj when a ansprechpartner form
       * is added via a checkbox click
-      * @param initialIndex the index which indicates the ansprechpartner form
-      * that has to be added. E.g checkbox n2 was clicked, then insert the ansprechpartner object
-      * corresponding to the index number 2 in the array
       */
-      function addAnsObjectFromCheckbox(initialIndex){
-        $ans_form.each(function( ans_form_index ){
-            var $form = $(this);
-            if( $form.hasClass('checked') && initialIndex == ans_form_index ){
-              insertAnsObject($form, ans_form_index);
-            }
-        })
+      function addAnsObjectFromCheckbox(){
+        var $ans_form = $('.ansprechpartner_form');
+        insertAnsObject($($ans_form[$ans_form.length-1]), $ans_form.length-1);
       }
 
       /*
@@ -75,16 +66,13 @@ FormChangesUtils = (function(){
       * ansprechpartner form is hidden by a checkbox
       */
       function removeAnsObject(){
-        $ans_form.each(function( ans_form_index ){
-            var $form = $(this);
-                if($form.hasClass('disabled')){
-                  for(var i=0; i<$form[0].length; i++){
-                   $($form[0][i]).off();
-                   }
-                   delete form_inputs_obj['ans_obj'+ans_form_index];
-                   delete new_form_inputs_obj['ans_obj'+ans_form_index];
-                }
-        })
+        var $ans_form = $('.ansprechpartner_form');
+        for(var i=0; i<$ans_form[$ans_form.length-1].length; i++){
+          $($ans_form[$ans_form.length-1][i]).off();
+        }
+        var curr_index = $ans_form.length-1;
+        delete form_inputs_obj['ans_obj'+curr_index];
+        delete new_form_inputs_obj['ans_obj'+curr_index];
       }
 
       /*
@@ -119,6 +107,8 @@ FormChangesUtils = (function(){
       * on the forms
       */
       function inputListener(e){
+        var $firm_form = $('#firm_form'),
+            $ans_form = $('.ansprechpartner_form');
         $firm_form.each(function(){
           var $form = $(this);
           for(var i=0; i<$form[0].length; i++){
@@ -129,7 +119,6 @@ FormChangesUtils = (function(){
        })
        $ans_form.each(function( ans_form_index ){
            var $form = $(this);
-           if($form.hasClass('checked')){
              var ans_obj = {};
              for(var i=0; i<$form[0].length; i++){
                 if($form[0][i].type != "radio"){
@@ -139,7 +128,6 @@ FormChangesUtils = (function(){
                 }
             }
             new_form_inputs_obj['ans_obj'+ans_form_index] = ans_obj;
-           }
           editCancelSubmitButton();
       })
      }

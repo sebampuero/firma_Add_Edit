@@ -1,5 +1,7 @@
 $(function(){
     var firm_name_exists = false;
+    FormUtils.appendAnsForm();
+    FormUtils.appendFirmForm();
     FormUtils.listBranches();
     FormChangesUtils.checkForChanges();
 

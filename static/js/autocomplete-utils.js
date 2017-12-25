@@ -1,4 +1,4 @@
-(function(){
+function initializeAutocomplete(){
   /*
   * Utils for the autocomplete function of the firm name and ansprechpartner title
   * Date 18.12.2017
@@ -23,4 +23,4 @@
   })
   $(".easy-autocomplete").removeAttr("style");
 
-})();
+}

@@ -26,12 +26,14 @@
     </div>
     <script>
         $(function(){
-            if($('#edited').data().status != ""){
+            if($('#edited').data('status') != ""){
                 $('#confirmation_modal').modal('show');
                 $('span#message_container').text("Firma "+ $('#edited').data().status +" wurde erfolgreich bearbeitet  ");
-            }else if($('#created').data() != ""){
+            }else if($('#created').data('status') != ""){
                 $('#confirmation_modal').modal('show');
                 $('span#message_container').text("Firma "+ $('#created').data().status +" wurde erfolgreich erstellt  ");
+            }else if($('#edited').data('status') === "" || $('#created').data('status') === ""){
+
             }
         });
     </script>

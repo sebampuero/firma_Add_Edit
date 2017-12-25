@@ -2,11 +2,9 @@ FormUtils = {}
 FormUtils = (function(){
 
   /*
-  * Module responsible for populating selects and disabling or enabling forms
+  * Module responsible for populating selects, appending and deleting of forms
   * Date 20.12.2017
   */
-  var $firm_form = $('#firm_form'),
-      $ans_form = $('.ansprechpartner_form');
 
   /*
   * Populates the select input with available branches
@@ -22,48 +20,54 @@ FormUtils = (function(){
   };
 
   /*
-  * Loop through all ansprechpartner forms and hide the form if it has been marked as disabled
+  * Appends a new firm form to the container
   */
-  function disableAnsprechpartnerForm(){
-      $ans_form.each(function( index, form ) {
-          if($(this).hasClass('disabled')){
-              for(var i=0; i<form.length; i++){
-                  $(this).hide();
-              }
-          }
-      });
+  function appendFirmForm(){
+    var template = $('#firm_form_template').html();
+    $('.firm_form_container').append(template);
+    initializeAutocomplete();
   }
+
   /*
-  * Loop through all ansprechpartner forms and show the form if it has been marked as checked
+  * Appends a new ansprechpartner form to the container
   */
-  function enableAnsprechpartnerForm(){
-      $ans_form.each(function( index, form ) {
-          if($(this).hasClass('checked')){
-              for(var i=0; i<form.length; i++){
-                  $(this).show();
-              }
-          }
-      });
+  function appendAnsForm(){
+    var template = $('#ansprechpartner_form_template').html();
+    $('.ansprechpartner_form_container').append(template);
+    initializeAutocomplete();
   }
+
+  /*
+  * Removes the last ansprechpartner form from the container
+  */
+  function removeAnsForm(){
+    var $ans_form = $('.ansprechpartner_form');
+    $($ans_form[$ans_form.length-1]).remove();
+  }
+
+  /*
+  * Removes all the ansprechpartner forms from the container
+  */
+  function removeAllAnsForms(){
+    $('.ansprechpartner_form_container').empty();
+  }
+
   /*
   * Enable or disable ansprechpartner form depending on checkbox the checkbox clicked
   */
   function enableOrDisableAnsprechpartnerForm(){
       var $checkbox = $(this),
-           checkbox_id = $checkbox.data('id'),
-           $the_ans_form = $('form#ansprechpartner_form_'+checkbox_id),
-           $dom_html_body = $('html, body');
+           $dom_html_body = $('html, body'),
+           $ans_form = $('.ansprechpartner_form');
       if ($checkbox.is(':checked')) {
-          $the_ans_form.removeClass('disabled').addClass('checked');
-          enableAnsprechpartnerForm();
-          FormChangesUtils.addAnsObjectFromCheckbox(checkbox_id);
+          appendAnsForm();
+          FormChangesUtils.addAnsObjectFromCheckbox();
           $dom_html_body.animate({ // smooth animation to show new form
-                scrollTop: $the_ans_form.offset().top - $dom_html_body.offset().top + $dom_html_body.scrollTop()
+                scrollTop: $($ans_form[$ans_form.length-1]).offset().top - $dom_html_body.offset().top + $dom_html_body.scrollTop()
            }, 1000);
       }else{
-          $the_ans_form.removeClass('checked').addClass('disabled');
-          disableAnsprechpartnerForm();
           FormChangesUtils.removeAnsObject();
+          removeAnsForm();
           FormChangesUtils.editCancelSubmitButton();
           $('#ans_form_remove_confirm').show().fadeOut(5500);
       }
@@ -75,7 +79,8 @@ FormUtils = (function(){
 
   return {
     listBranches: listBranches,
-    disableAnsprechpartnerForm: disableAnsprechpartnerForm,
-    enableAnsprechpartnerForm: enableAnsprechpartnerForm
+    appendAnsForm: appendAnsForm,
+    appendFirmForm: appendFirmForm,
+    removeAllAnsForms: removeAllAnsForms
   }
 })();

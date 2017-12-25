@@ -28,7 +28,6 @@ FormObjectParser = (function(){
       $('.ansprechpartner_form').each(function() { //get all ansprechpartner forms
           var ans_obj = {},
               $ans_form = $(this);
-          if($ans_form.hasClass('checked')){ //if this form is visible
               $ans_form.validate( ValidationUtils.ans_form_validation_rules );
               if(!$ans_form.valid()){ //if the form is invalid, exit and return validation_flag = false
                   validation_flag = false;
@@ -40,7 +39,6 @@ FormObjectParser = (function(){
                       ans_obj[element.name] = element.value.trim();
               });
               ansprechpartner_list.push( ans_obj );
-          }
       });
       firm_obj['ansprechpartner'] = ansprechpartner_list;
       if( !validation_flag ) return {flag:validation_flag};

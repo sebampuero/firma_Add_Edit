@@ -1,6 +1,6 @@
 $(function(){
-    var firms_list = []; //array for firms
-    FormUtils.listBranches();
+    var firms_list = [], //array for firms
+        is_first_time = true;
     // this get request returns an array of firms which then are saved in the firms_list array
     // the select is then populated with the corresponding names
     $.get( "/firms", function( firms ) {
@@ -19,45 +19,40 @@ $(function(){
     });
      // when a firm gets selected
     $('select#firm_name').on('change', function (e) {
-        // cache variables
-       var $firm_form = $("form#firm_form"),
-            $edit_btn = $('button#submit'),
-            $ansprechpartner_form = $('.ansprechpartner_form'),
-            $checkboxes = $('input.checkbox_ansprechpartner');
-        // clean all forms
-       $firm_form[0].reset();
-       $firm_form.show();
-       $.each($checkboxes,function(){
+        // clean firm forms
+        if( is_first_time ){
+           FormUtils.appendFirmForm();
+           is_first_time = false;
+        }
+        $('#firm_form')[0].reset();
+        FormUtils.listBranches();
+       $.each($('input.checkbox_ansprechpartner'),function(){
            var $checkbox = $(this);
            $checkbox.removeAttr("disabled");
            $checkbox.prop('checked',false);
        });
-       $.each($ansprechpartner_form,function(){
-           var $ans_form = $(this);
-           $ans_form.addClass('disabled').removeClass('checked');
-            FormUtils.disableAnsprechpartnerForm();
-           $ans_form[0].reset();
-       });
-       $edit_btn.prop('disabled',true);
+       // remove ansprechpartner forms
+       FormUtils.removeAllAnsForms();
+       $('button#submit').prop('disabled',true);
        // get the index of the firm in the firms_list array
        var value_selected = this.value;
        $.each(firms_list,function(index,firm){
            if(index == value_selected){
                for(var i=0; i<firm.ansprechpartner.length; i++){
-                   // get the list of ansprechpartner objects in the firm object and populate the forms accordingly
-                   $($ansprechpartner_form[i]).removeClass('disabled').addClass('checked').populate(firm.ansprechpartner[i]);
-                   FormUtils.enableAnsprechpartnerForm();
-                   if(i>=1){
-                       $checkboxes[i-1].checked = true; // check corresponding check boxes
-                   }
+                 FormUtils.appendAnsForm();
+                 $($('.ansprechpartner_form')[i]).populate(firm.ansprechpartner[i]);
+                 if(i>=1){
+                   $('input.checkbox_ansprechpartner')[i-1].checked = true; // check corresponding check boxes
+                 }
                }
                var temp_firm = jQuery.extend({}, firm);
                delete temp_firm.ansprechpartner; // delete the ansprechpartner list because the firm forms has no ansprechpartner inputs
-               $firm_form.populate(temp_firm);
-           }
-       });
-       FormChangesUtils.checkForChanges();
-   });
+               $('#firm_form').populate(temp_firm);
+             }
+           });
+           FormChangesUtils.checkForChanges();
+         });
+
     $('button#submit').on('click',function(){
        var result = FormObjectParser.parseFirmObject(),
            $loading_anim = $('#loading_spinner').show();
