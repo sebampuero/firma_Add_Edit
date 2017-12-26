@@ -10,10 +10,6 @@ $(function(){
         $select_firm_name.empty();
         $.each(firms,function(index,firm){
             container += "<option value='"+index+"'>"+firm.name+"</option>";
-            // unfortunately it couldnt be possible to include a way to prevent
-            // xss client side without inclusion of ES6 Syntax
-            // so if someone writes malicious code as a firm name it will be
-            // executed
         });
         $select_firm_name.append( container );
     });
@@ -22,10 +18,10 @@ $(function(){
         // clean firm forms
         if( is_first_time ){
            FormUtils.appendFirmForm();
+           FormUtils.listBranches();
            is_first_time = false;
         }
         $('#firm_form')[0].reset();
-        FormUtils.listBranches();
        $.each($('input.checkbox_ansprechpartner'),function(){
            var $checkbox = $(this);
            $checkbox.removeAttr("disabled");
