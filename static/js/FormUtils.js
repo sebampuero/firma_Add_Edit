@@ -7,17 +7,21 @@ FormUtils = (function(){
   */
 
   /*
-  * Populates the select input with available branches
+  * Gets the list of branches and fills up a container which will be appended
+  * to the branches select-one
   */
   function listBranches(){
-    $.get( "/branch", function( branches ) { //populate select branches list
-        var container = "";
+    var container = "";
+    $.ajax({
+      url: '/branch',
+      success: function( branches ){
         $.each(branches.branches, function( index, branch ){
             container += "<option>"+branch+"</option>";
         });
-        $('select#branch_select').empty();
-        $('select#branch_select').append( container );
-    });
+      },
+      async: false
+    })
+    return container;
   };
 
   /*

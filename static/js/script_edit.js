@@ -1,6 +1,7 @@
 $(function(){
     var firms_list = [], //array for firms
-        is_first_time = true;
+        is_first_time = true,
+        branches_container = FormUtils.listBranches();
     // this get request returns an array of firms which then are saved in the firms_list array
     // the select is then populated with the corresponding names
     $.get( "/firms", function( firms ) {
@@ -18,7 +19,7 @@ $(function(){
         // clean firm forms
         if( is_first_time ){
            FormUtils.appendFirmForm();
-           FormUtils.listBranches();
+           $('#branch_select').append(branches_container);
            is_first_time = false;
         }
         $('#firm_form')[0].reset();

@@ -1,8 +1,9 @@
 $(function(){
-    var firm_name_exists = false;
+    var firm_name_exists = false,
+        branches_container = FormUtils.listBranches();
     FormUtils.appendAnsForm();
     FormUtils.appendFirmForm();
-    FormUtils.listBranches();
+    $('#branch_select').append(branches_container);
     FormChangesUtils.checkForChanges();
 
      //listener for firm name input to check if the given firm already exists
