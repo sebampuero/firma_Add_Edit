@@ -36,7 +36,7 @@ $(function(){
         if( result.flag && !firm_name_exists){
             $.ajax({
                type: "POST",
-                url: "/firm/create",
+                url: "/create",
                 data: JSON.stringify(result.firm_obj),
                 contentType: 'application/json',
                 dataType: 'json'

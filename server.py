@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def hello():
+def home():
     if request.args.get('create', '') != "":
         return render_template('index.html', create=request.args.get('create'))
     if request.args.get('edit', '') != "":
@@ -14,28 +14,24 @@ def hello():
     return render_template('index.html')
 
 
-@app.route('/create')
-def create_template():
-    return render_template('create.html')
-
-
-@app.route('/edit')
-def edit_template():
-    return render_template('edit.html')
-
-
-@app.route('/firm/create', methods=['POST'])
+@app.route('/create', methods=['POST', 'GET'])
 def create():
-    content = request.get_json()
-    status = create_firm(content)
-    return str(status)
+    if request.method == 'GET':
+        return render_template('create.html')
+    elif request.method == 'POST':
+        content = request.get_json()
+        status = create_firm(content)
+        return str(status)
 
 
-@app.route('/firm/edit', methods=['PUT'])
+@app.route('/edit', methods=['PUT', 'GET'])
 def edit():
-    content = request.get_json()
-    status = edit_firm(content)
-    return str(status)
+    if request.method == 'GET':
+        return render_template('edit.html')
+    elif request.method == 'POST':
+        content = request.get_json()
+        status = edit_firm(content)
+        return str(status)
 
 
 @app.route('/firms', methods=['GET'])

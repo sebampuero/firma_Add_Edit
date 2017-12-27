@@ -55,7 +55,7 @@ $(function(){
        if( result.flag ){
            $.ajax({
                type: "PUT",
-               url: "/firm/edit",
+               url: "/edit",
                data: JSON.stringify(result.firm_obj),
                contentType: 'application/json',
                dataType: 'json'
