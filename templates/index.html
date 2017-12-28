@@ -1,40 +1,34 @@
 {% extends "base.html" %}
 {% block content %}
 
+{% if edit or create %}
+<script>
+  $(function(){
+    $('#confirmation_modal').modal('show')
+  })
+</script>
 <div id="confirmation_modal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal_custom_content_container">
-          <span id="message_container"></span><i class="fa fa-check" aria-hidden="true" style="color:green;"></i>
+      {% if edit %} Firma {{edit}} erfolgreich bearbeitet {% endif %}
+      {% if create %} Firma {{create}} erfolgreich erstellt {% endif %}
+       <i class="fa fa-check" aria-hidden="true" style="color:green;"></i>
       </div>
     </div>
   </div>
 </div>
+{% endif %}
 
-    <meta id="edited" data-status="{{edit}}">
-    <meta id="created" data-status="{{create}}">
-    <div class="container-fluid">
-        <div class="index-wrapper">
-          <h1 style="text-align:center;">Firmen erstellen und bearbeiten</h1>
-          <div class="row justify-content-center">
-              <div class="col-lg-auto">
-                  <button type="button" class="btn btn-outline-secondary" onclick="window.location.replace('/create')">Erstellen</button>
-                  <button type="button" class="btn btn-outline-secondary" onclick="window.location.replace('/edit')">Bearbeiten</button>
-              </div>
+<div class="container-fluid">
+    <div class="index-wrapper">
+      <h1 style="text-align:center;">Firmen erstellen und bearbeiten</h1>
+      <div class="row justify-content-center">
+          <div class="col-lg-auto">
+              <button type="button" class="btn btn-outline-secondary" onclick="window.location.replace('/create')">Erstellen</button>
+              <button type="button" class="btn btn-outline-secondary" onclick="window.location.replace('/edit')">Bearbeiten</button>
           </div>
-        </div>
+      </div>
     </div>
-    <script>
-        $(function(){
-            if($('#edited').data('status') != ""){
-                $('#confirmation_modal').modal('show');
-                $('span#message_container').text("Firma "+ $('#edited').data().status +" wurde erfolgreich bearbeitet  ");
-            }else if($('#created').data('status') != ""){
-                $('#confirmation_modal').modal('show');
-                $('span#message_container').text("Firma "+ $('#created').data().status +" wurde erfolgreich erstellt  ");
-            }else if($('#edited').data('status') === "" || $('#created').data('status') === ""){
-
-            }
-        });
-    </script>
+</div>
 {% endblock %}

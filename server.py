@@ -7,11 +7,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    if request.args.get('create', '') != "":
-        return render_template('index.html', create=request.args.get('create'))
-    if request.args.get('edit', '') != "":
-        return render_template('index.html', edit=request.args.get('edit'))
-    return render_template('index.html')
+    return render_template('index.html',
+    edit=request.args.get('edit', None),
+    create=request.args.get('create', None))
 
 
 @app.route('/create', methods=['POST', 'GET'])
@@ -28,7 +26,7 @@ def create():
 def edit():
     if request.method == 'GET':
         return render_template('edit.html')
-    elif request.method == 'POST':
+    elif request.method == 'PUT':
         content = request.get_json()
         status = edit_firm(content)
         return str(status)
