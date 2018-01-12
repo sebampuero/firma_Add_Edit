@@ -7,9 +7,11 @@ import xml.etree.ElementTree as ET
 filename = "Data/firmendaten.xml"
 
 
-# Retrieve a list of firms from the XML File
-# @return the list of firms elements found in the xml file
 def get_firms_from_xml():
+    """
+    Retrieve a list of firms from the XML File
+    :return: the list of firms elements found in the XML File
+    """
     try:
         firms = get_root()[0].findall('firma')
         return firms
@@ -17,9 +19,12 @@ def get_firms_from_xml():
         return None
 
 
-# Delete a firm in the XML File by name
-# @param firma_name the name of the firm to delete
 def delete_firm(firma_name):
+    """
+    Delete a firm in the XML File by name
+    :param firma_name: the name of the firm to delete
+    :return:
+    """
     try:
         root, tree = get_root()
         for firma in root.findall('firma'):
@@ -32,9 +37,12 @@ def delete_firm(firma_name):
         return None
 
 
-# Insert a new firm into the XML file
-# @param firma the firm object to insert into the xml file
 def insert_firm(firma):
+    """
+    Insert a new firm into the XML FIle
+    :param firma: the firm object to insert into the XML File
+    :return:
+    """
     try:
         root, tree = get_root()
         firma_attrib = {'name': firma.name}
@@ -68,9 +76,11 @@ def insert_firm(firma):
         return None
 
 
-# Get the root of the XML File
-# @return the root
 def get_root():
+    """
+    Get the root of the XML File
+    :return: the root and tree
+    """
     try:
         with open(filename, 'r') as xml_file:
             tree = ET.parse(xml_file)
@@ -80,11 +90,13 @@ def get_root():
         return None
 
 
-# Apply an indent to the XML File write whenever a firm gets updated or created. Useful utility function taken from
-# https://exceptionshub.com/pretty-printing-xml-in-python.html Without this function, added firms are appended to
-# the XML File in a single line
-# @return the root element with indents
 def indent(elem, level=0):
+    """
+    Apply an indent to the XML File write whenever a firm gets updated or created. Useful utility function taken from
+    https://exceptionshub.com/pretty-printing-xml-in-python.html Without this function, added firms are appended to
+    the XML File in a single line
+    :return: the root element with indents
+    """
     i = "\n" + level * "  "
     j = "\n" + (level - 1) * "  "
     if len(elem):

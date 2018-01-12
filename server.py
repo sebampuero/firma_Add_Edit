@@ -8,8 +8,8 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template('index.html',
-    edit=request.args.get('edit', None),
-    create=request.args.get('create', None))
+                           edit=request.args.get('edit', None),
+                           create=request.args.get('create', None))
 
 
 @app.route('/create', methods=['POST', 'GET'])
@@ -54,4 +54,4 @@ def get_branches():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()

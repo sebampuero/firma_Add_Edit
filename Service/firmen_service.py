@@ -7,18 +7,24 @@ from Entities.Firma import Firma
 from Service.xml_parser import get_firms_from_xml, insert_firm, delete_firm
 
 
-# Edit a firm. Delete and then create a new element with the new data
-# @param content dictionary containing info of received firm from client
 def edit_firm(content):
+    """
+    Edit a firm. Delete and then create a new element with the new data
+    :param content: The firm data in dictionary format
+    :return: Status code of the operation
+    """
     firma_dict = content
     delete_firm(firma_dict['name'].lower())
     create_firm(content)
     return 204
 
 
-# Insert a new firm
-# @param content dictionary containing info of received firm from client
 def create_firm(content):
+    """
+    Insert a new firm
+    :param content: dictionary containing info of received firm from client
+    :return: status code of the operation
+    """
     try:
         firma_dict = content
         firma = create_new_firm_object(firma_dict)
@@ -28,10 +34,12 @@ def create_firm(content):
         return 500
 
 
-# Create a firm object from a dictionary containing its values
-# @param dict_content dictionary containing info of received firm from client
-# @return the firm object
 def create_new_firm_object(dict_content):
+    """
+    Create a firm object from a dictionary containing its values
+    :param dict_content: dictionary containing info of received firm from client
+    :return: the firm object
+    """
     ansprechpartner_list = []
     for ans in dict_content['ansprechpartner']:
         telefon_list = []
@@ -47,10 +55,12 @@ def create_new_firm_object(dict_content):
     return firma
 
 
-# Retrieve a firm from the list by name
-# @param name the name of the firm to search for
-# @return the searched firm, None is returned when not found
 def get_firms_by_name(name):
+    """
+    Retrieve a list of firms according to the name query
+    :param name: the name query
+    :return: the list containing matching firms
+    """
     firms_elements = get_firms_from_xml()
     firms_list = []
     for f_element in firms_elements:
@@ -60,9 +70,11 @@ def get_firms_by_name(name):
     return firms_list
 
 
-# Retrive a list with all the firms
-# @return the list of firms
 def get_all_firms():
+    """
+    Retrieve a list of all available firms
+    :return: the list of all firms
+    """
     firms_elements = get_firms_from_xml()
     firms_list = []
     for f_element in firms_elements:
@@ -71,9 +83,11 @@ def get_all_firms():
     return firms_list
 
 
-# Retrieve a list of branchs
-# @return the list of branchs
 def get_firm_branchs():
+    """
+    Retrieve a list of all branches of firms
+    :return: the list of branches
+    """
     firms = get_all_firms()
     branchs_list = []
     for a_firm in firms:
@@ -83,11 +97,13 @@ def get_firm_branchs():
     return branchs_list
 
 
-# Populate the list of firms with the XML data
-# @param f_element the firm element from the xml file
-# @param firmas_list the list that has to be populated
-# @return the populated list
 def get_list_of_firms_from_xml(f_element, firmas_list):
+    """
+    Populate the list of firms with the XML data
+    :param f_element: the firm element from the xml file
+    :param firmas_list: the list that has to be populated
+    :return: the populated list
+    """
     ansprechpartner_list = []
     for a_element in f_element.findall('ansprechpartner'):
         telefon_list = []
